@@ -1,0 +1,105 @@
+/******************************************************
+BASIC
+******************************************************/
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: lightyellow;
+}
+
+
+
+/******************************************************
+PAGE: Home
+******************************************************/
+/******** Image slider ********/
+.slider {
+  padding: 10px 0 20px 0;
+  width: 100%;
+  height: 60vmin;
+  overflow: hidden;
+}
+
+.slides {
+  display: block;
+  list-style: none;
+  padding: 0;
+  width: 700vw;
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  float: left;
+  width: 100vw;
+  height: 60vmin;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+/******** Quote ********/
+.quote {
+  margin-top: -10vmin;
+  padding: 10vmin 3vmin 8vmin 3vmin;
+  font-size: 4vmin;
+  font-style: italic;
+  font-weight: bold;
+  background-color: inherit;
+  color: orange;
+  width: 100%;
+  height: 10vmin;
+}
+
+/******** paragraph box ********/
+.para_box {
+  background-color: inherit;
+  padding: 10px;
+  margin: 10px;
+  border-style: groove;
+  border-radius: 10px;
+  border-color: yellow;
+}
+
+.para_box h3 {
+  color: brown;
+}
+
+.para_box p {
+  color: chocolate;
+}
+
+/******** Body navigation Panel ********/
+.body_navigation {
+  background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  width: 100%;
+  height: 27vmin;
+  min-height: 120px;
+}
+
+.body_navigation ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  font-size: 4vmin;
+  font-weight: 500;
+  justify-content: center;
+  text-align: center;
+}
+
+.body_navigation ul li a {
+  text-decoration: none;
+  color: grey;
+}
+
+.body_navigation ul li a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  color: black;
+}

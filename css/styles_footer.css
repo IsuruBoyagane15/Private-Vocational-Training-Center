@@ -1,0 +1,44 @@
+/******************************************************
+BASIC
+******************************************************/
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: lightyellow;
+}
+
+
+
+/******************************************************
+FOOTER
+******************************************************/
+.footer {
+  width: 100%;
+  height: 17vmin;
+  background: linear-gradient(to right, white 20%, yellow 90%);
+}
+
+/******** copyright ownership ********/
+#copyright {
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/******** Social media logos ********/
+.footer .logos_footer {
+  padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer .logo {
+  width: 5vmin;
+  max-width: 35px;
+  height: auto;
+  margin-right: 1vw;
+}
