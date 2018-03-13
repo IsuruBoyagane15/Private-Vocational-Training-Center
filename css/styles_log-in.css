@@ -1,0 +1,95 @@
+/******************************************************
+PAGE: LOGIN
+******************************************************/
+
+#login_base {
+    width: 100vw;
+    height: auto;
+    min-height: 56vh;
+    padding: 2px;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+}
+
+/******left panel & right panel******/
+
+/*****basic container*****/
+#staff_login,
+#student_login {
+    background-color: wheat;
+    width: 50vw;
+    height: auto;
+    min-height: 56vh;
+    margin: 3vmin;
+    border: 2px dotted grey;
+    border-radius: 10px;
+    padding: 5vmin;
+}
+
+/*****panel heading*****/
+.panel_heading {
+  text-align: center;
+  color: darkorange;
+  font-size: 5vmin;
+}
+
+/*****image container*****/
+.image_container {
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+.login_photo {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+
+  transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -webkit-transform;
+  -o-transition-property: -webkit-transform;
+
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+}
+
+.login_photo:hover {
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+}
+
+/*****form container*****/
+.form_container {
+  padding: 15px;
+}
+
+/*****input boxes*****/
+input[type=text],
+input[type=password] {
+  width: 100%;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+/*****submit & cancel buttons*****/
+button {
+  background-color: orange;
+  color: white;
+  padding: 15px;
+  margin: 8px 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.7;
+}
