@@ -42,7 +42,7 @@
         <li class="slide"><img src="img/slider/training_4.jpg"></li>
         <li class="slide"><img src="img/slider/training_5.jpg"></li>
         <li class="slide"><img src="img/slider/img_group.jpg"></li>
-        <li class="slide"><img src="img/slider/img_institute.jpg"></li>
+        <li class="slide"><img src="img/slider/img_institute.jfif"></li>
       </ul>
     </div>
 
