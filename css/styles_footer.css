@@ -1,31 +1,22 @@
 /******************************************************
-BASIC
-******************************************************/
-html {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  margin: 0;
-  background-color: lightyellow;
-}
-
-
-
-/******************************************************
 FOOTER
 ******************************************************/
+
 .footer {
-  width: 100%;
+  width: 100vw;
   height: 17vmin;
+  min-height: 70px;
   background: linear-gradient(to right, white 20%, yellow 90%);
+  background: -webkit-linear-gradient(to right, white 20%, yellow 90%);
+  background: -moz-linear-gradient(to right, white 20%, yellow 90%);
+  background: -o-linear-gradient(to right, white 20%, yellow 90%);
 }
 
 /******** copyright ownership ********/
 #copyright {
   padding-top: 10px;
   text-align: center;
+  font-size: 3vmin;
   font-weight: bold;
 }
 
@@ -33,12 +24,19 @@ FOOTER
 .footer .logos_footer {
   padding: 10px 0 10px 0;
   display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
   justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
 }
 
 .footer .logo {
   width: 5vmin;
   max-width: 35px;
+  min-width: 15px;
   height: auto;
   margin-right: 1vw;
 }

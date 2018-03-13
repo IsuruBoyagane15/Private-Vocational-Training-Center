@@ -2,8 +2,7 @@
 BASIC
 ******************************************************/
 html {
-  width: 100%;
-  overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
@@ -16,14 +15,21 @@ body {
 /******************************************************
 HEADING
 ******************************************************/
+
 /******** Main heading box ********/
 .heading {
-  width: 100%;
+  width: 100vw;
   height: 18vmin;
   background: linear-gradient(to right, white 20%, yellow 90%);
+  background: -webkit-linear-gradient(to right, white 20%, yellow 90%);
+  background: -moz-linear-gradient(to right, white 20%, yellow 90%);
+  background: -o-linear-gradient(to right, white 20%, yellow 90%);
   padding: 0 0 10px 0;
   display: flex;
   flex-direction: row;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
 }
 
 /******** Logo and name ********/
@@ -32,14 +38,23 @@ HEADING
   color: black;
   font-size: 3vmin;
   text-align: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: auto;
 }
 
 #logo_name :hover {
   background: linear-gradient(to right, silver, black);
+  background: -webkit-linear-gradient(to right, silver, black);
+  background: -moz-linear-gradient(to right, silver, black);
+  background: -o-linear-gradient(to right, silver, black);
+  background-clip: text;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
 }
 
 /******** Main topic text ********/
@@ -50,6 +65,9 @@ HEADING
 /******** Main topic image ********/
 .heading img {
   align-self: center;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -o-align-self: center;
   width: 15%;
   max-height: 15vmin;
   max-width: 18vmin;
@@ -60,6 +78,9 @@ HEADING
 /******** Navigation panel ********/
 .navigate ul {
   background: linear-gradient(to right, white 20%, yellow 90%);
+  background: -webkit-linear-gradient(to right, white 20%, yellow 90%);
+  background: -moz-linear-gradient(to right, white 20%, yellow 90%);
+  background: -o-linear-gradient(to right, white 20%, yellow 90%);
   margin: 0;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -68,6 +89,9 @@ HEADING
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
 }
 
 .navigate ul li {

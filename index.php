@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vocational Training Institute</title>
 
     <!--css styles-->
@@ -13,20 +14,29 @@
     <script src="js/jquery-3.3.1.js"></script>
 
     <!--jquery slider-->
-	  <script src="js/slider.js"></script>
-
-    <!--jquery slideshow-->
-    <script src="js/slideshow.js"></script>
+    <script src="js/slider.js"></script>
 
   </head>
   <body>
     <!--Including header file-->
     <?php include_once("inc/header.php"); ?>
 
+    <!--navigation panel-->
+    <nav class="navigate">
+      <ul>
+        <li><a href="index.php" class="selected">Home</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="courses.php">Courses</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="log-in.php">Log In</a></li>
+      </ul>
+    </nav>
+
+
     <!--image slider-->
     <div class="slider">
       <ul class="slides">
-        <li class="slide"><img src="img/slider/img_institute.jpg"></li>
+        <li class="slide"><img src="img/slider/img_institute.jfif"></li>
         <li class="slide"><img src="img/slider/training_1.jpg"></li>
         <li class="slide"><img src="img/slider/training_2.jpg"></li>
         <li class="slide"><img src="img/slider/training_4.jpg"></li>

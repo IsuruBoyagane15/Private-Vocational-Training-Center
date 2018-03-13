@@ -1,25 +1,11 @@
 /******************************************************
-BASIC
+PAGE: HOME
 ******************************************************/
-html {
-  width: 100%;
-  overflow-x: hidden;
-}
 
-body {
-  margin: 0;
-  background-color: lightyellow;
-}
-
-
-
-/******************************************************
-PAGE: Home
-******************************************************/
 /******** Image slider ********/
 .slider {
   padding: 10px 0 20px 0;
-  width: 100%;
+  width: 100vw;
   height: 60vmin;
   overflow: hidden;
 }
@@ -31,6 +17,7 @@ PAGE: Home
   width: 700vw;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 .slide {
@@ -40,7 +27,7 @@ PAGE: Home
 }
 
 .slide img {
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 
@@ -53,7 +40,7 @@ PAGE: Home
   font-weight: bold;
   background-color: inherit;
   color: orange;
-  width: 100%;
+  width: 100vw;
   height: 10vmin;
 }
 
@@ -62,6 +49,7 @@ PAGE: Home
   background-color: inherit;
   padding: 10px;
   margin: 10px;
+  width: 100vw;
   border-style: groove;
   border-radius: 10px;
   border-color: yellow;
@@ -78,9 +66,12 @@ PAGE: Home
 /******** Body navigation Panel ********/
 .body_navigation {
   background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
-  width: 100%;
+  background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  width: 100vw;
   height: 27vmin;
-  min-height: 120px;
+  min-height: 80px;
 }
 
 .body_navigation ul {
@@ -90,6 +81,9 @@ PAGE: Home
   font-size: 4vmin;
   font-weight: 500;
   justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
   text-align: center;
 }
 
