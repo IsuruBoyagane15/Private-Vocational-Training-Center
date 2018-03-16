@@ -1,0 +1,58 @@
+a:link{    
+    text-decoration: none;
+}
+a:hover{
+    color: darkgray;
+}
+
+
+.tasks  {
+  background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  margin: 100px;
+  padding: 5%;
+  list-style:none;
+  font-size: 4vmin;
+  font-weight: 500;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  text-align: center;
+}
+
+.body_navigation {
+  background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  width: 100vw;
+  height: 27vmin;
+  min-height: 80px;
+}
+
+.body_navigation ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  font-size: 4vmin;
+  font-weight: 500;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  text-align: center;
+}
+
+.body_navigation ul li a {
+  text-decoration: none;
+  color: grey;
+}
+
+.body_navigation ul li a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  color: black;
+}
