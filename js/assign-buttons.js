@@ -38,7 +38,7 @@ $( function() {
   });
 
 
-  //logic on complete button
+  //logic on complete button, back and next buttons
   $('#complete').on('click', function() {
 
     //show popup window
@@ -56,19 +56,27 @@ $( function() {
       $("#popup_verify #table_verify").append("<tr><td>" + question + "</td><td>" + opt1 + "</td><td>" + opt2 + "</td><td>" + opt3 + "</td><td>" + opt4 + "</td><td>" + correctopt + "</td></tr>");
     } );
 
+    //logic on back button
     $("#back").click( function() {
-      $('#popup_verify #table_verify td').empty();
+      $('#popup_verify #table_verify td').remove();
       $("#popup_verify").hide();
     } );
 
+    //logic on next button
     $("#verify_next").click( function() {
       $("#popup_verify").hide();
     } );
 
   });
+
+
+  //logic on next button
+  $('#complete').on('click', function() {
+
+    
+  });
+
 } );
-
-
 
 
 
