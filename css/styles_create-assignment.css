@@ -1,0 +1,177 @@
+/******************************************************
+PAGE: CREATE ASSIGNMENT
+******************************************************/
+
+/******** Navigation panel ********/
+/***overriding few navigate attributes***/
+.navigate ul {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -o-justify-content: flex-end;
+}
+
+.navigate ul li:last-child {
+  margin-left: inherit;
+}
+
+
+/********question container********/
+.container_questions {
+  border: 2px solid yellow;
+  margin: 0;
+  padding: 4px;
+  width: 98vw;
+  height: auto;
+  min-height: 50vh;
+  background-color: lightblue;
+  text-align: center;
+  float: left;
+}
+
+.questions {
+  text-align: justify;
+}
+
+.questions ul {
+  list-style-type: decimal-leading-zero;
+  font-size: 3vmin;
+}
+
+.question {
+  margin: 3vh 1px 10vh;
+  font-size: 3vmin;
+}
+
+
+/********button container********/
+.container_buttons {
+  width: 98vw;
+  height: auto;
+  min-height: 10vh;
+  padding: 5px 2px;
+}
+
+.assign_button {
+  background-color: orange;
+  margin: 8px 0;
+  width: 33%;
+}
+
+/********for all buttons********/
+button[type="submit"] {
+  color: white;
+  padding: 5px;
+  font-size: 3vmin;
+  float: left;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+/********confirm dialog box(hidden)********/
+.confirmBox {
+  display: none;
+  background-color: #eee;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.confirmBox .button {
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+
+.confirmBox .button:hover {
+  background-color: #ddd;
+}
+
+/********verify assignment popup table (hidden)********/
+#popup_verify {
+  display: none;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 90%;
+  height: auto;
+  left: 5%;
+  top: 5%;
+  padding: 6px 5px;
+  box-sizing: border-box;
+}
+
+#table_verify {
+  text-align: left;
+  font-size: 3vmin;
+  margin-bottom: 8px;
+}
+
+#popup_verify .container_buttons {
+  display: flex;
+}
+
+#popup_verify button {
+  background-color: mediumspringgreen;
+  color: green;
+  width: 20vw;
+  height: 5vh;
+  margin: 2% 11%;
+}
+
+/**html sources at addQueTemp.js file**/
+
+/********New Question Box********/
+.question {
+  width: 95%;
+  height: auto;
+  border: 1px dotted grey;
+  margin: 1vh 0.2vw;
+  padding: 2vh 1vw;
+  float: left;
+}
+
+.answer {
+  width: inherit;
+  padding: 1vh 1vw;
+  float: left;
+}
+
+.textarea {
+  width: 98%;
+}
+
+.label {
+  color: darkblue;
+  width: 20%:
+  margin-left: 10px;
+}
+
+.option {
+  width: 50%;
+  height: 4vh;
+}
+
+.que_remove {
+  background-color: blue;
+  margin: 5% 26%;
+  width: 48%;
+}
