@@ -1,0 +1,115 @@
+/******************************************************
+PAGE: LECTURER PROFILE
+******************************************************/
+
+/******** Navigation panel ********/
+/***overriding few navigate attributes***/
+.navigate ul {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -o-justify-content: flex-end;
+}
+
+.navigate ul li:last-child {
+  margin-left: inherit;
+}
+
+
+/********main body contents********/
+.container {
+  width: 100vw;
+  height: auto;
+  min-height: 80vh;
+  background-color: lightyellow;
+  margin: 0;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+h3, h4 {
+  color: darkorange;
+}
+
+/********left column********/
+.left_column {
+  float: left;
+  border: 1px solid grey;
+  margin: 0.2vw;
+  padding: 0 0.3vw 2vh;
+  width: 19vw;
+  height: auto;
+}
+
+/********assigned module panel********/
+#assign_mods {
+  list-style-type: square;
+}
+
+#assign_mods a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#assign_mods a:hover {
+    text-decoration: underline;
+    color: green;
+}
+
+/********middle main body********/
+.middle_body {
+  float: left;
+  border: 1px solid grey;
+  margin: 0.2vw;
+  padding: 0 0.5vw 2vh;
+  width: 56vw;
+  height: auto;
+  background-color: white;
+  text-align: center;
+}
+
+/********selected module details********/
+.middle_content {
+  text-align: justify;
+}
+
+/********action pane with buttons********/
+button[type="submit"] {
+  background-color: orange;
+  color: white;
+  padding: 5px;
+  margin: 8px 0;
+  width: 45%;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+/********right column********/
+.right_column {
+  float: left;
+  border: 1px solid grey;
+  margin: 0.2vw;
+  padding: 0 0.3vw 2vh;
+  width: 19vw;
+  height: auto;
+}
+
+/********upcoming events panel********/
+#upcoming_events {
+
+}
+
+#up_events {
+
+}
+
+/********submission status panel********/
+#submission_status {
+
+}
+
+#sub_status {
+
+}
