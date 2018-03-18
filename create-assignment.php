@@ -54,6 +54,14 @@
       </div>
     </div>
 
+    <!--assignment details panel-->
+    <div class="assignment_details">
+      <label class="label">Selected module :</label>
+      <input type="text" name="module_name" class="details_input" id="module_name" readonly>
+      <label class="label">Assignment name :</label>
+      <input type="text" name="assignment_name" class="details_input" id="assignment_name">
+    </div>
+
     <!--question container-->
     <div class="container_questions">
       <nav class="questions">

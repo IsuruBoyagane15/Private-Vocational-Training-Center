@@ -16,6 +16,30 @@ PAGE: CREATE ASSIGNMENT
 }
 
 
+/********assignment details panel********/
+.assignment_details {
+  border: 2px solid yellow;
+  padding: 4px;
+  width: 98vw;
+  height: auto;
+  background-color: lightblue;
+  float: left;
+}
+
+.assignment_details .label {
+  margin: 2px 5px;
+  font-size: 2vw;
+}
+
+.assignment_details .details_input {
+  width: 25vw;
+  height: 3vw;
+}
+
+#module_name {
+  background-color: lightgrey;
+}
+
 /********question container********/
 .container_questions {
   border: 2px solid yellow;
@@ -117,12 +141,45 @@ button:hover {
   top: 5%;
   padding: 6px 5px;
   box-sizing: border-box;
+  overflow: scroll;
+  height: 100%;
 }
 
 #table_verify {
   text-align: left;
   font-size: 3vmin;
   margin-bottom: 8px;
+  border-collapse: collapse;
+  width: 98%;
+}
+
+#table_verify th {
+  text-align: left;
+  background-color: forestgreen;
+  color: white;
+}
+
+#table_verify td {
+  vertical-align: top;
+}
+
+#table_verify th,
+#table_verify td {
+  padding: 5px;
+  border: 2px solid darkgreen;
+}
+
+#table_verify tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+#table_verify tr:nth-child(even) {
+  background-color: #aaa;
+}
+
+#table_verify tr:hover {
+  background-color: darkolivegreen;
+  color: white;
 }
 
 #popup_verify .container_buttons {
@@ -136,6 +193,7 @@ button:hover {
   height: 5vh;
   margin: 2% 11%;
 }
+
 
 /**html sources at addQueTemp.js file**/
 
