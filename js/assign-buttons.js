@@ -114,10 +114,7 @@ $( function() {
         method: "POST",
         data: {module_name: mod, assign_name:assign, deadline:deadline, questions: allQus},
         success: function(){
-
           alert("Assignment Created Successfully!");
-
-          //redirect to the profile page
           window.location.href = "lecturer-profile.php";
         },
         error: function(){
