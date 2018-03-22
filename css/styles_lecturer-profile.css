@@ -71,7 +71,29 @@ h3, h4 {
 /********selected module details********/
 .middle_content {
   text-align: justify;
+  font-size: 2.3vmin;
 }
+
+.middle_content label{
+  font-weight: 900;
+}
+
+.note_container {
+
+}
+
+.note_container label{
+
+}
+
+.notes_uploaded {
+
+}
+
+#notes {
+
+}
+
 
 /********action pane with buttons********/
 button[type="submit"] {

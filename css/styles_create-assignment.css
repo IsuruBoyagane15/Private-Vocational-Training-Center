@@ -129,6 +129,62 @@ button:hover {
   background-color: #ddd;
 }
 
+/********set deadline dialog box (hidden)********/
+#set_deadline {
+  display: none;
+  background-color: lightgreen;
+  border: 1px solid green;
+  position: fixed;
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  left: 20%;
+  top: 20%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+#deadline_option {
+  display: none;
+  margin: 5px;
+  padding: 10px 6px;
+  border: 1px dotted green;
+}
+
+#hasDeadline:checked ~ #deadline_option{
+  display: block;
+}
+
+#deadline_option input[type="text"] {
+  width: 40px;
+}
+
+#deadline_option .label {
+  color: green;
+  font-size: 2.5vmin;
+  margin-right: 5px;
+  opacity: 0.6;
+}
+
+#deadline_option .label_h {
+  color: black;
+  font-size: 2.5vmin;
+  margin-right: 5px;
+}
+
+#deadline_buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#create {
+  background-color: green;
+  color: white;
+  width: 50%;
+  height: 6vh;
+  margin: 3%;
+}
+
 /********verify assignment popup table (hidden)********/
 #popup_verify {
   display: none;
@@ -155,8 +211,8 @@ button:hover {
 
 #table_verify th {
   text-align: left;
-  background-color: forestgreen;
-  color: white;
+  background-color: mediumspringgreen;
+  color: green;
 }
 
 #table_verify td {
@@ -166,7 +222,7 @@ button:hover {
 #table_verify th,
 #table_verify td {
   padding: 5px;
-  border: 2px solid darkgreen;
+  border: 2px solid green;
 }
 
 #table_verify tr:nth-child(odd) {
@@ -178,8 +234,7 @@ button:hover {
 }
 
 #table_verify tr:hover {
-  background-color: darkolivegreen;
-  color: white;
+  background-color: limegreen;
 }
 
 #popup_verify .container_buttons {
