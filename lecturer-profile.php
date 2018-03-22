@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/styles_lecturer-profile.css">
     <link rel="stylesheet" href="css/styles_footer.css">
 
+    <!--jquery sources-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/loadModule.js" type="text/javascript"></script>
+
   </head>
   <body>
 
@@ -46,7 +50,22 @@
         <!--selected module details-->
         <h3>Module Details</h3>
         <div class="middle_content">
-          <p>ednwrs  dtrj gtcdg </p>
+
+          <label id="mod_name">Module name :</label>
+          ///////load module name
+
+          <br><label id="mod_description">Description :</label>
+          ///////load module description
+
+          <div class="note_container">
+            <label>Lecture notes</label>
+            <nav class="notes_uploaded">
+              <ul id="notes">
+
+              </ul>
+            </nav>
+          </div>
+
         </div>
 
         <!--action pane with buttons-->
