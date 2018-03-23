@@ -13,6 +13,7 @@
     <!--jquery sources-->
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/loadModule.js" type="text/javascript"></script>
+    <script src="js/uploads_assigns.js" type="text/javascript"></script>
 
   </head>
   <body>
@@ -31,6 +32,28 @@
     <!--main body contents-->
     <div class="container">
 
+      <!--confirm dialog box (hidden)-->
+      <div class="confirmBox">
+        <div class="message"></div>
+        <span class="button yes">Yes</span>
+        <span class="button no">No</span>
+      </div>
+
+      <!--lecture note upload popup(hidden)-->
+      <div class="upload_popup">
+        <form action="lecNote_upload.php" method="post" enctype="multipart/form-data" id="lecNote_upload">
+          Select module
+          <br><br><label class="label" id="module_select">Module names</label><br><br>
+          Select a file to upload
+          <br><p>(texts, documents, images and pdf only)</p>
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <div class="button_container">
+            <input type="submit" value="back" name="back">
+            <input type="submit" value="Upload" name="upload">
+          </div>
+        </form>
+      </div>
+
       <!--left column-->
       <div class="left_column">
 
@@ -38,8 +61,7 @@
         <nav id="panel_modules">
           <h4>Assigned Modules</h4>
           <ul id="assign_mods">
-            <li><a href="#">module 1</a></li>
-            <li><a href="#">module 2</a></li>
+
           </ul>
         </nav>
       </div>
@@ -50,27 +72,12 @@
         <!--selected module details-->
         <h3>Module Details</h3>
         <div class="middle_content">
-
-          <label id="mod_name">Module name :</label>
-          ///////load module name
-
-          <br><label id="mod_description">Description :</label>
-          ///////load module description
-
-          <div class="note_container">
-            <label>Lecture notes</label>
-            <nav class="notes_uploaded">
-              <ul id="notes">
-
-              </ul>
-            </nav>
-          </div>
-
+          <!-- loading from database through php -->
         </div>
 
         <!--action pane with buttons-->
         <div class="middle_action">
-          <a href="#"><button type="submit" name="back">back</button></a>
+          <a href="#"><button type="submit" id="new_note">Add Lecture Notes</button></a>
           <a href="create-assignment.php"><button type="submit" name="new_assignment">create new assignment</button></a>
         </div>
       </div>
