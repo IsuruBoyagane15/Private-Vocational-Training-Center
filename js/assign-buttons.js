@@ -1,5 +1,16 @@
 $( function() {
 
+  //load assigned modules to the module select
+  $(document).ready( function() {
+    $.ajax({
+      url: "dbOperations/db_newAssign_module.php",
+      method: "POST",
+      success: function(data){
+        $('#module_select').html(data);
+      }
+    });
+  } );
+
   //Popup window for 'cancel' button
   $('#cancel').on('click', function(){
 
@@ -41,20 +52,24 @@ $( function() {
   //logic on complete button, back and next buttons
   $('#complete').on('click', function() {
 
-    //show popup window
-    $("#popup_verify").show();
+    if( $('#assignment_name').val() == "" ){
+      alert("Assignment name is required!");
+    }else{
+      //show popup window
+      $("#popup_verify").show();
 
-    //add questions to the table
-    $('.questions #que_list li').each( function() {
-      var quest = $(this).closest('.question');
-      var question = quest.find('textarea').val();
-      var opt1 = quest.find('#option1').val();
-      var opt2 = quest.find('#option2').val();
-      var opt3 = quest.find('#option3').val();
-      var opt4 = quest.find('#option4').val();
-      var correctopt = quest.find('input[type=radio]:checked').val();
-      $("#popup_verify #table_verify").append("<tr><td>" + question + "</td><td>" + opt1 + "</td><td>" + opt2 + "</td><td>" + opt3 + "</td><td>" + opt4 + "</td><td>" + correctopt + "</td></tr>");
-    } );
+      //add questions to the table
+      $('.questions #que_list li').each( function() {
+        var quest = $(this).closest('.question');
+        var question = quest.find('textarea').val();
+        var opt1 = quest.find('#option1').val();
+        var opt2 = quest.find('#option2').val();
+        var opt3 = quest.find('#option3').val();
+        var opt4 = quest.find('#option4').val();
+        var correctopt = quest.find('input[type=radio]:checked').val();
+        $("#popup_verify #table_verify").append("<tr><td>" + question + "</td><td>" + opt1 + "</td><td>" + opt2 + "</td><td>" + opt3 + "</td><td>" + opt4 + "</td><td>" + correctopt + "</td></tr>");
+      } );
+    }
   });
 
     //logic on back button
@@ -115,13 +130,13 @@ $( function() {
         data: {module_name: mod, assign_name:assign, deadline:deadline, questions: allQus},
         success: function(){
           alert("Assignment Created Successfully!");
+          window.location.href = "lecturer-profile.php";
         },
         error: function(){
           alert("Error: Assignment Creation Failed!!");
         }
       });
+
     } );
-
-
 
 } );

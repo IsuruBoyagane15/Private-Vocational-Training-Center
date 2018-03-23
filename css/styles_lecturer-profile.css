@@ -16,6 +16,10 @@ PAGE: LECTURER PROFILE
 }
 
 
+body {
+  display: grid;
+}
+
 /********main body contents********/
 .container {
   width: 100vw;
@@ -31,6 +35,86 @@ h3, h4 {
   color: darkorange;
 }
 
+/********confirm dialog box(hidden)********/
+.confirmBox {
+  display: none;
+  background-color: #eee;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.confirmBox .button {
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+
+.confirmBox .button:hover {
+  background-color: #ddd;
+}
+
+/********lecture note upload popup(hidden)********/
+.upload_popup {
+  display: none;
+  background-color: lightblue;
+  border: 1px solid blue;
+  position: fixed;
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  left: 20%;
+  top: 25%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.upload_popup p {
+  color: blue;
+}
+
+.upload_popup form {
+  margin: 5px;
+  padding: 10px 6px;
+  border: 1px dotted blue;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.upload_popup input[type="file"] {
+  color: red;
+  padding: 5px;
+  margin: 8px 0;
+}
+
+.button_container input[type="submit"] {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  margin: 8px 3px;
+  width: 35%;
+}
+
+.button_container input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
 /********left column********/
 .left_column {
   float: left;
@@ -39,6 +123,7 @@ h3, h4 {
   padding: 0 0.3vw 2vh;
   width: 19vw;
   height: auto;
+  font-size: 2.3vmin;
 }
 
 /********assigned module panel********/
@@ -48,7 +133,7 @@ h3, h4 {
 
 #assign_mods a {
     text-decoration: none;
-    color: inherit;
+    color: grey;
 }
 
 #assign_mods a:hover {
@@ -68,32 +153,59 @@ h3, h4 {
   text-align: center;
 }
 
-/********selected module details********/
 .middle_content {
   text-align: justify;
   font-size: 2.3vmin;
+  min-height: 50vh;
 }
 
 .middle_content label{
-  font-weight: 900;
+  font-weight: 600;
+}
+
+#modDescription {
+  padding: 0.5vw;
 }
 
 .note_container {
-
+  border: 1px dotted grey;
+  margin: 3px 0.5vw;
 }
 
-.note_container label{
-
+.assign_container {
+  border: 1px dotted grey;
+  margin: 3px 0.5vw;
 }
 
-.notes_uploaded {
-
+.label_head {
+  color: orange;
 }
 
+/********loaded lecture notes********/
 #notes {
-
+  list-style-type: square;
 }
 
+.lecN_name {
+  width: 95%;
+  margin: 4px 0;
+  border: 1px solid grey;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lecN_name a {
+  text-decoration: none;
+  color: green;
+}
+
+.lecN_name a img{
+  width: 17px;
+  height: 17px;
+  margin: 0 5px 0 10px;
+  padding: 2px;
+}
 
 /********action pane with buttons********/
 button[type="submit"] {
@@ -111,6 +223,7 @@ button:hover {
 /********right column********/
 .right_column {
   float: left;
+  font-size: 2.3vmin;
   border: 1px solid grey;
   margin: 0.2vw;
   padding: 0 0.3vw 2vh;
