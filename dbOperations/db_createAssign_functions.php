@@ -84,6 +84,15 @@
     $result = mysqli_query($conn, $query);
     if(!$result) {
       echo "deleting table failed!" . mysqli_error($conn) . "<br>" ;
+    }else{
+      //mark assignment as deleted in config table
+      $con1 = mysqli_connect('localhost', 'root', '', 'configdata');
+      $que1 = "UPDATE config_createassignment SET is_deleted=1 WHERE tableName='{$tablename}'";
+      $res = mysqli_query($con1, $que1);
+      if(!$res){
+        echo "Error deleting the config record!";
+      }
+      mysqli_close($con1);
     }
   }
 

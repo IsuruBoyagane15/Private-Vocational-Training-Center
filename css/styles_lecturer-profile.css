@@ -115,6 +115,70 @@ h3, h4 {
   opacity: 0.7;
 }
 
+/********preview assignment popup table (hidden)********/
+#popup_preview {
+  display: none;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 90%;
+  height: auto;
+  left: 5%;
+  top: 5%;
+  padding: 6px 5px;
+  box-sizing: border-box;
+  overflow: scroll;
+  height: 100%;
+}
+
+#table_preview {
+  text-align: left;
+  font-size: 3vmin;
+  margin-bottom: 8px;
+  border-collapse: collapse;
+  width: 98%;
+}
+
+#table_preview th {
+  text-align: left;
+  background-color: deepskyblue;
+  color: white;
+}
+
+#table_preview td {
+  vertical-align: top;
+}
+
+#table_preview th,
+#table_preview td {
+  padding: 5px;
+  border: 2px solid darkblue;
+}
+
+#table_preview tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+#table_preview tr:nth-child(even) {
+  background-color: #aaa;
+}
+
+#table_preview tr:hover {
+  background-color: lightblue;
+}
+
+#popup_preview .container_buttons {
+  display: flex;
+}
+
+#popup_preview button {
+  background-color: deepskyblue;
+  color: darkblue;
+  width: 20vw;
+  height: 5vh;
+  margin: 2% 11%;
+}
+
 /********left column********/
 .left_column {
   float: left;
@@ -205,6 +269,25 @@ h3, h4 {
   height: 17px;
   margin: 0 5px 0 10px;
   padding: 2px;
+}
+
+/********loaded assignment********/
+#assigns {
+  list-style-type: square;
+}
+
+.assign_name {
+  width: 95%;
+  margin: 4px 0;
+  border: 1px solid grey;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: space-between;
+}
+
+.assign_name a {
+  text-decoration: none;
+  color: green;
 }
 
 /********action pane with buttons********/

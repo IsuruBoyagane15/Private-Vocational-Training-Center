@@ -25,7 +25,7 @@
   }
 
 
-  //load data into lecture note area (append to a string $outAppend)
+  //load notes into lecture note area (return as a string)
   function loadLecNoteData($modname){
 
     //load file names & paths of all relevent lecture notes
@@ -44,6 +44,35 @@
           $output .= ' "class="note_path"> ';
           $output .= (string)$record[0];
           $output .= ' </a><a href="#" class="del_lecNote"><img src="icons/icon_cancel.png"></a></div></li> ';
+        }
+      }
+    }
+
+    return $output;
+  }
+
+
+  //load assignments into assignment area (return as a string)
+  function loadAsignmentData($modname){
+
+    //load data of all assignments
+    $connection = mysqli_connect('localhost','root','','configdata');
+    $query = "SELECT * FROM config_createassignment";
+    $result_set = mysqli_query($connection, $query);
+    mysqli_close($connection);
+    $output = '';
+
+    //load relevent assignment data into page
+    if($result_set) {
+      while( $record = mysqli_fetch_array($result_set) ) {
+        if( strcmp( trim( (string)$record[2] ), $modname ) == 0 ) {   //select assignments relevent to the module
+          if( $record[5] == 0 ){    //select only the not deleted records
+            $output .= ' <li><div class="assign_name"><a href="#" name=" ';
+            $output .= (string)$record[1];
+            $output .= ' "class="assign_path"> ';
+            $output .= (string)$record[3];
+            $output .= ' </a></div></li> ';
+          }
         }
       }
     }

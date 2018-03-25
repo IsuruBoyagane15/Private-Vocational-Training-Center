@@ -63,6 +63,7 @@ $( function() {
     uploadBox.show();
   } );
 
+
   //confirm popup for delete lecture note
   $(document).on('click', '.del_lecNote', function() {
 
@@ -91,5 +92,65 @@ $( function() {
     confirmBox.show();
   });
 
+
+  //popup table for view a assignment
+  $(document).on('click', '.assign_path', function() {
+    var popup = $('#popup_preview');
+    var assignment = $(this).attr('name');
+
+    // load data into popup table
+    $(document).ready( function() {
+      $.ajax({
+        url: "dbOperations/db_assignment_load.php",
+        method: "POST",
+        data: {tabname: assignment},
+        success: function(data){
+          $('#table_preview').html(data);
+        }
+      });
+    } );
+
+    popup.show();
+  });
+
+
+  //action on back button
+  $('#popup_preview').find('.container_buttons button[name="back_assign"] ').click( function(event) {
+    event.preventDefault();
+    $('#table_preview').empty();
+    $('#popup_preview').hide();
+  } );
+
+  //action on delete button
+  $('#popup_preview').find('.container_buttons button[name="delete_assign"] ').click( function(event) {
+    event.preventDefault();
+
+    //show confirm delete popup
+    var confirmBox = $('.confirmBox');
+    confirmBox.find('.message').text("Are you sure to delete assignment?");
+    confirmBox.find('.yes, .no').unbind().click( function() {
+      confirmBox.hide();
+    } );
+
+    confirmBox.find('.yes').click( function() {
+      $.ajax({
+        url: "assign_delete.php",
+        method: "POST",
+        data: { tabname: $('.assign_path').attr('name') },
+        success: function(){
+          alert("Assignment deleted successfully!");
+          location.reload(true);
+        },
+        error: function(error){
+          alert(error);
+        }
+      });
+    });
+
+    confirmBox.show();
+    $('#table_preview').empty();
+    $('#popup_preview').hide();
+
+  } );
 
 });
