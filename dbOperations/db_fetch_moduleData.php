@@ -34,9 +34,9 @@
   $output .= ' </ul></nav></div> ';
 
   //created assignments
-  $output .= ' <div class="assign_container"><label class="label_head">Assignments</label>
-    <nav class="assign_created"><ul id="assigns"> ';
-  // $output .= ;
+  $output .= ' <div class="assign_container"><label class="label_head">
+  Assignments</label><nav class="assign_created"><ul id="assigns"> ';
+  $output .= loadAsignmentData($row[0]);
   $output .= ' </ul></nav></div> ';
 
 

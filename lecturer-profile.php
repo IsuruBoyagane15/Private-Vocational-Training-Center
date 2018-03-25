@@ -54,6 +54,17 @@
         </form>
       </div>
 
+      <!--preview assignment popup table (hidden)-->
+      <div id="popup_preview">
+        <table id="table_preview">
+          
+        </table>
+        <div class="container_buttons">
+          <button type="submit" name="back_assign" class="assign_button">Back</button>
+          <button type="submit" name="delete_assign" class="assign_button" id="delete_assign">Delete</button>
+        </div>
+      </div>
+
       <!--left column-->
       <div class="left_column">
 
