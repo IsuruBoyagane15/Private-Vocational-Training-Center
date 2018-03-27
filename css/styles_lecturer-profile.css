@@ -1,0 +1,333 @@
+/******************************************************
+PAGE: LECTURER PROFILE
+******************************************************/
+
+/******** Navigation panel ********/
+/***overriding few navigate attributes***/
+.navigate ul {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -o-justify-content: flex-end;
+}
+
+.navigate ul li:last-child {
+  margin-left: inherit;
+}
+
+
+body {
+  display: grid;
+}
+
+/********main body contents********/
+.container {
+  width: 100vw;
+  height: auto;
+  min-height: 80vh;
+  background-color: lightyellow;
+  margin: 0;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+h3, h4 {
+  color: darkorange;
+}
+
+/********confirm dialog box(hidden)********/
+.confirmBox {
+  display: none;
+  background-color: #eee;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.confirmBox .button {
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+
+.confirmBox .button:hover {
+  background-color: #ddd;
+}
+
+/********lecture note upload popup(hidden)********/
+.upload_popup {
+  display: none;
+  background-color: lightblue;
+  border: 1px solid blue;
+  position: fixed;
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  left: 20%;
+  top: 25%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.upload_popup p {
+  color: blue;
+}
+
+.upload_popup form {
+  margin: 5px;
+  padding: 10px 6px;
+  border: 1px dotted blue;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.upload_popup input[type="file"] {
+  color: red;
+  padding: 5px;
+  margin: 8px 0;
+}
+
+.button_container input[type="submit"] {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  margin: 8px 3px;
+  width: 35%;
+}
+
+.button_container input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+/********preview assignment popup table (hidden)********/
+#popup_preview {
+  display: none;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 90%;
+  height: auto;
+  left: 5%;
+  top: 5%;
+  padding: 6px 5px;
+  box-sizing: border-box;
+  overflow: scroll;
+  height: 100%;
+}
+
+#table_preview {
+  text-align: left;
+  font-size: 3vmin;
+  margin-bottom: 8px;
+  border-collapse: collapse;
+  width: 98%;
+}
+
+#table_preview th {
+  text-align: left;
+  background-color: deepskyblue;
+  color: white;
+}
+
+#table_preview td {
+  vertical-align: top;
+}
+
+#table_preview th,
+#table_preview td {
+  padding: 5px;
+  border: 2px solid darkblue;
+}
+
+#table_preview tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+#table_preview tr:nth-child(even) {
+  background-color: #aaa;
+}
+
+#table_preview tr:hover {
+  background-color: lightblue;
+}
+
+#popup_preview .container_buttons {
+  display: flex;
+}
+
+#popup_preview button {
+  background-color: deepskyblue;
+  color: darkblue;
+  width: 20vw;
+  height: 5vh;
+  margin: 2% 11%;
+}
+
+/********left column********/
+.left_column {
+  float: left;
+  border: 1px solid grey;
+  margin: 0.2vw;
+  padding: 0 0.3vw 2vh;
+  width: 19vw;
+  height: auto;
+  font-size: 2.3vmin;
+}
+
+/********assigned module panel********/
+#assign_mods {
+  list-style-type: square;
+}
+
+#assign_mods a {
+    text-decoration: none;
+    color: grey;
+}
+
+#assign_mods a:hover {
+    text-decoration: underline;
+    color: green;
+}
+
+/********middle main body********/
+.middle_body {
+  float: left;
+  border: 1px solid grey;
+  margin: 0.2vw;
+  padding: 0 0.5vw 2vh;
+  width: 56vw;
+  height: auto;
+  background-color: white;
+  text-align: center;
+}
+
+.middle_content {
+  text-align: justify;
+  font-size: 2.3vmin;
+  min-height: 50vh;
+}
+
+.middle_content label{
+  font-weight: 600;
+}
+
+#modDescription {
+  padding: 0.5vw;
+}
+
+.note_container {
+  border: 1px dotted grey;
+  margin: 3px 0.5vw;
+}
+
+.assign_container {
+  border: 1px dotted grey;
+  margin: 3px 0.5vw;
+}
+
+.label_head {
+  color: orange;
+}
+
+/********loaded lecture notes********/
+#notes {
+  list-style-type: square;
+}
+
+.lecN_name {
+  width: 95%;
+  margin: 4px 0;
+  border: 1px solid grey;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lecN_name a {
+  text-decoration: none;
+  color: green;
+}
+
+.lecN_name a img{
+  width: 17px;
+  height: 17px;
+  margin: 0 5px 0 10px;
+  padding: 2px;
+}
+
+/********loaded assignment********/
+#assigns {
+  list-style-type: square;
+}
+
+.assign_name {
+  width: 95%;
+  margin: 4px 0;
+  border: 1px solid grey;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: space-between;
+}
+
+.assign_name a {
+  text-decoration: none;
+  color: green;
+}
+
+/********action pane with buttons********/
+button[type="submit"] {
+  background-color: orange;
+  color: white;
+  padding: 5px;
+  margin: 8px 0;
+  width: 45%;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+/********right column********/
+.right_column {
+  float: left;
+  font-size: 2.3vmin;
+  border: 1px solid grey;
+  margin: 0.2vw;
+  padding: 0 0.3vw 2vh;
+  width: 19vw;
+  height: auto;
+}
+
+/********upcoming events panel********/
+#upcoming_events {
+
+}
+
+#up_events {
+
+}
+
+/********submission status panel********/
+#submission_status {
+
+}
+
+#sub_status {
+
+}
