@@ -56,12 +56,31 @@
 
       <!--preview assignment popup table (hidden)-->
       <div id="popup_preview">
+        <div class="sub_stat_container">
+          <nav id="sub_status">
+            <ul>
+
+            </ul>
+          </nav>
+        <button type="submit" name="view_sub" id="view_sub">View Submissions</button>
+        </div>
+        <br>
         <table id="table_preview">
-          
+
         </table>
         <div class="container_buttons">
           <button type="submit" name="back_assign" class="assign_button">Back</button>
           <button type="submit" name="delete_assign" class="assign_button" id="delete_assign">Delete</button>
+        </div>
+      </div>
+
+      <!--preview submissions popup table (hidden)-->
+      <div id="submission_preview">
+        <table id="submission_table_preview">
+
+        </table>
+        <div class="container_buttons">
+          <button type="submit" name="back_submission" class="assign_button">Back</button>
         </div>
       </div>
 
@@ -89,37 +108,10 @@
         <!--action pane with buttons-->
         <div class="middle_action">
           <a href="#"><button type="submit" id="new_note">Add Lecture Notes</button></a>
-          <a href="create-assignment.php"><button type="submit" name="new_assignment">create new assignment</button></a>
+          <a href="create-assignment.php"><button type="submit" name="new_assignment">Create New Assignment</button></a>
         </div>
       </div>
 
-      <!--right column-->
-      <div class="right_column">
-
-        <!--upcoming events panel-->
-        <div id="upcoming_events">
-          <h4>Upcoming Events</h4>
-          <nav id="up_events">
-            <ul>
-              <li>event 1</li>
-              <li>event 2</li>
-            </ul>
-          </nav>
-        </div>
-
-        <!--submission status panel-->
-        <div id="submission_status">
-          <h4>Submission Status</h4>
-          <nav id="sub_status">
-            <ul>
-              <li>total submissions : </li>
-              <li>submitted : </li>
-              <li>late submissions : </li>
-              <li>yet to submit : </li>
-            </ul>
-          <nav>
-        </div>
-      </div>
     </div>
 
     <!--Include footer file-->

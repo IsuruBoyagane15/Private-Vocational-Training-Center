@@ -11,6 +11,7 @@ $( function() {
     });
   } );
 
+
   //load selected module data to the middle body
   $(document).on('click', '.mod_link', function(event) {
 
@@ -24,10 +25,5 @@ $( function() {
     });
   });
 
-  //load upcoming events to the right panel
-
-
-  //load submission details to the right panel
-
-
+  
 } );

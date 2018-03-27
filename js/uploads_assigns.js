@@ -93,7 +93,7 @@ $( function() {
   });
 
 
-  //popup table for view a assignment
+  //popup table for view an assignment
   $(document).on('click', '.assign_path', function() {
     var popup = $('#popup_preview');
     var assignment = $(this).attr('name');
@@ -152,5 +152,55 @@ $( function() {
     $('#popup_preview').hide();
 
   } );
+
+
+  //load assignment status to the popup
+  $(document).on('click', '.assign_path', function() {
+    var assignment = $(this).attr('name');
+
+    // load data into sub. status container
+    $(document).ready( function() {
+      $.ajax({
+        url: "dbOperations/db_submission_status.php",
+        method: "POST",
+        data: {tabname: assignment},
+        success: function(data){
+          $('#sub_status ul').html(data);
+        },
+        error: function(err) {
+          alert(err);
+        }
+      });
+    } );
+
+    //functionality on view submission button////////////////////////
+    $('#view_sub').on('click', function() {
+      var popup_sub = $('#submission_preview');
+
+      //click on back button
+      popup_sub.find('button[name="back_submission"]').on('click', function() {
+        popup_sub.find('#submission_table_preview').empty();
+        popup_sub.hide();
+      });
+
+      $.ajax({
+        url: "dbOperations/db_submission_load.php",
+        method: "POST",
+        data: {tabname: assignment},
+        success: function(data){
+          $('#submission_table_preview').html(data);
+        },
+        error: function(err) {
+          alert(err);
+        }
+      });
+
+      popup_sub.show();
+
+    });
+
+  });
+
+
 
 });
