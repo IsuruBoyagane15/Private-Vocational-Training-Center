@@ -16,6 +16,16 @@
     <!--Including header file-->
     <?php include_once("inc/header.php"); ?>
 
+    <nav class="navigate">
+      <ul>
+        <li><a href="index.php" class="selected">Home</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="courses.php">Courses</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="">#to profile</a></li>
+      </ul>
+    </nav>
+    
     <nav class = "tasks">
         <ul>
             <li><a href="HoI_new_courses.php">New Courses</a></li>
