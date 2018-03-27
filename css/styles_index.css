@@ -16,7 +16,6 @@ PAGE: HOME
   padding: 0;
   width: 700vw;
   margin: 0;
-  padding: 0;
   overflow: hidden;
 }
 
@@ -47,12 +46,13 @@ PAGE: HOME
 /******** paragraph box ********/
 .para_box {
   background-color: inherit;
-  padding: 10px;
-  margin: 10px;
-  width: 100vw;
+  padding: 2vmin;
+  margin: 3vmin 0;
+  width: 95%;
   border-style: groove;
   border-radius: 10px;
   border-color: yellow;
+  font-size: 3vmin;
 }
 
 .para_box h3 {

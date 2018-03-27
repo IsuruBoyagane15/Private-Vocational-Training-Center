@@ -131,6 +131,20 @@ h3, h4 {
   height: 100%;
 }
 
+.sub_stat_container {
+  border: 1px dotted  #aaa;
+}
+
+#sub_status ul{
+  list-style-type: none;
+  margin-left: -30px;
+  color: blue;
+}
+
+#late {
+  color: red;
+}
+
 #table_preview {
   text-align: left;
   font-size: 3vmin;
@@ -179,13 +193,77 @@ h3, h4 {
   margin: 2% 11%;
 }
 
+/********view submission popup table********/
+#submission_preview {
+  display: none;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 90%;
+  height: auto;
+  left: 5%;
+  top: 5%;
+  padding: 6px 5px;
+  box-sizing: border-box;
+  overflow: scroll;
+  height: 95%;
+}
+
+#submission_table_preview {
+  text-align: left;
+  font-size: 3vmin;
+  margin-bottom: 8px;
+  border-collapse: collapse;
+  width: 98%;
+}
+
+#submission_table_preview th {
+  text-align: left;
+  background-color: deepskyblue;
+  color: white;
+}
+
+#submission_table_preview td {
+  vertical-align: top;
+}
+
+.td_late {
+  color: red;
+}
+
+#submission_table_preview th,
+#submission_table_preview td {
+  padding: 5px;
+  border: 2px solid darkblue;
+}
+
+#submission_table_preview tr:nth-child(odd) {
+  background-color: lightgrey;
+}
+
+#submission_table_preview tr:nth-child(even) {
+  background-color: #aaa;
+}
+
+#submission_preview .container_buttons {
+  text-align: center;
+}
+
+#submission_preview button {
+  background-color: deepskyblue;
+  color: darkblue;
+  width: 20vw;
+  height: 5vh;
+  margin: 2% 11%;
+}
+
 /********left column********/
 .left_column {
   float: left;
   border: 1px solid grey;
   margin: 0.2vw;
   padding: 0 0.3vw 2vh;
-  width: 19vw;
+  width: 24vw;
   height: auto;
   font-size: 2.3vmin;
 }
@@ -211,7 +289,7 @@ h3, h4 {
   border: 1px solid grey;
   margin: 0.2vw;
   padding: 0 0.5vw 2vh;
-  width: 56vw;
+  width: 71vw;
   height: auto;
   background-color: white;
   text-align: center;
@@ -301,33 +379,4 @@ button[type="submit"] {
 
 button:hover {
   opacity: 0.7;
-}
-
-/********right column********/
-.right_column {
-  float: left;
-  font-size: 2.3vmin;
-  border: 1px solid grey;
-  margin: 0.2vw;
-  padding: 0 0.3vw 2vh;
-  width: 19vw;
-  height: auto;
-}
-
-/********upcoming events panel********/
-#upcoming_events {
-
-}
-
-#up_events {
-
-}
-
-/********submission status panel********/
-#submission_status {
-
-}
-
-#sub_status {
-
 }

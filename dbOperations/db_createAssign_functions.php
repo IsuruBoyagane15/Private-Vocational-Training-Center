@@ -10,13 +10,14 @@
     return $connection;
   }
 
+
   //close the connection
   function closeConnection($connection) {
     mysqli_close($connection);
   }
 
 
-  //get a available id to create a table
+  //get an available id to create a table
   function getAvailableID($module_name, $assign_name, $deadline="0000-00-00 00:00:00") {
     $conn = createConnection('localhost','root','','configdata');
 
@@ -53,7 +54,44 @@
     return $availableId;
   }
 
-  //create a new table for a assignment
+
+  //create a table in assignment_did_log
+  function createStuTable($id) {
+    $conn = mysqli_connect('localhost', 'root', '', 'assignment_did_log');
+
+    $query = "CREATE TABLE assignment{$id} (
+      student_id INT(7) PRIMARY KEY,
+      student_name VARCHAR(200),
+      total_questions INT(3),
+      correct_answers INT(3),
+      marks VARCHAR(3),
+      timetaken VARCHAR(8),
+      is_late TINYINT(1)
+    )";       //timetaken should be a time field
+    $result = mysqli_query($conn, $query);
+
+    if(!$result) {
+      echo "creating log table failed! " . mysqli_error($conn) . "<br>" ;
+    }
+    mysqli_close($conn);
+  }
+
+
+  //delete a table in assignment_did
+  function deleteStuTable($tablename) {
+    $conn = mysqli_connect('localhost', 'root', '', 'assignment_did_log');
+    $query = "DROP TABLE {$tablename}";
+
+    $result = mysqli_query($conn, $query);
+    if(!$result) {
+      echo "deleting log table failed!" . mysqli_error($conn) . "<br>" ;
+    }
+
+    mysqli_close($conn);
+  }
+
+
+  //create a new table for an assignment
   function createTable($conn, $module_name, $assign_name, $deadline="NULL") {
     $avaiId = getAvailableID($module_name, $assign_name, $deadline, $deadline);
 
@@ -73,6 +111,8 @@
     if(!$result) {
       echo "creating table failed! " . mysqli_error($conn) . "<br>" ;
     }
+    createStuTable($avaiId);
+
     return "assignment{$avaiId}";
   }
 
@@ -82,6 +122,7 @@
     $query = "DROP TABLE {$tablename}";
 
     $result = mysqli_query($conn, $query);
+
     if(!$result) {
       echo "deleting table failed!" . mysqli_error($conn) . "<br>" ;
     }else{
@@ -92,6 +133,9 @@
       if(!$res){
         echo "Error deleting the config record!";
       }
+
+      deleteStuTable($tablename);
+
       mysqli_close($con1);
     }
   }
