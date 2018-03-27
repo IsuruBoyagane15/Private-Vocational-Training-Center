@@ -41,19 +41,19 @@ a:hover{
   color: black;
 }
 
-tasks {
+.tasks  {
   background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
   background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
   background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
   background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-  width: 100vw;
+  width: 100%;
   height: 27vmin;
   min-height: 80px;
 }
 
 .tasks ul {
   margin: 0;
-  padding: 10px;
+  padding-bottom: 20px;
   list-style: none;
   font-size: 4vmin;
   font-weight: 500;
@@ -62,15 +62,16 @@ tasks {
   -moz-justify-content: center;
   -o-justify-content: center;
   text-align: center;
-    background-color: darkblue;
+
 }
 
 .tasks ul li a {
   text-decoration: none;
-  color: lightblue;
+  color: darkblue;
+
 }
 
 .tasks ul li a:hover {
-
-  color: gainsboro;
+  color: gray;
 }
+
