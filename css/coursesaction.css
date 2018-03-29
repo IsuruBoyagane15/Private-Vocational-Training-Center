@@ -1,0 +1,39 @@
+html{
+  width:100vw;
+}
+body{
+  margin: 0vw;
+  background-color: lightyellow;
+  font-family: Arial,Helvetica,sans-serif;
+}
+h2{
+  
+}
+
+.datatable{
+
+  border-collapse:collapse;
+  border-spacing: 0;
+  width:100%;
+  border:2px solid #ddd;
+}
+th,td{
+  text-align:left;
+  padding:16px;
+}
+tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+.btn {
+  background-color:green;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.btn:hover {opacity: 1}

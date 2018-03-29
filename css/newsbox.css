@@ -1,0 +1,11 @@
+.newsbox{
+  position:absolute;
+  right:15px;
+  top:140px;
+  height: 300px;
+  margin:8px;
+  width:45%;
+  border-radius:5px;
+  padding:20px;
+  background-color:grey;
+}
