@@ -4,7 +4,7 @@ FOOTER
 
 .footer {
   width: 100vw;
-  height: 17vmin;
+  height: 18vmin;
   min-height: 70px;
   background: linear-gradient(to right, white 20%, yellow 90%);
   background: -webkit-linear-gradient(to right, white 20%, yellow 90%);
@@ -14,7 +14,7 @@ FOOTER
 
 /******** copyright ownership ********/
 #copyright {
-  padding-top: 10px;
+  padding-top: 0.5vh;
   text-align: center;
   font-size: 3vmin;
   font-weight: bold;
@@ -22,7 +22,7 @@ FOOTER
 
 /******** Social media logos ********/
 .footer .logos_footer {
-  padding: 10px 0 10px 0;
+  padding: 0.5vh 0;
   display: flex;
   display: -webkit-flex;
   display: -moz-flex;

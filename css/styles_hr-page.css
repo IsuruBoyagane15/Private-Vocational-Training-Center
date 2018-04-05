@@ -1,0 +1,255 @@
+/******************************************************
+PAGE: HR
+******************************************************/
+
+/******** Navigation panel ********/
+/***overriding few navigate attributes***/
+.navigate ul {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -o-justify-content: flex-end;
+}
+
+.navigate ul li:last-child {
+  margin-left: inherit;
+}
+
+
+body {
+  display: grid;
+}
+
+/********preview popup box(hidden)********/
+.popup_box {
+  display: none;
+  position: fixed;
+  margin-top: 15vh;
+  margin-left: 5%;
+  width: 90%;
+  height: auto;
+  min-height: 50vh;
+  max-height: 80vh;
+  border: 1px solid grey;
+  background-color: #eee;
+  overflow-y: scroll;
+  padding: 5px;
+}
+
+.popup_data {
+  width: 99%;
+  height: auto;
+  min-height: 40vh;
+  vertical-align: middle;
+}
+
+.pop_btn_container {
+  display: flex;
+  justify-content: center;
+}
+
+.popup_btn {
+  background-color: darkgrey;
+  color: black;
+  margin: 20px 20px;
+  min-width: 150px;
+}
+
+.popup_data dt {
+  display: block;
+  float: left;
+  text-align: left;
+  width: 200px;
+  color: blue;
+}
+
+.popup_data dd {
+  display: block;
+}
+
+.pop_heading {
+  text-align: center;
+  color: blue;
+}
+
+/********confirm dialog box(hidden)********/
+.confirmBox {
+  display: none;
+  background-color: #eee;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 300px;
+  top: 40%;
+  left: 50%;
+  margin-left: -150px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.confirmBox .button {
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+
+.confirmBox .button:hover {
+  background-color: #ddd;
+}
+
+/********Add news popup(hidden)********/
+.upload_popup {
+  display: none;
+  background-color: lightblue;
+  border: 1px solid blue;
+  position: fixed;
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  left: 20%;
+  top: 15%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.upload_popup p {
+  color: blue;
+}
+
+.upload_popup form {
+  margin: 5px;
+  padding: 10px 6px;
+  border: 1px dotted blue;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#news_name {
+  width: 90%;
+}
+
+#news_des {
+  width: 90%;
+}
+
+#year {
+  width: 40px;
+}
+
+.upload_popup input[type="file"] {
+  color: red;
+  padding: 5px;
+  margin: 8px 0;
+}
+
+.button_container input[type="submit"] {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  margin: 8px 3px;
+  width: 35%;
+}
+
+.button_container input[type="submit"]:hover {
+  opacity: 0.7;
+}
+
+/********main body contents********/
+.container {
+  width: 100vw;
+  height: auto;
+  min-height: 70vh;
+  background-color: lightyellow;
+  margin: 0;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+.sm_cont {
+  width: 98%;
+  height: auto;
+  min-height: 20vh;
+  border: 1px dotted black;
+  margin: 10px 2px;
+  padding: 10px;
+}
+
+.sm_cont h4{
+  margin: 0;
+}
+
+button {
+  background-color: dimgrey;
+  color: white;
+}
+
+.no_data {
+  color: grey;
+  font-style: italic;
+}
+
+/********News Panel (not approved yet)********/
+#news_added {
+  color: blue;
+}
+
+#news_added li a {
+  text-decoration: none;
+  color: blue;
+}
+
+#news_added li a:hover {
+  color: orange;
+}
+
+/********Approved news panel********/
+#app_news_added {
+  color: green;
+}
+
+#app_news_added li a {
+  text-decoration: none;
+  color: green;
+}
+
+#app_news_added li a:hover {
+  color: orange;
+}
+
+.preview_source {
+  text-decoration: none;
+  background-color: #2980b9;
+  color: white;
+  padding: 5px 10px;
+  transition-property: background-color;
+  transition-duration: 2s;
+}
+
+
+.preview_source:hover {
+  background-color: darkblue;
+  font-style: italic;
+}
+
+/********Lecture Post/Student Applicants********/
+#lec_apps li a,
+#stud_apps li a {
+  text-decoration: none;
+  color: blue;
+}
+
+#lec_apps li a:hover,
+#stud_apps li a:hover {
+  color: orange;
+}
