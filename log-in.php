@@ -48,7 +48,7 @@
                 <input type="checkbox" name="remember">
                 Remember me
               </label>
-              <button type="submit" name="submit">Login</button>
+              <button type="submit"  name="submit">Login</button>
             </div>
 
           </form>
@@ -57,7 +57,7 @@
         <!--right panel (student login)-->
         <div id="student_login">
             <h2 class="panel_heading">Student Log in</h2>
-            <form action="stdlogin_actionpage.php">
+            <form action="inc/validate.php" method="POST">
 
               <div class="image_container">
                 <img src="img/login/login_student.jfif" alt="Avatar" class="login_photo">

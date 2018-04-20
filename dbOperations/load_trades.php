@@ -20,7 +20,7 @@ while($row=mysqli_fetch_array($result)){
    $output .= (string)$row[0];
    $output .= " '> ";
    $output .= (string)$row[0];
-   $soutput .= " </option> ";
+   $output .= " </option> ";
    //$output .= "<option>opt1</option>";
 }
 

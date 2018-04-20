@@ -1,0 +1,7 @@
+.mod_link{
+  color:black;
+  text-decoration: none;
+}
+.mod_link:hover{
+  color:blue;
+}

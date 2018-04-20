@@ -5,10 +5,13 @@
    <link rel="stylesheet" href="css\courses.css">
    <link rel="stylesheet" href="css\styles_header.css">
    <link rel="stylesheet" href="css\styles_footer.css">
+   <link rel="stylesheet" href="css/navpannel.css">
+   <link rel="stylesheet" href="css/card.css">
 
    <script src="js/jquery-3.3.1.js"></script>
    <script src="js/load_trade.js" type="text/javascript"></script>
    <script src="js/load_courses.js" type="text/javascript"></script>
+   <script src="js/navpannel.js" type="text/javascript"></script>
 
    <title>courses</title>
 
@@ -16,7 +19,8 @@
  <body>
 
    <?php include_once("inc\header.php"); ?>
-   <?php// include_once("inc\iconbar.php");?>
+   <?php include_once("inc/navpannel.php"); ?>
+
 
 
 
@@ -44,7 +48,10 @@
    <div class="newsbox">
     <?php// include_once("inc\newsbox.php");?>
    </div>
+
    <div id="coursetable"></div>
+ 
+
 
 
  </body>

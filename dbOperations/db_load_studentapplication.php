@@ -13,7 +13,9 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully";
 $courseid=$_GET["courseid"];
-$sql="SELECT TRADE,COURSE_NAME,COURSE_TYPE,TYPE FROM COURSE_DETAILS WHERE COURSE_ID=$courseid";
+$courseid=(string)$courseid;
+$courseid=trim($courseid);
+$sql="SELECT TRADE,COURSE_NAME,COURSE_TYPE,TYPE FROM COURSE_DETAILS WHERE COURSE_ID='$courseid'";
 $result=$conn->query($sql);
 $row=mysqli_fetch_array($result);
 $trade=$row[0];
