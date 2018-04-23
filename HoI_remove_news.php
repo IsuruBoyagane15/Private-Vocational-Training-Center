@@ -1,8 +1,8 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "applicantdetails_hrselected");
+$link = mysqli_connect("localhost", "root", "", "news");
 
-$query = "select * from selected_student_details";
+$query = "select * from news";
 $result = mysqli_query($link,$query);
 					 
 
@@ -21,10 +21,10 @@ if($link === false){
     <!--css styles-->
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
-    <link rel="stylesheet" href="css/styles_HoI_registration.css">
+    <link rel="stylesheet" href="css/styles_HoI_remove_news.css">
 	  
 	<script src="js/jquery-3.3.1.js"></script>
-    <script src="js/HoI_registration_buttons.js" type="text/javascript"></script>
+    <script src="js/HoI_remove_news_buttons.js" type="text/javascript"></script>
 
 
 </head> 
@@ -39,7 +39,7 @@ if($link === false){
         <li><a href="news.php">News</a></li>
         <li><a href="courses.php">Courses</a></li>
         <li><a href="about.php">About</a></li>
-        <li><a href="HoI.php">#to profile</a></li>
+        <li><a href="HoI.php">HoI</a></li>
       </ul>
     </nav>
     
@@ -51,41 +51,19 @@ if($link === false){
 	
 	
 	<div class="container">
-		<ul class = "students">
+		<ul class = "news">
 			<div class = "student_container">
-				<li><h4>Selected Students</h4>
-					<table align ="center"  class ="student_table"  >
-						<tr>
-							<th>ID</th>
-							<th>Course</th>
-							<th>Name With Initionals</th>
-							<th>Address</th>
-							<th>Gender</th>
-							<th>Age</th>
-							<th>appplied Date</th>
-							<th>Selected Date</th>
-						</tr>
+				<li><h4>News</h4>
 						<?php
 							while($row = mysqli_fetch_assoc($result)){
-						?>
-						<tr class ="records">	
-							<td><?php echo($row['id']);?></td>
-							<td><?php echo($row['course']);?></td>	
-							<td><?php echo($row['name_with_initials']);?></td>	
-							<td><?php echo($row['address']);?></td>
-							<td><?php echo($row['gender']);?></td>
-							<td><?php echo($row['age']);?></td>
-							<td><?php echo($row['applied_date']);?></td>
-							<td><?php echo($row['selected_date']);?></td>
-						</tr>
-						<tr>
-						
+						?>	
+							//<td><?php echo($row['id']);?></td>
+							
+
 						<?php
 							}
 						?>
-							
-					</table>
-					
+
 									
 				</li>
 			</div>

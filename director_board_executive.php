@@ -27,8 +27,10 @@
         <li><a href="">#to profile</a></li>
       </ul>
     </nav>
+	
     <nav class = "tasks">
-    <a href="create_course.php">Create Course</a>
+    <a href="create_course.php">Create Course</a><br>
+    <a href="modify_course.php">Modify Course</a>
     </nav>
     <!--Include footer file-->
     

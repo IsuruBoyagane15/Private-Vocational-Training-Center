@@ -1,8 +1,8 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "applicantdetails_hrselected");
+$link = mysqli_connect("localhost", "root", "", "news");
 
-$query = "select * from selected_student_details";
+$query = "select * from news";
 $result = mysqli_query($link,$query);
 					 
 
@@ -21,10 +21,10 @@ if($link === false){
     <!--css styles-->
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
-    <link rel="stylesheet" href="css/styles_HoI_registration.css">
+    <link rel="stylesheet" href="css/styles_HoI_remove_news.css">
 	  
 	<script src="js/jquery-3.3.1.js"></script>
-    <script src="js/HoI_registration_buttons.js" type="text/javascript"></script>
+    <script src="js/HoI_remove_news_buttons.js" type="text/javascript"></script>
 
 
 </head> 
@@ -39,7 +39,7 @@ if($link === false){
         <li><a href="news.php">News</a></li>
         <li><a href="courses.php">Courses</a></li>
         <li><a href="about.php">About</a></li>
-        <li><a href="HoI.php">#to profile</a></li>
+        <li><a href="HoI.php">to profile</a></li>
       </ul>
     </nav>
     

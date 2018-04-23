@@ -1,0 +1,226 @@
+.body_navigation {
+  background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  width: 100vw;
+  height: 27vmin;
+  min-height: 80px;
+}
+
+.body_navigation ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  font-size: 4vmin;
+  font-weight: 500;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  text-align: center;
+}
+
+.body_navigation ul li a {
+  text-decoration: none;
+  color: grey;
+}
+
+.body_navigation ul li a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  color: black;
+}
+
+.container{
+	height: auto;
+	padding: 20px;
+	background-color: lightyellow;
+}
+
+.course_container{
+	border : dotted blue;
+	margin :20px;
+}
+
+.ctable {
+
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+	margin-top: 20px
+
+}
+.ctable td, .ctable th {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.ctable tr:nth-child(even){background-color: #f2f2f2;}
+
+.ctable tr:hover {background-color: #ddd;}
+
+.ctable th {
+	border: solid black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #D3D3D3;
+    color: black;
+}
+
+.ctable td{
+	border: solid black;
+	text-align: center;
+}
+
+#modules {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+	margin-top: 20px;
+	margin-bottom:20px;
+
+}
+
+#modules td, #modules th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#modules tr:nth-child(even){background-color: #f2f2f2;}
+
+#modules tr:hover {background-color: #ddd;}
+
+#modules th {
+	border: solid black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #D3D3D3;
+    color: black;
+}
+
+#modules	 td{
+	border: solid black;
+	text-align: center;
+}
+
+
+ ul{
+	list-style-type: none;
+}
+
+.buttons{
+	
+
+	height:50px;
+	margin:5px;
+	padding:5px;
+}
+
+.reject, .approve, .mod{
+	width:33%;
+	height: 30px;
+	justify-content: center;
+	padding:5px 5px;
+	background-color: cadetblue;
+	border-color: azure;
+	
+}
+
+.container .courses .course_container h4{
+	color: cadetblue;
+	text-align: center;
+	font-family: fantasy;
+	font-size: 25px;
+}
+
+.def_buttons{
+	
+	
+	height:50px;
+	margin:100px;
+	padding:5px;
+}
+
+.def 	{
+	width:100%;
+	height: 30px;
+	justify-content: center;
+	padding:5px 5px;
+	background-color:darkturquoise;
+	border-color: azure;
+	align-self: center;
+	
+}
+
+.confirmBox {
+  display: none;
+  background-color: lightyellow;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  position: fixed; top: 50%; left: 50%; width: 600px; height: 100px; margin-left: -300px; margin-top: -200px;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+
+.confirmBox .button {
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+
+.confirmBox .button:hover {
+  background-color: #ddd;
+}
+
+.commentBox {
+  display: none;
+  background-color: lightyellow;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  position: fixed; top: 50%; left: 50%; width: 800px; height: 150px; margin-left: -300px; margin-top: -200px;
+  width: 400px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.commentBox .button {
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: center;
+  width: 150px;
+  cursor: pointer;
+}
+
+.comment{
+	margin: 5px;
+	width:350px;
+	HEIGHT: 50px;
+}
+
+.commentBox .button:hover {
+  background-color: #ddd;
+}
+
+

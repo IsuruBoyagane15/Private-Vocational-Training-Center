@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vocational Training Institute</title>
+    <title>Create Course</title>
 
 
     <link rel="stylesheet" href="css/styles_header.css">
@@ -31,32 +31,101 @@
           
       </ul>
     </nav>
-    
-    <div class = "basic_data">
-      <form action="dbOperations/create_course_db.php " method = "post">
-        <label>Course Name</label><br>
-        <input type="text" id="name" name="name" placeholder="Enter Course Name"><br>
-
-        <label>Number of Students</label><br>
-        <input type="number" id="student_count" name="student_count" placeholder ="Enter Number of Students"><br>
-
-        <label>Duration (Semesters)</label><br>
-        <input type="number" id="duration" name="duration" placeholder = "Enter Number of semesters"><br>
-          
-      </form>
-    </div>
-    
-    
-    
-
-    <div class="confirmBox">
+	
+	<div class="confirmBox">
       <div class="message"></div>
       <span class="button yes">Yes</span>
       <span class="button no">No</span>
     </div>
+    
+    <div class = "basic_data">
+      <form action="dbOperations/create_course_db.php " method = "post">
+		   
+		  
+        <label>Course Name</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter Course Name"><br>
+
+		  
+		  
+        <label>Number of Students</label><br>
+        <input type="number" id="student_count" name="student_count" placeholder ="Enter Number of Students"><br>
+
+		  
+		  
+        <label>Duration (Months)</label><br>
+        <input type="number" id="duration" name="duration" placeholder = "Enter Number of Months"><br>
+        
+		  
+		  
+		<label>Trade</label><br>
+		<input list="trades" placeholder="Enter Trade Field" id = "trade">
+		  <datalist id="trades">
+			<option value="Automobile">
+			<option value="Building & Construction">
+		  </datalist>
+		<br>
+		  
+		  
+          
+		<label>Course Type</label><br>
+        <select id = "course_type" name="course_type" class = "values">
+		  <option value = "" selected>Select Course Type</option>
+          <option value="full" >Full</option>
+          <option value="part">Part</option>
+        </select>
+		<br>
+        
+		  
+		  
+		<label>Type</label><br>
+        <select id = "type" name="type" class = "values">
+			<option value = "" selected>Select Type</option>	  
+        	<option value="NVQ" >NVQ</option>
+            <option value="NON-NVQ">NON-NVQ</option>
+		</select>
+		<br>
+		  
+		  
+		  
+		<label>Accredit Level</label><br>
+        <form>
+		  <input list="accredit_level" name="accredit_level" placeholder="Enter Accredit Level" id = "accredit_level">
+		  <datalist id="accredit_level">
+			<option value="Cetificate">
+			<option value="NVQ">
+			</datalist>
+		</form><br>
+
+		  
+        
+		<label>Medium</label><br>
+        <select id = "medium" name="medium" class = "values">
+		  		<option value = "" selected>Select Medium</option>
+          		<option value="english" >English</option>
+          		<option value="sinhala">Sinhala</option>
+		</select><br>
+        
+		  
+		  
+		<label>Required Qulification </label><br>
+        <form>
+		  <input list="required_qualification" name="required_qualification" placeholder="Enter Required Qualification" id = "required_qualification">
+		  <datalist id="required_qualification">
+			<option value="G.C.E O/L">
+			<option value="G.C.E A/L">
+			</datalist>
+		</form><br>
+          
+		  
+		
+      </form>
+    </div>
+
+    
+	
      
     <div class="container_modules">
-      <nav class="questions">
+      <nav class="modules">
         <ul id="que_list">
 
         </ul>
@@ -69,8 +138,9 @@
       <button type="submit" name="new-question" class="assign_button" id="new-question">Add New Module</button>
       <button type="submit" name="complete" class="assign_button" id="done">Create Course</button>
     </div>
-
-
-    <?php include_once("inc/footer.php"); ?>
+	
+	<div class = "footer">
+    	<?php include_once("inc/footer.php"); ?>
+	</div>
   </body>
 </html>

@@ -8,33 +8,29 @@
     <!--css styles-->
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
-    <link rel="stylesheet" href="css/styles_HoI.css">
+    <link rel="stylesheet" href="css/styles_modify_course.css">
 
 </head>
 <body>
 
     <!--Including header file-->
-    <?php include_once("inc/header.php"); ?>
-
+    <?php 
+    include("inc/header.php");
+    
+    ?>
     <nav class="navigate">
       <ul>
         <li><a href="index.php" class="selected">Home</a></li>
         <li><a href="news.php">News</a></li>
         <li><a href="courses.php">Courses</a></li>
         <li><a href="about.php">About</a></li>
-        <li><a href="HoI.php">#to profile</a></li>
+        <li><a href="">#to profile</a></li>
       </ul>
     </nav>
-    
     <nav class = "tasks">
-        <ul>
-            <li><a href="HoI_new_courses.php">New Courses</a></li>
-            <li><a href="HoI_vacancies.php">Staff Vacancies</a></li>
-            <li><a href="HoI_registration.php">Student Registration</a></li>
-            <li><a href="HoI_recruitment.php">Staff Recruitment</a></li>
-            <li><a href="HoI_remove_news.php">Remove News</a></li>
-        </ul>
+    
     </nav>
+    <!--Include footer file-->
     
     <div class="body_navigation">
       <ul>
@@ -46,7 +42,7 @@
       </ul>
     </div>
 
-    <!--Include footer file-->
+    
     <?php include_once("inc/footer.php"); ?>
 
 </body>
