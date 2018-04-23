@@ -1,10 +1,15 @@
 a:link{    
     text-decoration: none;
+
 }
 a:hover{
     color: darkgray;
 }
 
+.tasks a {
+  text-decoration: none;
+  color: darkblue;
+}
 
 .tasks  {
   background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
@@ -56,3 +61,4 @@ a:hover{
   text-decoration-style: dashed;
   color: black;
 }
+

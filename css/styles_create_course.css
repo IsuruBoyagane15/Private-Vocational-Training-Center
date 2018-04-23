@@ -1,7 +1,3 @@
-html{
-    margin:5px;
-}
-
 .navigate ul {
   justify-content:flex-start;
   -webkit-justify-content: flex-start;
@@ -17,9 +13,8 @@ html{
 
 .container_modules {
   border: 2px solid yellow;
-  margin: 2px;
-  padding: 4px;
-  width: 100%;
+
+  width: 100% ;
   height: auto;
   min-height: 50vh;
   background-color: lightyellow;
@@ -27,12 +22,6 @@ html{
   float: left;
 }
 
-.module_data {
-  text-align:center;
-  padding:inherit;
-  margin: 3vh 1px 10vh;
-  font-size: 4vmin;
-}
 
 .module_data ul {
   list-style-type: decimal-leading-zero;
@@ -43,7 +32,7 @@ html{
 
 /********button container********/
 .container_buttons {
-  width: 100%;
+  width:100%;
   height: auto;
   min-height: 10vh;
   padding: 5px 2px;
@@ -55,7 +44,7 @@ html{
   width: 33%;
 }
 
-/********for all buttons********/
+
 button[type="submit"] {
   color: white;
   padding: 5px;
@@ -69,10 +58,10 @@ button:hover {
 
 .confirmBox {
   display: none;
-  background-color: lightyellow;
+  background-color: #eee;
   border-radius: 5px;
   border: 1px solid #aaa;
-  position:fixed  ;
+  position: fixed;
   width: 300px;
   left: 50%;
   margin-left: -150px;
@@ -85,7 +74,6 @@ button:hover {
   text-align: center;
   margin-bottom: 8px;
 }
-
 
 .confirmBox .button {
   background-color: #ccc;
@@ -102,9 +90,8 @@ button:hover {
   background-color: #ddd;
 }
 
-
 .module_data {
-  width: 95%;
+  width: 90%;
   height: auto;
   border: 1px dotted grey;
   margin: 1vh 0.2vw;
@@ -122,29 +109,35 @@ button:hover {
 
 
 
-.label {
+label {
+  text-align: center;
   color: darkblue;
   width: 100%:
   margin-left: 20px;
 }
 
-.values {
-  width: 25%;
+.module_name, .module_code, .term, .lecturer {
+  width: 50%;
   height: 4vh;
   margin-bottom: 2vh;
   
 }
 
 .basic_data{
-    margin:10px;
+	border-style:inset;
+	border-color: gray;
+	width: 100%;
+	margin-bottom: 10px;
+
+
 }
 
 
 
 .basic_data input[type=text] {
-    width: 100%;
+	margin-left : 5px;
+    width: 97%;
     padding: 12px 20px;
-    margin: 8px 0;
     background-color: yellow;
     border: none;
     border-radius: 4px;
@@ -158,11 +151,10 @@ button:hover {
 
 
 .basic_data input[type=number] {
-    width: 100%;
+    width: 97%;
     background-color: yellow;
     color: black;
     padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -173,10 +165,62 @@ button:hover {
     background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
     }
 
+
+.basic_data input[list]
+{
+  	width: 97%;
+    background-color: yellow;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  	background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+		background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+		background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+}
+
+
+.basic_data datalist	 {
+    width: 97%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: yellow;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
+    background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+    background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+    background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+}
+
+.basic_data select {
+    width: 97%;
+		text-align-last:center;
+		text-align: center;
+    margin: 8px 0;
+    background-color: yellow;
+    border: none;
+    border-radius: 4px;
+		color :gray;
+    box-sizing: border-box;
+    text-align: center;
+    background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
+    background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+    background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+    background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+}
+
+
 .basic_data label{
     font-size: 20px;
     color: black;
     text-align: center;
-    width: 100%;
+    width: 50%;
 }
 

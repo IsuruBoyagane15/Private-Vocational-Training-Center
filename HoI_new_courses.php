@@ -1,0 +1,159 @@
+<?php
+
+$link = mysqli_connect("localhost", "root", "", "course_info");
+
+$query = "select * from courses";
+$result = mysqli_query($link,$query);
+
+						 
+
+if($link === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vocational Training Institute</title> 
+
+    <!--css styles-->
+    <link rel="stylesheet" href="css/styles_header.css">
+    <link rel="stylesheet" href="css/styles_footer.css">
+    <link rel="stylesheet" href="css/styles_HoI_new_courses.css">
+	  
+	<script src="js/jquery-3.3.1.js"></script>
+    <script src="js/HoI_new_courses_buttons.js" type="text/javascript"></script>
+
+
+</head>
+<body>
+
+    <!--Including header file-->
+    <?php include_once("inc/header.php"); ?>
+	
+    <nav class="navigate">
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="courses.php">Courses</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="HoI.php">#to profile</a></li>
+      </ul>
+    </nav>
+    
+	<div class="confirmBox">
+      <div class="message"></div>
+      <span class="button yes">Yes</span>
+      <span class="button no">No</span>
+    </div>
+	
+	<div class="commentBox">
+      <div class="message"></div>
+	  <textarea class="comment" rows="4"></textarea>
+	  <br>
+      <span class="button yes">Add Comment</span>
+      <span class="button no">Cancel</span>
+    </div>	
+	
+	<div class="container">
+		<ul class = "courses">
+			<?php
+				while($row = mysqli_fetch_assoc($result)){
+			?>
+
+			<div class = "course_container">
+				<li><h4><?php echo($row['course_name']);?></h4>
+					<table align ="center"  class ="ctable"  >
+						<tr>
+							<th>Course name</th>
+							<th>Number of students</th>
+							<th>Course Duration</th>
+							<th>Trade</th>
+							<th>Course Type</th>
+							<th>Type</th>
+							<th>Accredit Level</th>
+							<th>Medium</th>
+							<th>Required Qualification</th>
+							<th >ID</th>
+
+						</tr>
+						<tr class ="records">	
+							<td class = "course_name"><?php echo($row['course_name']);?></td>
+							<td class = "student_count"><?php echo($row['student_count']);?></td>	
+							<td class = "duration"><?php echo($row['duration']);?></td>	
+							<td class = "trade"><?php echo($row['trade']);?></td>
+							<td class = "course_type"><?php echo($row['course_type']);?></td>	
+							<td class = "type"><?php echo($row['type']);?></td>
+							<td class = "accredit_level"><?php echo($row['accredit_level']);?></td>
+							<td class = "medium"><?php echo($row['medium']);?></td>
+							<td class = "required_qualification"> <?php echo($row['required_qualification']);?></td>
+							<td class = "course_id"><?php echo($row['id']);?></td>
+						<tr>
+					</table>
+					<?php
+						$cid = mysqli_real_escape_string($link,$row['id']);
+						$query2 = "SELECT modules.* FROM modules where course_id = $cid";
+						$result2 = mysqli_query($link,$query2);	
+
+
+					?>
+					<table align = "center" id = modules>
+							<tr>
+								<th>Module Name</th>
+								<th>Module Code</th>
+								<th>Term</th>
+								<th>Lecturer</th>
+							</tr>
+						<?php
+							while($row2 = mysqli_fetch_assoc($result2)){
+						?>
+							<tr>	
+								<td><?php echo($row2['module_name']);?></td>
+								<td><?php echo($row2['module_code']);?></td>
+								<td><?php echo($row2['term']);?></td>
+								<td><?php echo($row2['lecturer']);?></td>	
+
+							<tr>
+						<?php
+							}
+						?>	
+					</table>
+
+					<div class = "buttons">
+						<button class = "reject">Reject</button>
+						<button class = "mod">Request Modifications</button>
+						<button class = "approve">Approve</button>
+
+					</div>
+
+				</li>
+			</div>
+
+			<?php
+				}
+			?>
+		</ul>
+		
+		<div class="def_buttons">
+			<button class = "def" id = "finish">Finish Now</button>
+		</div>
+	</div>
+	
+    <div class="body_navigation">
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="news.php">News</a></li>
+        <li><a href="courses.php">Courses</a></li>
+        <li><a href="about.php">About</a></li>
+        <li><a href="log-in.php">Log In</a></li>
+      </ul>
+    </div>
+
+    <!--Include footer file-->
+    <?php include_once("inc/footer.php"); ?>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+.body_navigation {
+  background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
+  width: 100%;
+  height: 27vmin;
+  min-height: 80px;
+}
+
+.body_navigation ul {
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  font-size: 4vmin;
+  font-weight: 500;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  text-align: center;
+}
+
+.body_navigation ul li a {
+  text-decoration: none;
+  color: grey;
+}
+
+.body_navigation ul li a:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  color: black;
+}
+
+.container{
+	height: auto;
+	padding: 0px;
+	background-color: lightyellow;
+	margin: 20px;
+}
+
+.student_container{
+	border : dotted blue;
+	margin: 5px;
+}
+
+.student_table {
+
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 15px;
+	padding: 5px;
+
+
+}
+.student_table td, .student_table th {
+    border: 1px black;
+    padding: 2px;
+}
+
+.student_table tr:nth-child(even){background-color: #f2f2f2;}
+
+.student_table tr:hover {background-color: #ddd;}
+
+.student_table th {
+	border: solid black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #D3D3D3;
+    color: black;
+}
+
+.student_table td{
+	border: solid black;
+	text-align: center;
+}
+
+
+
+ ul{
+	list-style-type: none;
+}
+
+
+
+
+.container .students .student_container h4{
+	color: cadetblue;
+	text-align: center;
+	font-family: fantasy;
+	font-size: 25px;
+}
+
+,def_buttons{
+	width:100%;
+	height: auto;
+	margin:20px;
+	padding:10px;
+}
+
+
+.def 	{
+	width:47%;
+	height: 30px;
+	justify-content: center;
+	padding:5px 5px;
+	background-color:darkturquoise;
+	border-color: azure;
+	margin-left: 35px;
+	
+}
+
+.confirmBox {
+  display: none;
+  background-color: lightyellow;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  position: fixed; top: 50%; left: 50%; width: 600px; height: 100px; margin-left: -300px; margin-top: -200px;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+
+.confirmBox .button {
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+
+.confirmBox .button:hover {
+  background-color: #ddd;
+}
+

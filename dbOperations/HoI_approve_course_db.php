@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "course_info");
+$link = mysqli_connect("localhost", "root", "", "active_course_info");
 
 
 if($link === false){
@@ -17,19 +17,15 @@ if($link === false){
     $accredit_level = $_POST["accredit_level"];
     $medium = $_POST["medium"];
     $required_qualification = $_POST["required_qualification"];
+    $id = $_POST["course_id"];
 
 		
-    $sql = "INSERT INTO courses (course_name, student_count, duration, trade, course_type, type, accredit_level, medium,required_qualification) VALUES ('$course_name', '$student_count', '$duration','$trade','$course_type','$type','$accredit_level','$medium','$required_qualification' )";
+    $sql = "INSERT INTO courses (course_name, student_count, duration, trade, course_type, type, accredit_level, medium,required_qualification,id) VALUES ('$course_name', '$student_count', '$duration','$trade','$course_type','$type','$accredit_level','$medium','$required_qualification', '$id', )";
     if(mysqli_query($link, $sql)){
         echo "Records inserted successfully.";
     } else{
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
     }
-
-	session_start();
-        $idrow = mysqli_query($link, "SELECT * FROM courses ORDER BY id DESC LIMIT 1");
-		$id = mysqli_fetch_row($idrow);
-		$_SESSION['id'] = $id[9];
 
 mysqli_close($link);
 
