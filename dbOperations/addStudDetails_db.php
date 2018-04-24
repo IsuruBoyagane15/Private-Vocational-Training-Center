@@ -5,28 +5,26 @@ $conn = mysqli_connect("localhost", "root", "", "applicantdetails");
 $course = $_POST['course'];
 $fullname = $_POST['fullname'];
 $address = $_POST['address'];
-$nic = $_POST['nicno'];
-$mobile = $_POST['mob'];
+$nic = $_POST['nic'];
+$mobile = $_POST['mobile'];
 $dob = $_POST['dob'];
 $gender = $_POST['gender'];
-$year_o/l = $_POST['year_ol'];
-$index_o/l = $_POST['indexno_1'];
-$maths = $_POST['mathematics'];
+$year_ol = $_POST['year_ol'];
+$index_ol = $_POST['index_ol'];
+$maths = $_POST['maths'];
 $english = $_POST['english'];
 $science = $_POST['science'];
 $ict = $_POST['ict'];
-$year_a/l = $_POST['year_al'];
-$index_a/l = $_POST['indexno_2'];
+$year_al = $_POST['year_al'];
+$index_al = $_POST['index_al'];
 $stream = $_POST['stream'];
+$degree = $_POST['degree'];
 
+$query = "INSERT INTO lecturer_details (course,fullname,address,nic,mobile,date_of_birth,gender,year_of_ol,index_ol,
+  maths,english,science,ict,year_of_al,index_al,stream,degree) VALUES
+('$course','$fullname','$address','$nic','$mobile','$dob','$gender','$year_ol','$index_ol','$maths','$english',
+  '$science','$ict','$year_al','$index_al','$stream','$degree')";
 
-//////////////
-
-
-$query = "INSERT INTO student_details (selected_course,name,address,nic,mob_no,dob,gender,yearof_ol,index_ol,
-  maths,english,science,ict,yearof_al,index_al,stream,) VALUES
-($course,$fullname,$address,$nic,$mobile,$dob,$gender,$year_ol,$indexno_1,$mathematics,$english,
-  $science,$ict,$year_al,$indexno_2,$stream)";
 $result = mysqli_query($conn, $query);
 
 if(!$result) {
