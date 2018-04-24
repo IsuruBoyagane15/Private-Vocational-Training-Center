@@ -28,18 +28,18 @@
 <form action="dbOperations/addStudDetails_db.php" method="POST"><font face ="Andalus">
 <ol>
 <li>Course :<select name="course">
-<option value= "1">Automobile Repair and Maintainance </option>
-<option value= "2">Building and Constructions</option>
-<option value= "3">Agriculture Plantation and Livestock</option>
-<option value= "4" selected >Electrical and Electronic Telecommunication</option>
-<option value= "5" >Fisheries & Aquaculture</option>
-<option value= "6" >Food Technology</option>
-<option value= "7" >Hotel and Tourism</option>
-<option value= "8" >Information Communication and Multimedia Technology</option>
-<option value= "9" >Metal and Light Engineering</option>
-<option value= "10" >Wood Related</option>
-<option value= "11" >Textile and Garments</option>
-<option value= "12" >Other</option>
+<option value= "Automobile Repair and Maintainance">Automobile Repair and Maintainance </option>
+<option value= "Building and Constructions">Building and Constructions</option>
+<option value= "Agriculture Plantation and Livestock">Agriculture Plantation and Livestock</option>
+<option value= "Electrical and Electronic Telecommunication" selected >Electrical and Electronic Telecommunication</option>
+<option value= "Fisheries & Aquaculture" >Fisheries & Aquaculture</option>
+<option value= "Food Technology" >Food Technology</option>
+<option value= "Hotel and Tourism" >Hotel and Tourism</option>
+<option value= "Information Communication and Multimedia Technology" >Information Communication and Multimedia Technology</option>
+<option value= "Metal and Light Engineering" >Metal and Light Engineering</option>
+<option value= "Wood Related" >Wood Related</option>
+<option value= "Textile and Garments" >Textile and Garments</option>
+<option value= "Other" >Other</option>
 </select></li><br><br>
 
 <li>Full Name :<input type="text" name="fullname"></li><br>
@@ -48,6 +48,7 @@
 <li>Email :<input type="text" name="email"></li><br>
 <li>Mobile Number :<input type="text" name="mob"></li><br>
 <li>Date of Birth :<input type="text" name="dob"></li><br>
+<li>Higher Education Qualifications :<input type="text" name="degrees"></li><br>
 
 <li>Gender :
 <input type="radio" name="gender" value="f">Female</input>
@@ -58,47 +59,47 @@
 <li>GCE O/L :</li><br>
 Year :
 <select name="year_ol">
-<option value= "1" >2010</option>
-<option value= "2" >2011</option>
-<option value= "3" >2012</option>
-<option value= "4" >2013</option>
-<option value= "5" >2014</option>
-<option value= "6" >2015</option>
-<option value= "7" >2016</option>
-<option value= "8" selected >2017</option>
+<option value= "2010" >2010</option
+<option value= "2011" >2011</option>
+<option value= "2012" >2012</option>
+<option value= "2013" >2013</option>
+<option value= "2014" >2014</option>
+<option value= "2015" >2015</option>
+<option value= "2016" >2016</option>
+<option value= "2017" selected >2017</option>
 </select>
 Index Number :<input type="text" name="indexno1">
 Mathematics :
 <select name="mathematics">
-<option value= "1" >A</option>
-<option value= "2" >B</option>
-<option value= "3" selected>C</option>
-<option value= "4" >S</option>
-<option value= "5" >W</option>
+<option value= "A" >A</option>
+<option value= "B" >B</option>
+<option value= "C" selected>C</option>
+<option value= "S" >S</option>
+<option value= "W" >W</option>
 </select>
 English :
 <select name="english">
-<option value= "1" >A</option>
-<option value= "2" >B</option>
-<option value= "3" selected>C</option>
-<option value= "4" >S</option>
-<option value= "5" >W</option>
+<option value= "A" >A</option>
+<option value= "B" >B</option>
+<option value= "C" selected>C</option>
+<option value= "S" >S</option>
+<option value= "W" >W</option>
 </select>
 Science :
 <select name="science">
-<option value= "1" >A</option>
-<option value= "2" >B</option>
-<option value= "3" selected>C</option>
-<option value= "4" >S</option>
-<option value= "5" >W</option>
+<option value= "A" >A</option>
+<option value= "B" >B</option>
+<option value= "C" selected>C</option>
+<option value= "S" >S</option>
+<option value= "W" >W</option>
 </select>
 ICT(If done) :
 <select name="ict">
-<option value= "1" >A</option>
-<option value= "2" >B</option>
-<option value= "3" selected>C</option>
-<option value= "4" >S</option>
-<option value= "5" >W</option>
+<option value= "A" >A</option>
+<option value= "B" >B</option>
+<option value= "C" selected>C</option>
+<option value= "S" >S</option>
+<option value= "W" >W</option>
 </select>
 <br><br>
 
@@ -106,22 +107,22 @@ ICT(If done) :
 <li>GCE A/L :</li><br>
 Year :
 <select name="year_al">
-<option value= "1" >2012</option>
-<option value= "2" >2013</option>
-<option value= "3" >2014</option>
-<option value= "4" >2015</option>
-<option value= "5" >2016</option>
-<option value= "6" selected>2017</option>
+<option value= "2012" >2012</option>
+<option value= "2013" >2013</option>
+<option value= "2014" >2014</option>
+<option value= "2015" >2015</option>
+<option value= "2016" >2016</option>
+<option value= "2017" selected>2017</option>
 </select>
 Index Number :<input type="text" name="indexno2">
 Stream :
 <select name="stream">
-<option value= "1" >Arts</option>
-<option value= "2" >Commerce</option>
-<option value= "3" selected>Physical Science</option>
-<option value= "4" >Bio Science</option>
-<option value= "5" >Technology</option>
-<option value= "6" >IT</option>
+<option value= "Arts" >Arts</option>
+<option value= "Commerce" >Commerce</option>
+<option value= "Physical Science" selected>Physical Science</option>
+<option value= "Bio Science" >Bio Science</option>
+<option value= "Technology" >Technology</option>
+<option value= "IT" >IT</option>
 </select></ul>
 <br><br><br>
 
