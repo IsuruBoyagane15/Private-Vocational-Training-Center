@@ -1,4 +1,4 @@
-<?php
+ <?php
 
   // insert a log into database about uploaded file
   function addLog($filename, $module, $filepath){

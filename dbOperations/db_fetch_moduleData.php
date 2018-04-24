@@ -6,10 +6,10 @@
   // get relevent id from a link click
   $id = $_POST['id'];
 
-  $connection = mysqli_connect("localhost", "root", "", "test");
+  $connection = mysqli_connect("localhost", "root", "", "modules");
 
   //get module name, code and description from the database
-  $query = "SELECT modname,modcode,moddetails FROM module_names WHERE id={$id}";
+  $query = "SELECT module_name,module_code,module_details FROM modules WHERE module_code='2m1'";
   $result = mysqli_query($connection, $query);
   $row = mysqli_fetch_array($result);
 
