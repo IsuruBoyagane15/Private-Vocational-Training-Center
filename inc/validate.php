@@ -31,6 +31,6 @@
      $_SESSION['flash_error']="invalid user name or password";
      $_SESSION['signed_in']=false;
      $_SESSION['username']=null;
-     header("Location:/GitHub/Private-Vocational-Training-Center/log-in.php");
+     header("Location:/VTI/Private-Vocational-Training-Center/log-in.php");
    }
    ?>
