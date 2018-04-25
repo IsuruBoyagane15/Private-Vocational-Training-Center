@@ -1,6 +1,5 @@
 $(function(){
   $(document).ready(function(){
-    alert("Hello");
     var index=$("#index").val();
     $.ajax({
       url: "dbOperations/db_load_modules.php?index="+index,

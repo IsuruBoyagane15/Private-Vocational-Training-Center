@@ -24,7 +24,7 @@
      $_SESSION['signed_in']=true;
      $_SESSION['username']=$username;
      $conn->close();
-     header("Location:/GitHub/Private-Vocational-Training-Center/student_profile.php?index=$username");
+     header("Location:/Github/Private-Vocational-Training-Center/student_profile.php?index=$username");
    }
    else{
      $conn->close();

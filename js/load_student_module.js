@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  alert("Yess");
   var module_id=$("#mo_id").val();
   var index=$("#index").val();
   $.ajax({

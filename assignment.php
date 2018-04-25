@@ -34,9 +34,7 @@
      <div class="asscontainer">
          <table id="statustable"></table>
      </div><br><br>
-     <div class="asscontainer"><br><br>
-           <button class="button" onClick="return addSubmission">Add Submission</button><br><br>
-           <button class="button" onClick="return editSubmission">Edit Submission</button>
+     <div class="asscontainer" id="butt"><br><br>
 
      </div>
 
