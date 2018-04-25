@@ -2,6 +2,7 @@
 
 <?php
   $tablename = $_POST['tabname'];
+  
 
   $connection = mysqli_connect("localhost", "root", "", "assignments");
   $query = "SELECT * FROM {$tablename}";

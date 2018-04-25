@@ -43,4 +43,14 @@ $(document).ready(function(){
       alert(error);
     }
   });
+  $.ajax({
+    url: "dbOperations/db_load_button.php?module_id="+module_id+"&ass_id="+ass_id+"&index="+index,
+    method: "POST",
+    success: function(data){
+      $('#butt').html(data);
+    },
+    error: function(error){
+      alert(error);
+    }
+  });
 });

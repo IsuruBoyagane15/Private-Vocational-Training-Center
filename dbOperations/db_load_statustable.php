@@ -61,11 +61,13 @@ $due_date=date_create($row[0]);
 $due_date=date_format($due_date,"r");
 $output.='<tr><th>Due date</th><td>'.$due_date.'</td></tr>';
 $today = date("Y-m-d H:i:s");
+$today=date_create($today);
+$today=date_format($today,"r");
 if($today<$due_date){
   $output.='<tr><th>Time Remaining</th><td>Still time remaining</td></tr>';
 }
 else{
-  $output.='<tr><th>Time Remaining</th><td>assignemnt is overdue</td></tr>';
+  $output.='<tr><th>Time Remaining</th><td>assignment is overdue</td></tr>';
 }
 $output.='<tr><th>Last modified</th><td></td></tr>';
 $output.='<tr><th>File Submissions</th><td></td></tr>';
