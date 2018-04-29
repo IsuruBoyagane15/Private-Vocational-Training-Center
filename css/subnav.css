@@ -1,0 +1,38 @@
+.subnav{
+   margin-left: 80%;
+}
+.text{
+}
+h1{
+  color:blue;
+}
+.dropbtn{
+  background-color: #333;
+  color:white;
+  cursor:pointer;
+  opacity:0.7;
+  width:10%;
+}
+.dropbtn:hover{
+  opacity:1;
+}
+.dropdown-content{
+  display:none;
+  position:absolute;
+  background-color: #333;
+  min-width:160px;
+  overflow:auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index:1;
+}
+.dropdown-content a{
+  color:white;
+  padding:12px 16px;
+  display:block;
+  text-decoration: none;
+}
+.dropdown a:hover{background-color:green;
+}
+.show{
+  display:block;
+}

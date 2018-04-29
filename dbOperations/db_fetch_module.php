@@ -1,9 +1,9 @@
 <!-- Adding relevent module codes to the left panel -->
 
 <?php
-  $connection = mysqli_connect("localhost", "root", "", "test");
+  $connection = mysqli_connect("localhost", "root", "", "COURSES_DETAILS");
   $output = '';
-  $query = "SELECT id,modcode FROM module_names";
+  $query = "SELECT module_id,module_name FROM module_details";
   $result = mysqli_query($connection, $query);
 
   while( $row = mysqli_fetch_array($result) ){

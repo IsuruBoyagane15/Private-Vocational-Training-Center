@@ -64,6 +64,7 @@ tr:nth-child(even){
   margin: 4px 2px;
   opacity: 0.6;
   transition: 0.3s;
+  align-self: flex-end;
 }
 
 .btn:hover {opacity: 1}

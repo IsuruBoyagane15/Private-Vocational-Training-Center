@@ -2,8 +2,8 @@
 <!-- load module names to the note_upload popup -->
 
 <?php
-  $connection = mysqli_connect("localhost", "root", "", "test");
-  $query = "SELECT modname FROM module_names";
+  $connection = mysqli_connect("localhost", "root", "", "COURSES_DETAILS");
+  $query = "SELECT module_name FROM module_details";
   $result = mysqli_query($connection, $query);
   $output = '<select class="label" id="module_name">';
 
