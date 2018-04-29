@@ -107,8 +107,8 @@ $('#done').on('click', function() {
 					alert('Module Name can not be left blank...!');
 				}
 			
-				else if($.trim($(this).find('.module_code').val()) == ''){
-					alert('Module Code can not be left blank...!');
+				else if($.trim($(this).find('.description').val()) == ''){
+					alert('Description can not be left blank...!');
 				}
 			
 				else if($(this).find('.term').val() == ""){
@@ -125,10 +125,33 @@ $('#done').on('click', function() {
 			});
 			
 			if (is_done==="YES"){
+				var course_name = $('#name').val();
+				var student_count = $('#student_count').val();
+				var duration = $('#duration').val();
+				var trade = $('#trade').val();
+				var course_type = $('#course_type').val();
+				var type = $('#type').val();
+				var accredit_level = $('#accredit_level').val();
+				var medium = $('#medium').val();
+				var required_qualification = $('#required_qualification').val();
+
+
+			  	$.ajax( {
+
+						url: "dbOperations/create_course_db.php",
+						type: "POST",
+						data: {course_name : course_name, student_count : student_count, duration : duration,  trade : trade, course_type:  course_type, type:type, accredit_level: accredit_level,  medium: medium,  required_qualification:required_qualification},
+
+						success:function(data){
+							alert("New course was created successfully...!");
+							window.location.href = "director_board_executive.php";
+						}
+
+					});
 				
 				module_list.each(function(index, element){	
 						var module_name = $(this).find('.module_name').val();
-						var module_code = $(this).find('.module_code').val();
+						var description = $(this).find('.description').val();
 						var term = $(this).find('.term').val();
 						var lecturer = $(this).find('.lecturer').val();
 
@@ -137,7 +160,7 @@ $('#done').on('click', function() {
 
 							url: "dbOperations/create_modules_db.php",
 							type: "POST",
-							data: {module_name : module_name, module_code : module_code, term : term, lecturer : lecturer, },
+							data: {module_name : module_name, description : description, term : term, lecturer : lecturer, },
 
 							success:function(data){
 								alert("New module was created...!");
@@ -148,29 +171,6 @@ $('#done').on('click', function() {
 						});
 					}); 
 					
-					var course_name = $('#name').val();
-					var student_count = $('#student_count').val();
-					var duration = $('#duration').val();
-					var trade = $('#trade').val();
-					var course_type = $('#course_type').val();
-					var type = $('#type').val();
-					var accredit_level = $('#accredit_level').val();
-					var medium = $('#medium').val();
-					var required_qualification = $('#required_qualification').val();
-
-
-				  $.ajax( {
-
-						url: "dbOperations/create_course_db.php",
-						type: "POST",
-						data: {course_name : course_name, student_count : student_count, duration : duration, trade : trade, course_type:  course_type, type:type, accredit_level: accredit_level, medium: medium,  required_qualification:required_qualification},
-
-						success:function(data){
-							alert("New course was created successfully...!");
-							window.location.href = "director_board_executive.php";
-						}
-
-					 });
 		
   					
      			} 

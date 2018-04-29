@@ -14,9 +14,9 @@
 <body>
 
     <!--Including header file-->
-    <?php 
+    <?php
     include("inc/header.php");
-    
+
     ?>
     <nav class="navigate">
       <ul>
@@ -27,24 +27,14 @@
         <li><a href="">#to profile</a></li>
       </ul>
     </nav>
-	
+
     <nav class = "tasks">
     <a href="create_course.php">Create Course</a><br>
-    <a href="modify_course.php">Modify Course</a>
     </nav>
     <!--Include footer file-->
-    
-    <div class="body_navigation">
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="courses.php">Courses</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="log-in.php">Log In</a></li>
-      </ul>
-    </div>
 
-    
+
+
     <?php include_once("inc/footer.php"); ?>
 
 </body>
