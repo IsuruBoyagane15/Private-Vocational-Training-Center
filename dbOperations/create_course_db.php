@@ -6,8 +6,8 @@ $link = mysqli_connect("localhost", "root", "", "course_info");
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-	
-   
+
+
     $course_name =$_POST["course_name"] ;
     $student_count = $_POST["student_count"];
     $duration = $_POST["duration"];
@@ -18,7 +18,7 @@ if($link === false){
     $medium = $_POST["medium"];
     $required_qualification = $_POST["required_qualification"];
 
-		
+
     $sql = "INSERT INTO courses (course_name, student_count, duration, trade, course_type, type, accredit_level, medium,required_qualification) VALUES ('$course_name', '$student_count', '$duration','$trade','$course_type','$type','$accredit_level','$medium','$required_qualification' )";
     if(mysqli_query($link, $sql)){
         echo "Records inserted successfully.";
@@ -28,8 +28,8 @@ if($link === false){
 
 	session_start();
         $idrow = mysqli_query($link, "SELECT * FROM courses ORDER BY id DESC LIMIT 1");
-		$id = mysqli_fetch_row($idrow);
-		$_SESSION['id'] = $id[9];
+		    $id = mysqli_fetch_row($idrow);
+		    $_SESSION['id'] = $id[9];
 
 mysqli_close($link);
 

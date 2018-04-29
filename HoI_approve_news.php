@@ -8,10 +8,10 @@
      <!--css styles-->
      <link rel="stylesheet" href="css/styles_header.css">
      <link rel="stylesheet" href="css/styles_footer.css">
-     <link rel="stylesheet" href="css/styles_HoI_remove_news.css">
+     <link rel="stylesheet" href="css/styles_HoI_approve_news.css">
 
  	<script src="js/jquery-3.3.1.js"></script>
-     <script src="js/HoI_remove_news_buttons.js" type="text/javascript"></script>
+     <script src="js/HoI_approve_news_buttons.js" type="text/javascript"></script>
 
 
  </head>
@@ -19,7 +19,7 @@
 
      <!--Including header file-->
      <?php include_once("inc/header.php"); ?>
-     <?php include_once("dbOperations/HoI_remove_news_db.php"); ?>
+     <?php include_once("dbOperations/HoI_approve_news_db.php"); ?>
 
      <nav class="navigate">
        <ul>
@@ -47,6 +47,11 @@
  				<li>
           <div class="news_items" style="display: block;">
             <div class="basic_data">
+              <label class = "title">ID</label>
+              <br>
+              <div class = "value_box">
+                <label class = "ids"><?php echo $row["id"] ?></label>
+              </div>
               <label class = "title">Name</label>
               <br>
               <div class = "value_box">
@@ -78,8 +83,8 @@
             </div>
 
             <div class="button_container">
-              <button class="remove">Remove News Item</button>
-
+              <button class="approve">Approve</button>
+              <button class="reject">Reject</button>
             </div>
            </div>
  				</li>
