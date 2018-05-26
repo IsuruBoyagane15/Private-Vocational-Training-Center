@@ -2,6 +2,8 @@ var queId = 0;
 
 $(function() {
   var $queList = $('#que_list');
+  var box = $(".container_modules");
+  box.show();
 
   $('#new-question').on('click', function() {
     $queList.append('\
@@ -13,11 +15,6 @@ $(function() {
       \
       </div>\
       \
-      <div class="data">\
-        <label class="label">Module Code</label><br>\
-        <input type="text" name="module_code" class="module_code" id="module_code">\
-        \
-      </div>\
       \
       <div class="data">\
         <label class="label">Term</label><br>\
@@ -33,6 +30,11 @@ $(function() {
           <option value="lecturer4">lecturer3</option>\
           <option value="lecturer3">lecturer4</option>\
         </select>\
+      </div>\
+	  <div class="data">\
+        <label class="label">Description</label><br>\
+        <textarea name="description" class="description" id="description" rows= "4"></textarea>\
+      \
       </div>\
       \
       <button type="submit" name="que_remove" class="que_remove">Remove Module</button>\

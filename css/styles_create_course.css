@@ -12,44 +12,62 @@
 
 
 .container_modules {
-  border: 2px solid yellow;
+	display: none;
+/*
+	margin:10px;
+	margin-left: 20%;
+	margin-right:20%;
+*/
+	padding:10px;
+	background-color:#64706c	;
 
-  width: 100% ;
-  height: auto;
-  min-height: 50vh;
-  background-color: lightyellow;
-  text-align: center;
-  float: left;
+}
+
+.module_data {
+	margin:20px;
+	margin-left: 5%;
+	margin-right:10%;
+	padding-bottom:60px;
+	padding-top:60px;
+	background-color:#424242;
+/*	border-radius: 10px;*/
+
 }
 
 
-.module_data ul {
-  list-style-type: decimal-leading-zero;
-  font-size: 5vmin; 
+.modules ul {
+   list-style-type : none;
 }
 
+.module_data label{
+    color:black;
+	padding-bottom: 10px;
+	margin: 20%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
 
-
-/********button container********/
 .container_buttons {
-  width:100%;
-  height: auto;
-  min-height: 10vh;
-  padding: 5px 2px;
+
+	padding: 10px;
+	/*
+	margin-left: 20%;
+	margin-right: 20%;
+*/
+	background-color: #64706c;
+
 }
 
 .assign_button {
-  background-color: orange;
-  margin: 8px 0;
-  width: 33%;
+	width:33%;
+/*	border-radius: 5px;*/
+	height: 30px;
+	background-color: #3b3a36;
+	border-style: hidden;
 }
 
 
 button[type="submit"] {
-  color: white;
-  padding: 5px;
-  font-size: 3vmin;
-  float: left;
+  width : 33%;
 }
 
 button:hover {
@@ -58,11 +76,11 @@ button:hover {
 
 .confirmBox {
   display: none;
-  background-color: #eee;
-  border-radius: 5px;
-  border: 1px solid #aaa;
+  background-color: #c0dfd9;
+/*  border: 1px solid #aaa;*/
   position: fixed;
   width: 300px;
+  height: 100px;
   left: 50%;
   margin-left: -150px;
   padding: 6px 8px 8px;
@@ -76,151 +94,80 @@ button:hover {
 }
 
 .confirmBox .button {
-  background-color: #ccc;
+  background-color: #b3c2bf;
   display: inline-block;
-  border-radius: 3px;
+/*  border-radius: 3px;*/
   border: 1px solid #aaa;
-  padding: 2px;
+  padding: 5px;
   text-align: center;
   width: 80px;
   cursor: pointer;
 }
 
 .confirmBox .button:hover {
-  background-color: #ddd;
-}
 
-.module_data {
-  width: 90%;
-  height: auto;
-  border: 1px dotted grey;
-  margin: 1vh 0.2vw;
-  padding: 2vh 1vw;
-  float: left;
 }
-
 
 
 .que_remove {
-  background-color: blue;
-  margin: 5% 26%;
-  width: 50%;
+	background-color: #b3c2bf;
+	margin-left: 33%;
+	margin-right: 27%;
+/*	border-radius: 5px;*/
+	height: 30px;
+	border-style: hidden;
 }
 
 
+.module_name, .term, .lecturer {
+    margin-left: 23%;
+	margin-bottom: 20px;
+/*	border-radius: 5px;*/
+	height :30px;
+	width : 52%;
+	background-color:#c9c9c9;
+	border-style: hidden;
 
-label {
-  text-align: center;
-  color: darkblue;
-  width: 100%:
-  margin-left: 20px;
 }
 
-.module_name, .module_code, .term, .lecturer {
-  width: 50%;
-  height: 4vh;
-  margin-bottom: 2vh;
-  
+.description{
+	margin-left: 23%;
+	margin-bottom: 20px;
+/*	border-radius: 5px;*/
+	height :60px;
+	width : 52%;
+	background-color:#c9c9c9;
+	border-style: hidden;
 }
 
 .basic_data{
-	border-style:inset;
-	border-color: gray;
-	width: 100%;
-	margin-bottom: 10px;
-
+/*
+	margin:10px;
+	margin-left: 20%;
+	margin-right:20%;
+*/
+	padding:30px;
+	background-color:#3b3a36;
 
 }
 
 
-
-.basic_data input[type=text] {
-	margin-left : 5px;
-    width: 97%;
-    padding: 12px 20px;
-    background-color: yellow;
-    border: none;
-    border-radius: 4px;
-    box-sizing: border-box;
-    text-align: center;
-    background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-}
-
-
-.basic_data input[type=number] {
-    width: 97%;
-    background-color: yellow;
-    color: black;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    }
-
-
-.basic_data input[list]
-{
-  	width: 97%;
-    background-color: yellow;
-    color: black;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    text-align: center;
-    background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
-  	background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-		background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-		background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-}
-
-
-.basic_data datalist	 {
-    width: 97%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    background-color: yellow;
-    border: none;
-    border-radius: 4px;
-    box-sizing: border-box;
-    text-align: center;
-    background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-}
-
-.basic_data select {
-    width: 97%;
-		text-align-last:center;
-		text-align: center;
-    margin: 8px 0;
-    background-color: yellow;
-    border: none;
-    border-radius: 4px;
-		color :gray;
-    box-sizing: border-box;
-    text-align: center;
-    background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-    background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
-}
+.basic_data input[type=number] ,.basic_data input[list] , .basic_data datalist, .basic_data select,.basic_data input[type=text]{
+    margin-left: 25%;
+	margin-bottom: 20px;
+/*	border-radius: 5px;*/
+	height :30px;
+	width : 50%;
+	background-color:#c9c9c9;
+	border-style: hidden;
+	color:#5a5c51;
+ }
 
 
 .basic_data label{
-    font-size: 20px;
-    color: black;
-    text-align: center;
-    width: 50%;
+    color:#c0dfd9;
+	margin-bottom: 10px;
+	margin: 20%;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-style: hidden;
 }
-

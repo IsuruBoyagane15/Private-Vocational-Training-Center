@@ -1,13 +1,12 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "active_course_info");
+    $link = mysqli_connect("localhost", "root", "", "courses_details");
 
 
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
-	
-   
+    if($link === false){
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+    }
+
     $course_name =$_POST["course_name"] ;
     $student_count = $_POST["student_count"];
     $duration = $_POST["duration"];
@@ -17,17 +16,21 @@ if($link === false){
     $accredit_level = $_POST["accredit_level"];
     $medium = $_POST["medium"];
     $required_qualification = $_POST["required_qualification"];
-    $id = $_POST["course_id"];
+    $course_id = $_POST["course_id"];
 
-		
-    $sql = "INSERT INTO courses (course_name, student_count, duration, trade, course_type, type, accredit_level, medium,required_qualification,id) VALUES ('$course_name', '$student_count', '$duration','$trade','$course_type','$type','$accredit_level','$medium','$required_qualification', '$id', )";
+    $zeros = 3-strlen("$course_id");
+    $id = "C".str_repeat("0",$zeros)."$course_id";
+    echo $id;
+
+
+    $sql = "INSERT INTO course_details (id,trade,course_name,course_type, type, accredit_level, duration,   medium,required_qualification,student_count,) VALUES ('$id', '$trade', '$course_name', '$course_type', '$type', '$accredit_level', '$duration', '$medium', '$required_qualification', '$student_count')";
     if(mysqli_query($link, $sql)){
         echo "Records inserted successfully.";
     } else{
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
     }
 
-mysqli_close($link);
+    mysqli_close($link);
 
 
 ?>
