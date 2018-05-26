@@ -1,0 +1,49 @@
+.submission_window{
+  display: block;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: lightgreen;
+  border-color: lightgrey;
+  height:auto;
+  width:95%;
+  transition: 0.3s;
+  box-shadow: 1px solid grey;
+  margin-right: 5px;
+  margin-left: 30px;
+  padding:10px;
+
+
+}
+.question{
+   padding:5px;
+}
+.option{
+  text-indent: 40px;
+  padding: 20px;
+}
+tr:nth-child(even){
+  background-color:rgba(0,255,0,0.4);
+
+}
+.dtable{
+
+  border-collapse:collapse;
+  border-spacing: 0;
+  width:100%;
+  background-color: lightgreen;
+}
+.butn{
+   display:block;
+   border-radius: 5px;
+   border-color: lightgrey;
+   background-color: rgba(128,128,128,0.3);
+   width:auto;
+   height:40px;
+   justify-content: center;
+   margin-left:89.5%;
+   font-weight:500;
+   font-size: 100%;
+}
+.butn:hover{
+  background-color: rgba(128,128,128,0.7);
+}

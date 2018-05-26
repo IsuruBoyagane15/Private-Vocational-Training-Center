@@ -34,10 +34,10 @@ $result=$conn->query($sql);
 $output="";
 $conn->close();
 if(!empty($result)){
-  $output.='<br><br><button class="button">Edit Submisson</button>';
+  $output.='<br><br><button onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'"class="button">Edit Submisson</button>';
 }
 else{
-  $output.='<br><br><button class="button">Add Submisson</button>';
+  $output.='<br><br><button onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'" class="button">Add Submisson</button>';
 }
 echo $output;
 ?>

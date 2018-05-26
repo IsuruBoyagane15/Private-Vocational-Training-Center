@@ -1,0 +1,25 @@
+.popupbox{
+  display: none;
+  background-color: lightgrey;
+  border: 3px solid grey;
+  border-radius: 5px;
+  position:fixed;
+  left:50%;
+  margin-left:-150px;
+  padding:6px 8px 8px;
+  box-shadow: 3px rgba(0,0,0,0.6);
+  box-sizing: border-box;
+  height:100px;
+  width:300px;
+  text-align: center;
+
+}
+.popupbutton{
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: rgba(128,128,128,0.4);
+
+}
+.popupbutton:hover{
+  background-color: rgba(128,128,128,0.7);
+}
