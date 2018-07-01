@@ -32,7 +32,6 @@
       </ul>
     </nav>
 
-
     <!--image slider-->
     <div class="slider">
       <ul class="slides">
