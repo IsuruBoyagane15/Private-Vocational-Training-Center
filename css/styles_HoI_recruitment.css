@@ -1,0 +1,104 @@
+.container{
+	height: auto;
+	padding: 20px;
+	background-color: lightyellow;
+}
+
+.staff_container{
+	border : dotted blue;
+	margin :20px;
+	padding: 20px;
+}
+
+.stable {
+
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+	   margin-top: 20px
+
+}
+.stable td, .stable th {
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.stable tr:nth-child(even){background-color: #f2f2f2;}
+
+.stable tr:hover {background-color: #ddd;}
+
+.stable th {
+	border: solid black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #D3D3D3;
+    color: black;
+}
+
+.stable td{
+	border: solid black;
+	text-align: center;
+}
+
+#modules {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+	margin-top: 20px;
+	margin-bottom:20px;
+
+}
+
+ ul{
+	list-style-type: none;
+}
+
+.buttons{
+	height:50px;
+	margin:5px;
+	padding:5px;
+}
+
+.rejection, .approval{
+	width:33%;
+	height: 30px;
+	justify-content: center;
+	padding:5px 5px;
+	border-color: azure;
+
+}
+
+
+.confirmBox {
+  display: none;
+  background-color: lightyellow;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  position: fixed; top: 50%; left: 50%; width: 600px; height: 100px; margin-left: -300px; margin-top: -200px;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+
+.confirmBox .button {
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+  padding: 2px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
+}
+
+.confirmBox .button:hover {
+  background-color: #ddd;
+}

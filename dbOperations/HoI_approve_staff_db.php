@@ -1,15 +1,19 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "course_info");
+$link = mysqli_connect("localhost", "root", "", "applicantdetails_hrselected");
 
 
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-$course_id =  $_POST["course_id"];
-$sql = "delete from courses where id = $course_id";
-echo course_id;
+$staff_id =  $_POST["staff_id"];
+echo $staff_id;
+$name =  $_POST["name"];
+echo $name;
+
+$sql = "Insert into staff_details (staff_id, name) values ($staff_id,$name)";
+
 
 if(mysqli_query($link, $sql)){
 	alert("Records deleted successfully.");

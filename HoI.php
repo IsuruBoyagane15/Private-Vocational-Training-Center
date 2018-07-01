@@ -25,26 +25,18 @@
         <li><a href="HoI.php">#to profile</a></li>
       </ul>
     </nav>
-    
-    <nav class = "tasks">
+
+    <div class = "tasks">
         <ul>
             <li><a href="HoI_new_courses.php">New Courses</a></li>
-            <li><a href="HoI_vacancies.php">Staff Vacancies</a></li>
             <li><a href="HoI_registration.php">Student Registration</a></li>
             <li><a href="HoI_recruitment.php">Staff Recruitment</a></li>
+            <li><a href="HoI_approve_news.php">Approve News</a></li>
             <li><a href="HoI_remove_news.php">Remove News</a></li>
         </ul>
-    </nav>
-    
-    <div class="body_navigation">
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="courses.php">Courses</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="log-in.php">Log In</a></li>
-      </ul>
     </div>
+
+
 
     <!--Include footer file-->
     <?php include_once("inc/footer.php"); ?>

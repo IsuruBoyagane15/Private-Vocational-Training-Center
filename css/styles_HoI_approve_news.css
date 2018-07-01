@@ -84,7 +84,7 @@ a:link{
   padding:20px;
 }
 
-.remove{
+.approve, .reject{
   width:49.5%;
   height: 30px;
   background-color: #3b3a36;
