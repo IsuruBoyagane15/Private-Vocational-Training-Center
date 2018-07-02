@@ -4,7 +4,7 @@
   $id = $_POST['id'];
 
   $conn = mysqli_connect('localhost', 'root', '', 'applicantdetails');
-  $query = "DELETE FROM lecture_details WHERE id='{$id}'";
+  $query = "DELETE FROM lecturer_details WHERE id='{$id}'";
   $result = mysqli_query($conn, $query);
   mysqli_close($conn);
 
