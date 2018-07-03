@@ -17,8 +17,8 @@
   //insert data into new database (selected db)
   $conn2 = mysqli_connect('localhost', 'root', '', 'applicantdetails_hrselected');
   $query2 = "INSERT INTO selected_student_details
-  (course, name_with_initials, fullname, medium, address, gender, date_of_birth, age, mobile, home, email, applied_date)
-  VALUES ('$row[1]', '$row[2]', '$row[3]', '$row[4]', '$row[5]', '$row[6]', '$row[7]', '$row[8]', '$row[9]', '$row[10]', '$row[11]', '$row[12]')";
+  (course, name_with_initials, fullname, medium, address, nic, gender, date_of_birth, age, mobile, home, email, year_of_ol, index_ol, maths, english, science, ict, year_of_al, index_al, stream, applied_date)
+  VALUES ('$row[1]', '$row[2]', '$row[3]', '$row[4]', '$row[5]', '$row[6]', '$row[7]', '$row[8]', '$row[9]', '$row[10]', '$row[11]', '$row[12]', '$row[14]', '$row[15]', '$row[16]', '$row[17]', '$row[18]', '$row[19]', '$row[20]', '$row[21]', '$row[22]', '$row[13]')";
   $result2 = mysqli_query($conn2, $query2);
   mysqli_close($conn2);
   if(!$result2){

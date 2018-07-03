@@ -114,3 +114,20 @@ HEADING
 .navigate :hover {
   color: black;
 }
+
+
+/******************************************************
+Media Query
+******************************************************/
+
+@media screen and (min-width:900px){
+  .head_voc {
+    font-size: 5.5vmin;
+  }
+
+  .navigate ul {
+    font-size: 3.2vmin;
+    /* font-weight: 600; */
+    padding-top: 30px;
+  }
+}

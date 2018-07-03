@@ -4,7 +4,7 @@ PAGE: HOME
 
 /******** Image slider ********/
 .slider {
-  padding: 10px 0 20px 0;
+  padding: 0 0 20px 0;
   width: 100vw;
   height: 60vmin;
   overflow: hidden;
@@ -96,4 +96,19 @@ PAGE: HOME
   text-decoration: underline;
   text-decoration-style: dashed;
   color: black;
+}
+
+
+/******************************************************
+Media Query
+******************************************************/
+
+@media screen and (min-width:900px){
+  .slider {
+    height: 90vmin;
+  }
+
+  .slide {
+    height: 90vmin;
+  }
 }

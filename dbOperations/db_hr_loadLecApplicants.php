@@ -2,7 +2,7 @@
   //load lecture post applicants
 
   $conn = mysqli_connect('localhost', 'root', '', 'applicantdetails');
-  $query = "SELECT id,course,name_with_initials FROM lecture_details";
+  $query = "SELECT id,course,name_with_initials FROM lecturer_details";
   $result = mysqli_query($conn, $query);
   mysqli_close($conn);
   $output = '';
