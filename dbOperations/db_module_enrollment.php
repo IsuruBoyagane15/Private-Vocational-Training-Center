@@ -24,26 +24,24 @@
 $sql="SELECT * FROM $id";
 $result=$conn->query($sql);
 $all_property=array();
+$output="";
+$output .= '<table id="datatable">
+       <tr>';
 while($property=mysqli_fetch_field($result)){
+   $output.='<td style="background-color:grey;color:white;">'.$property->name.'</td>';
+   $output.='<td></td>';
    array_push($all_property,$property->name);
 }
-$output="";
-$output .= '<div>';
-foreach($all_property as $item){
-   $sql="SELECT $item FROM $id";
-   $result=$conn->query($sql);
-   $output.='<div id='.$item.'>';
-   while($values=mysqli_fetch_array($result)){
-     $mo_id=$values[0];
-     $sql="SELECT module_name FROM module_details WHERE module_id='$mo_id'";
-     $result2=$conn->query($sql);
-     $row2=mysqli_fetch_array($result2);
-     $output .= '<a class="mod_link" href="student_module.php?module_id='.$mo_id.'&&index='.$index.'">'.$mo_id.'&emsp;'.$row2[0].'</a><br><br>';
-
+$output .= '</tr>';
+while($row=mysqli_fetch_array($result)){
+  $output .= '<tr>';
+  foreach($all_property as $item){
+    $output .= '<td>' .$row[$item].'</td>';
+    $output.='<td><button class="btn" onclick="#">Enroll</td>';
   }
-  $output.="</div>";
-}
-$output .="</div>";
+
+ }
+     //$output .= '<button class="btn" onclick="#">'.$row2[0].'</a><br><br>'
 $conn->close();
 echo $output;
 ?>

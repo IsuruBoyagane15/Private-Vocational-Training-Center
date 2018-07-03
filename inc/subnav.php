@@ -7,7 +7,7 @@
           <a href="#"><img src="icons/account.svg" width="10%" alt="img profile"> Profile</a>
           <a href="#"><img src="icons/grades.svg" width="10%" alt="img grades"> Grades</a>
           <a href="#"><img src="icons/settings.svg" width="10%" alt="img settings"> Settings</a>
-          <a href="/GitHub/Private-Vocational-Training-Center/index.php"><img src="icons/logout.svg" width="10%" alt="img logout"> Log out</a>
+          <a href="/VTI2/Private-Vocational-Training-Center/index.php"><img src="icons/logout.svg" width="10%" alt="img logout"> Log out</a>
      </div>
   </div>
   <p >Logged in as <?php echo $index?></p>
