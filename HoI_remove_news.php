@@ -47,6 +47,11 @@
  				<li>
           <div class="news_items" style="display: block;">
             <div class="basic_data">
+              <label class = "title">ID</label>
+              <br>
+              <div class = "value_box">
+                <label class = "ids"><?php echo $row["id"] ?></label>
+              </div>
               <label class = "title">Name</label>
               <br>
               <div class = "value_box">

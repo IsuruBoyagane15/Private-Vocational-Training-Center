@@ -57,6 +57,7 @@ $(function() {
 			alert("Course is deleted...!");
 			},
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();
@@ -68,7 +69,7 @@ $(function() {
     var confirmBox = $('.confirmBox');
 	  var box =  $(this).closest('.course_container');
 
-    confirmBox.find('.message').text("Reject this Course...?");
+    confirmBox.find('.message').text("Approve this Course...?");
     confirmBox.find('.yes, .no').unbind().click( function() {
       confirmBox.hide();
     } );
@@ -90,7 +91,7 @@ $(function() {
 		 $.ajax({
 
 			url: "dbOperations/HoI_approve_course_db.php",
-			type: "POST",
+			method: "POST",
 			data: {course_name : course_name,
           student_count : student_count,
           duration : duration,
@@ -103,11 +104,35 @@ $(function() {
           course_id:course_id},
 
 			success:function(data){
-				alert("New course was created...!");
-				window.location.href = "dbOperations/HoI_approve_course_db.php";
+				alert("New course was approved...!");
 			}
 
 			 });
+
+       var module_list = box.getElementById("modules");
+       for (var i = 0, row; row = module_list.rows[i]; i++){
+            alert(i);
+             // var module_name = row.find('.module_name').val();
+             // var description = row.find('.description').val();
+             // var term = row.find('.term').val();
+             // var lecturer = row.find('.lecturer').val();
+             //
+             //
+             // $.ajax({
+             //
+             //   url: "dbOperations/create_modules_db.php",
+             //   type: "POST",
+             //   data: {module_name : module_name, description : description, term : term, lecturer : lecturer, },
+             //
+             //   success:function(data){
+             //     alert("New module was created...!");
+             //
+             //
+             //   }
+             //
+             // });
+
+       }
     });
     confirmBox.show();
   });
