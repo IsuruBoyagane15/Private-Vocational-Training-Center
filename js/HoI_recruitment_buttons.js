@@ -53,7 +53,7 @@ $(function() {
     var box =  $(this).closest('.staff_container');
 
 
-    confirmBox.find('.message').text("Reject this Staff member...?");
+    confirmBox.find('.message').text("Approve this Staff member...?");
     confirmBox.find('.yes, .no').unbind().click( function() {
         confirmBox.hide();
     } );
@@ -70,7 +70,6 @@ $(function() {
       data: {staff_id:staff_id,name:name},
 
       success:function(data){
-      window.location.href = "dbOperations/HoI_approve_staff_db.php";
       alert("id sent");
       },
     });
