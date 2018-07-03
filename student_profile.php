@@ -29,7 +29,7 @@
        <div class="head" >
           Course Modules
        </div>
-    
+
        <div id="modules" class="container">
 
           <div id="modulelist"></div>

@@ -13,6 +13,7 @@ $(document).ready(function(){
   });
   $.ajax({
    url:"dbOperations/load_lecnote_data.php?module_id="+module_id,
+
    method:"POST",
    success: function(data){
      $('#notes').html(data);
