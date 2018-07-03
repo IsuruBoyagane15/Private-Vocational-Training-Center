@@ -39,9 +39,8 @@ $(function() {
       url: "dbOperations/HoI_reject_news_db.php",
       type:"POST",
       data: {id:id},
-      
+
       success:function(data){
-      window.location.href = "dbOperations/HoI_reject_news_db.php";
       },
     });
   });
@@ -49,34 +48,36 @@ $(function() {
   confirmBox.show();
   });
 
-  // $('.approve').on('click', function(){
-  //   var confirmBox = $('.confirmBox');
-  //   var box =  $(this).closest('.basic_data');
-  //
-  //
-  //   confirmBox.find('.message').text("Approve this News item...?");
-  //   confirmBox.find('.yes, .no').unbind().click( function() {
-  //       confirmBox.hide();
-  //   } );
-  //
-  //
-  //   confirmBox.find('.yes').click( function() {
-  //
-  //     var id = box.find('.ids').text();
-  //
-  //   $.ajax({
-  //     url: "dbOperations/HoI_approve_staff_db.php",
-  //     type:"POST",
-  //     data: {staff_id:staff_id,name:name},
-  //
-  //     success:function(data){
-  //     window.location.href = "dbOperations/HoI_approve_staff_db.php";
-  //     alert("id sent");
-  //     },
-  //   });
-  // });
-  //
-  // confirmBox.show();
-  // });
+  $('.approve').on('click', function(){
+    var confirmBox = $('.confirmBox');
+    var box =  $(this).closest('.news_items');
+
+
+    confirmBox.find('.message').text("Approve this News item...?");
+    confirmBox.find('.yes, .no').unbind().click( function() {
+        confirmBox.hide();
+    } );
+
+
+    confirmBox.find('.yes').click( function() {
+
+      var id = box.find('.ids').text();
+      alert(id);
+
+    $.ajax({
+      url: "dbOperations/HoI_approve_news_logic_db.php",
+      type:"POST",
+      data: {
+        id:id,
+      },
+
+      success:function(data){
+        alert("id sent");
+      },
+    });
+  });
+
+  confirmBox.show();
+  });
 
 });
