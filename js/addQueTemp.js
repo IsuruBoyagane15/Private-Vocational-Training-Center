@@ -6,7 +6,7 @@ $( function() {
   //add new question box to the container
   $('#new-question').on('click', function() {
     var radioName = "correct_option" + queId;
-    
+
     $queList.append('\
     <li class="question">\
       <textarea class="textarea" rows="8"></textarea><br>\

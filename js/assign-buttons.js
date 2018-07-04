@@ -54,6 +54,8 @@ $( function() {
 
     if( $('#assignment_name').val() == "" ){
       alert("Assignment name is required!");
+    }else if( $('input[name="option1"]').val() == "" || $('input[name="option2"]').val() == "" ){
+      alert("You should specify at least first two options!");
     }else{
       //show popup window
       $("#popup_verify").show();
