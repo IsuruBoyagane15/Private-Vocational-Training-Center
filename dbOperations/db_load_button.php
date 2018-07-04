@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname="assignments";
+$dbname="configdata";
 
 // Create connection
 $index=$_GET['index'];
@@ -18,7 +18,7 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT assignment_name FROM {$module_id} where assignment_id={$ass_id}";
+$sql="SELECT assignment_name FROM config_createassignment where id='$ass_id'";
 $result=$conn->query($sql);
 $conn->close();
 $row=mysqli_fetch_array($result);

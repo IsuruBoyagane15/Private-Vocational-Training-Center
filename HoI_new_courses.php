@@ -88,7 +88,7 @@
 
           ?>
 
-					<table align = "center" id = modules>
+					<table align = "center" id = "modules">
 							<tr>
 								<th>Module Name</th>
 								<th>Term</th>

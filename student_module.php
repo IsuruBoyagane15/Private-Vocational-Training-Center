@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/navpannel.css">
   <link rel="stylesheet" href="css/card.css">
   <link rel="stylesheet" href="css/subnav.css">
+  <link rel="stylesheet" href="css/modules.css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/subnav.js" type="text/javascript"></script>
   <script src="js/load_student_profile.js"  type="text/javascript"></script>
@@ -24,12 +25,12 @@
 
   <div id="module" class="head"><?php echo $_GET['module_id']?></div><br><br>
 
-  <div id="lecture_notes" name="lecture_notes" class="card">
-     <div class="head" >Lecture Notes</div>
+  <div id="lecture_notes" name="lecture_notes" class="card" style="width:60vw;">
+     <div class="head" style="display:" >Lecture Notes</div>
      <div id="notes"></div>
   </div>
-  <div id="assignments" name="assignments" class="card">
-    <div class="head">Assignments</div>
+  <div id="assignments" name="assignments" class="card" style="width:60vw;">
+    <div class="head" >Assignments</div>
     <div id="assign"></div>
   </div>
 

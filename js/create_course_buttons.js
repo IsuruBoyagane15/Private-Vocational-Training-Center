@@ -1,20 +1,20 @@
 $(function() {
-  
+
 
 $('#cancel').on('click', function(){
-	
+
 	var confirmBox = $('.confirmBox');
-    confirmBox.find('.message').text("Details of added modules will be lost.. Are you sure ?");
-    confirmBox.find('.yes, .no').unbind().click( function() {
+  confirmBox.find('.message').text("Details of added modules will be lost.. Are you sure ?");
+  confirmBox.find('.yes, .no').unbind().click( function() {
     	confirmBox.hide();
-    });
+});
 
-    confirmBox.find('.yes').click( function() {
-    	$('#que_list').empty();
-      	location.href = "director_board_executive.php";
-    });
+  confirmBox.find('.yes').click( function() {
+    $('#que_list').empty();
+    location.href = "director_board_executive.php";
+  });
 
-    confirmBox.show(); 
+    confirmBox.show();
   });
 
 
@@ -37,18 +37,18 @@ $(document).on('click', '.que_remove', function(){
 
 
 $('#done').on('click', function() {
-      
-    var confirmBox = $('.confirmBox');  
+
+  var confirmBox = $('.confirmBox');
 	var module_list = $('#que_list li');
 	var len = module_list.length;
-    
+
     confirmBox.find('.message').text("Create course ?");
-	
+
     confirmBox.find('.yes, .no').unbind().click( function() {
       	confirmBox.hide();
     } );
 
-	
+
     confirmBox.find('.yes').click( function() {
 
 		if($.trim($('#name').val()) == ''){
@@ -95,35 +95,35 @@ $('#done').on('click', function() {
 		else if( (module_list.length === 0) ){
 			alert('Modules are not added...!');
 		}
-		
-		
+
+
 		else{
-		
+
 		var is_done = "NO";
-			
+
 		module_list.each(function(index, element){
-			
+
 				if($.trim($(this).find('.module_name').val()) == ''){
 					alert('Module Name can not be left blank...!');
 				}
-			
+
 				else if($.trim($(this).find('.description').val()) == ''){
 					alert('Description can not be left blank...!');
 				}
-			
+
 				else if($(this).find('.term').val() == ""){
 					alert('Term can not be left blank...!');
 				}
-			
+
 				else if($.trim($(this).find('.lecturer').val()) == ''){
 					alert('Lecturer can not be left blank...!');
 				}
-				
+
 				else if(index === (len - 1)){
 					is_done = "YES";
 				}
 			});
-			
+
 			if (is_done==="YES"){
 				var course_name = $('#name').val();
 				var student_count = $('#student_count').val();
@@ -148,8 +148,8 @@ $('#done').on('click', function() {
 						}
 
 					});
-				
-				module_list.each(function(index, element){	
+
+				module_list.each(function(index, element){
 						var module_name = $(this).find('.module_name').val();
 						var description = $(this).find('.description').val();
 						var term = $(this).find('.term').val();
@@ -164,19 +164,16 @@ $('#done').on('click', function() {
 
 							success:function(data){
 								alert("New module was created...!");
-								
-								
+
+
 							}
 
 						});
-					}); 
-					
-		
-  					
-     			} 
+					});
+     			}
 		}
 
-}); 
+});
 
 confirmBox.show();
 });

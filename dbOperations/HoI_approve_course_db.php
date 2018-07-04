@@ -18,14 +18,44 @@
     $required_qualification = $_POST["required_qualification"];
     $course_id = $_POST["course_id"];
 
-    $zeros = 3-strlen("$course_id");
-    $id = "C".str_repeat("0",$zeros)."$course_id";
-    echo $id;
+    $id = "C"."$course_id";
 
 
-    $sql = "INSERT INTO course_details (id,trade,course_name,course_type, type, accredit_level, duration,   medium,required_qualification,student_count,) VALUES ('$id', '$trade', '$course_name', '$course_type', '$type', '$accredit_level', '$duration', '$medium', '$required_qualification', '$student_count')";
+    $sql = "INSERT INTO course_details (course_id,trade,course_name,course_type, type, accredit_level, duration,   medium,required_qualification,student_count) VALUES ('$id', '$trade', '$course_name', '$course_type', '$type', '$accredit_level', '$duration', '$medium', '$required_qualification', '$student_count')";
     if(mysqli_query($link, $sql)){
         echo "Records inserted successfully.";
+
+
+        $link2 = mysqli_connect("localhost", "root", "", "course_info");
+
+
+        if($link2 === false){
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
+
+        $course_id =  $_POST["course_id"];
+        $sql2 = "delete from modules where course_id = $course_id";
+
+        if(mysqli_query($link2, $sql2)){
+
+            $sql3 = "delete from courses where id = $course_id";
+
+            if(mysqli_query($link2, $sql3)){
+
+            } else{
+            	   echo "ERROR: Could not able to execute $sql3. " . mysqli_error($link2);
+            }
+
+        } else{
+        	echo "ERROR: Could not able to execute $sql2. " . mysqli_error($link2);
+        }
+
+        mysqli_close($link2);
+
+
+
+
+
     } else{
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
     }

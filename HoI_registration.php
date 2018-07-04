@@ -59,7 +59,8 @@ if($link === false){
 							<th>ID</th>
 							<th>Course</th>
               <th>course_id</th>
-							<th>Name With Initionals</th>
+              <th>nic</th>
+							<th>Name With Initials</th>
               <th>Fullname</th>
               <th>Medium</th>
 							<th>Address</th>
@@ -79,6 +80,7 @@ if($link === false){
 							<td class = "id"><?php echo($row['id']);?></td>
 							<td class = "course"><?php echo($row['course']);?></td>
               <td class = "course_id"><?php echo($row['course_id']);?></td>
+              <td class = "nic"><?php echo($row['nic']);?></td>
 							<td class = "name_with_initials"><?php echo($row['name_with_initials']);?></td>
               <td class = "fullname"><?php echo($row['fullname']);?></td>
               <td class = "medium"><?php echo($row['medium']);?></td>

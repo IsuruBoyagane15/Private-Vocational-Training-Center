@@ -1,0 +1,78 @@
+//<-state chart implimentation for worshop object->
+class Workshop{
+   private State state;
+   public Workshop(){
+     this.state=new Proposed();
+   }
+   public void setState(State state){
+      this.state=state;
+   }
+   public changeState(){
+     state.initiateNextState();
+   }
+}
+abstract class State{
+    Workshop workshop;
+    public State(Workshop ws){
+      workshop=ws;
+    }
+    public abstract initiateNextState();
+}
+class Proposed extends State{
+    public Proposed(Workshop ws){
+        super(ws);
+    }
+    public initiateNextState(){
+       workshop.setState(new Sheduled(workshop));
+    }
+}
+class Sheduled extends State{
+    int date;
+    public Sheduled(Workshop ws){
+       super(ws);
+    }
+    public initiateNextState(){
+       workshop.setState(new OpenedForEnrollment(workshop));
+    }
+
+}
+class OpenedForEnrollment extends State(){
+      ArrayList<int> waitinglist;
+      ArrayList<Object> studentlist;
+      public OpenedForEnrollment(Workshop ws){
+        super(ws);
+        studentlist=new int[50]
+        waitinglist=new ArrayList<Object>;
+
+      }
+      public void enroll(int index){
+            if(studentlist.size()<50){
+                  studentlist.add(index);
+            }
+            else{
+              waitinglist.add(index); 
+            }
+            
+      }
+      public void drop(int index){
+         try{
+             studentlist.remove(studentlist.indexOf(index));         
+ 
+         catch(ArrayIndexOutOfBoundsException e){
+             waitinglist.remove(waitinglist,indexOf(index));
+         }
+      }
+      public void initiateNextState(){
+         workshop.setState(new Closed(workshop));
+      }
+
+
+}
+class Closed extends State{
+   public Closed(Workshop ws){
+     super(ws);
+   }
+   public initiateNextState(){};
+
+}
+    
