@@ -5,6 +5,7 @@ $( function() {
     $.ajax({
       url: "dbOperations/db_fetch_module.php",
       method: "POST",
+      data: {id:"100001l"},         //***************need to get lec id********************
       success: function(data){
         $('#assign_mods').html(data);
       }
@@ -25,5 +26,5 @@ $( function() {
     });
   });
 
-  
+
 } );

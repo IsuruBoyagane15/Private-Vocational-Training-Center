@@ -18,7 +18,7 @@
 
 
   //get an available id to create a table
-  function getAvailableID($module_name, $assign_name, $deadline="0000-00-00 00:00:00") {
+  function getAvailableID($module_name, $assign_name, $deadline="0000-00-00 00:00:00", $assign_desc, $attempts) {
     $conn = createConnection('localhost','root','','configdata');
 
     $query = "SELECT * FROM config_createassignment";
@@ -30,7 +30,7 @@
         if( $record['is_deleted'] == 1 ) {
 
           //update the config_createassignment table
-          $query = "UPDATE config_createassignment SET tableName='assignment{$availableId}', module='{$module_name}', assignment_name='{$assign_name}', deadline='{$deadline}', is_deleted=0 WHERE id={$availableId}";
+          $query = "UPDATE config_createassignment SET tableName='assignment{$availableId}', module='{$module_name}', assignment_name='{$assign_name}', description='{$assign_desc}', deadline='{$deadline}', no_of_attempts='{$attempts}', is_deleted=0 WHERE id={$availableId}";
           $result = mysqli_query($conn, $query);
           if(!$result) {
             echo "configdata database query failed! " . mysqli_error($conn) . "<br>" ;
@@ -44,7 +44,7 @@
     }
 
     //add about new table to the config_createassignment table
-    $query = "INSERT INTO config_createassignment (id, tableName, module, assignment_name, deadline, is_deleted) VALUES ('{$availableId}', 'assignment{$availableId}', '{$module_name}', '{$assign_name}', '{$deadline}', 0)";
+    $query = "INSERT INTO config_createassignment (id, tableName, module, assignment_name, deadline, is_deleted, description, no_of_attempts) VALUES ('{$availableId}', 'assignment{$availableId}', '{$module_name}', '{$assign_name}', '{$deadline}', 0, '{$assign_desc}', '{$attempts}')";
     $result = mysqli_query($conn, $query);
     if(!$result) {
       echo "configdata database query failed! " . mysqli_error($conn) . "<br>" ;
@@ -92,8 +92,8 @@
 
 
   //create a new table for an assignment
-  function createTable($conn, $module_name, $assign_name, $deadline="NULL") {
-    $avaiId = getAvailableID($module_name, $assign_name, $deadline, $deadline);
+  function createTable($conn, $module_name, $assign_name, $deadline="NULL", $assign_desc, $attempts) {
+    $avaiId = getAvailableID($module_name, $assign_name, $deadline, $assign_desc, $attempts);
 
     //create a table to add questions
     $query = "CREATE TABLE assignment{$avaiId} (

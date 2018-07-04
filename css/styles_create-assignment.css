@@ -28,12 +28,20 @@ PAGE: CREATE ASSIGNMENT
 
 .assignment_details .label {
   margin: 2px 5px;
-  font-size: 2vw;
+  font-size: 1vw;
 }
 
 .assignment_details .details_input {
   width: 25vw;
   height: 2vw;
+}
+
+.des_input {
+  width: 90%;
+}
+
+#attempts {
+  
 }
 
 #module_name {

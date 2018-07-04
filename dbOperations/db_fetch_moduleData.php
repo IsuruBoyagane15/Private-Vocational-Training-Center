@@ -4,12 +4,12 @@
   include_once(dirname(__FILE__).'/db_lectureNote_log.php');
 
   // get relevent id from a link click
-  $id = $_POST['id'];
+  $mod_id = trim($_POST['id']);
 
-  $connection = mysqli_connect("localhost", "root", "", "modules");
+  $connection = mysqli_connect("localhost", "root", "", "courses_details");
 
   //get module name, code and description from the database
-  $query = "SELECT module_name,module_code,module_details FROM modules WHERE module_code='2m1'";
+  $query = "SELECT module_name,module_id,module_description FROM module_details WHERE module_id='{$mod_id}'";
   $result = mysqli_query($connection, $query);
   $row = mysqli_fetch_array($result);
 
@@ -38,7 +38,6 @@
   Assignments</label><nav class="assign_created"><ul id="assigns"> ';
   $output .= loadAsignmentData($row[0]);
   $output .= ' </ul></nav></div> ';
-
 
   mysqli_close($connection);
   echo $output;
