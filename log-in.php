@@ -33,7 +33,7 @@
         <!--left panel (staff login)-->
         <div id="staff_login">
           <h2 class="panel_heading">Staff Log in</h2>
-          <form action="stflogin_actionpage.php">
+          <form action="db_staff_login.php" method="POST">
 
             <div class="image_container">
               <img src="img/login/login_staff.jfif" alt="Avatar" class="login_photo">
