@@ -1,3 +1,4 @@
+
 $( function() {
 
   //load assigned modules to the module select
@@ -127,14 +128,14 @@ $( function() {
         allQus.push(array);
 
       } );
-
+      var index=$("#index").val();
       $.ajax({
         url: "dbOperations/db_createAssignment.php",
         method: "POST",
         data: {module_name: mod, assign_name:assign, assign_desc:desc, attempts:attempts, deadline:deadline, questions: allQus},
         success: function(){
           alert("Assignment Created Successfully!");
-          window.location.href = "lecturer-profile.php";
+          window.location.href = "lecturer-profile.php?index="+index;
         },
         error: function(){
           alert("Error: Assignment Creation Failed!!");

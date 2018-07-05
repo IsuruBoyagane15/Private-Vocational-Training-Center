@@ -20,6 +20,7 @@
 
     <!--Including header file-->
     <?php include_once("inc/header.php"); ?>
+    <input type="hidden" name="index" id="index" value=<?php echo $_GET['index']?>>
 
     <!--navigation panel-->
     <nav class="navigate">

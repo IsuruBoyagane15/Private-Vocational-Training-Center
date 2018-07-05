@@ -5,13 +5,20 @@
 
   // get data from authentication DB
   $connection = mysqli_connect("localhost", "root", "", "authentication");
-  $query = "SELECT * FROM table WHERE username_lec='{$provided_username}'";
+  $query = "SELECT * FROM user_staff WHERE username='$provided_username' AND password='$provided_password' ";
   $result = mysqli_query($connection, $query);
-  $row = mysqli_fetch_array($result);
   mysqli_close($connection);
-
-
-
-  $output .= (string)$row[0];
-
+  if($row=mysqli_fetch_array($result)){
+    $_SESSION['signed_in']=true;
+    $_SESSION['username']=$provied_username;
+    $connection->close();
+    header("Location:../lecturer-profile.php?index=$provided_username");
+  }
+  else{
+    $connection->close();
+    $_SESSION['flash_error']="invalid user name or password";
+    $_SESSION['signed_in']=false;
+    $_SESSION['username']=null;
+    header("Location:../log-in.php");
+}
 ?>

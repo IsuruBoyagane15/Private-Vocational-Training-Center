@@ -4,7 +4,7 @@
   $connection = mysqli_connect("localhost", "root", "", "courses_details");
   $id = $_POST["id"];
   $output = '';
-  $query = "SELECT module_id,module_name FROM module_details WHERE lecturer_id='{$id}'";
+  $query = "SELECT module_id,module_name FROM module_details WHERE lecturer='$id'";
   $result = mysqli_query($connection, $query);
 
   while( $row = mysqli_fetch_array($result) ){
