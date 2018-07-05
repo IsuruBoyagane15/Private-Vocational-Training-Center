@@ -6,7 +6,7 @@
     <title>VTI-Log In</title>
     <!---script files---->
     <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/log-in.js" type="text/javascript"></script>
+    <script src="js/log-in_stud.js" type="text/javascript"></script>
 
 
     <!--css styles-->
