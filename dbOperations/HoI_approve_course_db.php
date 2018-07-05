@@ -36,6 +36,17 @@
         $course_id =  $_POST["course_id"];
         $sql2 = "delete from modules where course_id = $course_id";
 
+        $query = "SELECT id, id_key, name, file_name, file_path, description, added_date, remove_date FROM temporary_news WHERE id = '$id'";
+        $result = mysqli_query($link,$query);
+        $data = mysqli_fetch_array($result);
+        $id_key = $data[1];
+        $name = $data[2];
+        $file_name = $data[3];
+        $file_path = $data[4];
+        $description = $data[5];
+        $added_date = $data[6];
+        $remove_date = $data[7];
+
         if(mysqli_query($link2, $sql2)){
 
             $sql3 = "delete from courses where id = $course_id";
@@ -51,10 +62,6 @@
         }
 
         mysqli_close($link2);
-
-
-
-
 
     } else{
         echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);

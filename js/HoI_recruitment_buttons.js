@@ -61,16 +61,17 @@ $(function() {
 
     confirmBox.find('.yes').click( function() {
 
-      var staff_id = box.find('.staff_id').text();
-      var name = box.find('.name').text();
+      var id = box.find('.staff_id').text();
+      alert(id);
 
     $.ajax({
       url: "dbOperations/HoI_approve_staff_db.php",
       type:"POST",
-      data: {staff_id:staff_id,name:name},
+      data: {id:id},
 
       success:function(data){
       alert("id sent");
+      //window.location= "dbOperations/HoI_approve_staff_db.php";
       },
     });
   });
