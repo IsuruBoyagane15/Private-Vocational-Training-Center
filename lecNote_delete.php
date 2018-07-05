@@ -1,6 +1,6 @@
-<!-- delete a lecture note from ajax call -->
-
 <?php
+  // delete a lecture note from ajax call
+
   include_once(dirname(__FILE__).'/dbOperations/db_lectureNote_log.php');
 
   $path = trim( $_POST['file_path'] );

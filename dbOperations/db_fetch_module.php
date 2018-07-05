@@ -1,9 +1,10 @@
 <!-- Adding relevent module codes to the left panel -->
 
 <?php
-  $connection = mysqli_connect("localhost", "root", "", "COURSES_DETAILS");
+  $connection = mysqli_connect("localhost", "root", "", "courses_details");
+  $id = $_POST["id"];
   $output = '';
-  $query = "SELECT module_id,module_name FROM module_details";
+  $query = "SELECT module_id,module_name FROM module_details WHERE lecturer_id='{$id}'";
   $result = mysqli_query($connection, $query);
 
   while( $row = mysqli_fetch_array($result) ){

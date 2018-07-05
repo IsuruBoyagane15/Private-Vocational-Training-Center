@@ -15,12 +15,12 @@ function getModName($tablename){
 
 //get total assigned students
 function getTotal($modname){
-  $conn1 = mysqli_connect("localhost", "root", "", "test");
-  $query1 = "SELECT * FROM module_names WHERE modname='$modname'";
+  $conn1 = mysqli_connect("localhost", "root", "", "courses_details");
+  $query1 = "SELECT * FROM module_details WHERE module_name='$modname'";
   $result1 = mysqli_query($conn1, $query1);
   mysqli_close($conn1);
   $row1 = mysqli_fetch_array($result1);
-  $total = (string)$row1[5];
+  $total = (string)$row1[3];
   return $total;
 }
 

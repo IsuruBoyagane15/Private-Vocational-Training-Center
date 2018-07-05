@@ -82,6 +82,7 @@ $( function() {
         data: { file_path: note.attr('href'), file_name: note.text() },
         success: function(data){
           alert(data);
+          location.reload(true);
         },
         error: function(){
           alert("Error!");
