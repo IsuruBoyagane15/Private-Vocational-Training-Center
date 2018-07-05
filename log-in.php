@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VTI-Log In</title>
+    <!---script files---->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/log-in.js" type="text/javascript"></script>
+
 
     <!--css styles-->
     <link rel="stylesheet" href="css/styles_header.css">
