@@ -1,84 +1,69 @@
-.regapplication{
-width:auto;
-height:auto;
-font-size:22;
+
+.abtus {
+  background-color: inherit;
+  padding: 2vmin;
+  margin: 3vmin 0;
+  width: 95%;
+  border-style: groove;
+  border-radius: 10px;
+  border-color: yellow;
+  font-size: 6vmin;
+}
+.abtus h3 {
+  color: brown;
 }
 
-.headerpart{
-width:auto;
-height:30vw;
-background-image:url('../Imgs/training_2.jpg');
+.abtus ul {
+  margin: 5;
+  padding: 10px;
+  list-style: none;
+  font-size: 4vmin;
+  font-weight: 500;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  text-align: center;
 }
-h1{
-color:FireBrick4;
-}
-.linkbar{
-width:auto;
-height:5vw;
-background-color:SlateGrey;
-}
-.linkbar a{
-color:white;
-font-size:26;
-text-decoration:none;
+.abtus p {
+  color: chocolate;
 }
 
-.linkbar a:hover{
-background-color:white;
-color:blue;
+.slider {
+  padding: 0 0 20px 0;
+  width: 100vw;
+  height: 60vmin;
+  overflow: hidden;
 }
-.bodypart{
-width:100%;
-height:auto;
 
+.slides {
+  display: block;
+  list-style: none;
+  padding: 0;
+  width: 700vw;
+  margin: 0;
+  overflow: hidden;
 }
-.application{
-width:98%;
-height:auto;
-margin: 3vmin;
-background-color:wheat;
-}
-/* border: 2px dotted grey;
-border-radius: 10px;
-padding: 5vmin;
-} */
-/* margin: 3vmin;
-border: 2px dotted grey;
-border-radius: 10px;
-padding: 5vmin; */
-/* display:inline-block; */
 
-/* .coursedetails{
-width:30vw;
-height:45vw;
-float:right;
-background-color:snow;
+.slide {
+  float: left;
+  width: 100vw;
+  height: 60vmin;
 }
-h2{
-color:green;
+
+.slide img {
+  width: 100vw;
+  height: 100%;
 }
-.courses{
-width:25vw;
-height:auto;
-}
-h4{
-color:blue;
-font-size:20;
-text-align:center;
-}
-p{
-text-align:center;
-} */
 
 .body_navigation {
-
   background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
   background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
   background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
   background: -o-linear-gradient(to right, white 15%, yellow 50%, white 85%);
   width: 100vw;
   height: 27vmin;
-  min-height: 90px;
+  min-height: 80px;
 }
 
 .body_navigation ul {

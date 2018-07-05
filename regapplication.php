@@ -1,11 +1,21 @@
-<html><head>
-<title>Vocational Training centre application</title>
-<link rel="stylesheet" type="text/css" href="css/Student_registration_appl.css">
+<!DOCTYPE html>
+  <html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>VTI-RegAppLecturer</title>
+
+      <!--css styles-->
+      <link rel="stylesheet" href="css/styles_header.css">
+      <link rel="stylesheet" href="css/Student_registration_appl.css">
+      <link rel="stylesheet" href="css/styles_footer.css">
+
 <script src="js/jquery-3.3.1.js"></script>
-<script src="js/addStudDetails.js" type="text/javascript"></script>
+<script src="js/addLecDetails.js" type="text/javascript"></script>
 </head>
 
 <body>
+    <?php include_once("inc/header.php"); ?>
 <div class ="regapplication">
 <div class ="headerpart">
 <br><h1 align="center"><marquee direction="left"><font face="Algerian">Vocational Training Institute</h1></font></marquee>
@@ -13,11 +23,11 @@
 </div>
 <div class="linkbar">
 <center>
-<a href "home.html">Home</a>&nbsp&nbsp&nbsp&nbsp
-<a href "news.html">News</a>&nbsp&nbsp&nbsp&nbsp
-<a href "courses.html">Courses</a>&nbsp&nbsp&nbsp&nbsp
-<a href "about.html">About</a>&nbsp&nbsp&nbsp&nbsp
-<a href "login.html">Login</a>
+<a href="index.php">Home</a>&nbsp&nbsp&nbsp&nbsp
+<a href="news.php">News</a>&nbsp&nbsp&nbsp&nbsp
+<a href="courses.php">Courses</a>&nbsp&nbsp&nbsp&nbsp
+<a href="about.php">About</a>&nbsp&nbsp&nbsp&nbsp
+<a href="log-in.php">Login</a>
 </center>
 </div>
 <div class="bodypart">
@@ -25,7 +35,8 @@
 
 
 <h2 align="center"> <font face="Agency Fb" color="black">Registration Appication </font></h2>
-<form action="dbOperations/addStudDetails_db.php" method="POST"><font face ="Andalus">
+<p color="purple"><b>Fill this and submit</b></p>
+<form action="dbOperations/addLecDetails_db.php" method="POST"><font face ="Andalus">
 <ol>
 <li>Course :<select name="course">
 <option value= "Automobile Repair and Maintainance">Automobile Repair and Maintainance </option>
@@ -42,17 +53,20 @@
 <option value= "Other" >Other</option>
 </select></li><br><br>
 
-<li>Full Name :<input type="text" name="fullname"></li><br>
-<li>Personal Address :<input type="text" name="address"></li><br>
-<li>NIC Number :<input type="text" name="nicno"></li><br>
-<li>Email :<input type="text" name="email"></li><br>
-<li>Mobile Number :<input type="text" name="mob"></li><br>
-<li>Date of Birth :<input type="text" name="dob"></li><br>
-<li>Higher Education Qualifications :<input type="text" name="degrees"></li><br>
+<li>Name with Initials:<input type="text" name="name_ini" required></li><br>
+<li>Full Name :<input type="text" name="fullname" required></li><br>
+<li>Personal Address :<input type="textarea" name="address" placeholder="Enter your personal address" required></li><br>
+<li>NIC Number :<input type="text" name="nicno" required></li><br>
+<li>Email :<input type="text" name="email" required></li><br>
+<li>Mobile Number :<input type="text" name="mob" placeholder="(XXX)-XXX-XXXX" required></li><br>
+<li>Telephone Number(Home) :<input type="text" name="home" placeholder="(XXX)-XXX-XXXX" required></li><br>
+<li>Date of Birth :<input type="text" name="dob" required></li><br>
+<li>Age :<input type="text" name="age" required></li><br>
+
 
 <li>Gender :
-<input type="radio" name="gender" value="f">Female</input>
-<input type="radio" name="gender" value="m">Male</input></li><br>
+<input type="radio" name="gender" value="f" required>Female</input>
+<input type="radio" name="gender" value="m" required>Male</input></li><br>
 <hr color = "purple">
 <li><b>Education </b></li><br><br>
 <ul>
@@ -68,39 +82,6 @@ Year :
 <option value= "2016" >2016</option>
 <option value= "2017" selected >2017</option>
 </select>
-Index Number :<input type="text" name="indexno1">
-Mathematics :
-<select name="mathematics">
-<option value= "A" >A</option>
-<option value= "B" >B</option>
-<option value= "C" selected>C</option>
-<option value= "S" >S</option>
-<option value= "W" >W</option>
-</select>
-English :
-<select name="english">
-<option value= "A" >A</option>
-<option value= "B" >B</option>
-<option value= "C" selected>C</option>
-<option value= "S" >S</option>
-<option value= "W" >W</option>
-</select>
-Science :
-<select name="science">
-<option value= "A" >A</option>
-<option value= "B" >B</option>
-<option value= "C" selected>C</option>
-<option value= "S" >S</option>
-<option value= "W" >W</option>
-</select>
-ICT(If done) :
-<select name="ict">
-<option value= "A" >A</option>
-<option value= "B" >B</option>
-<option value= "C" selected>C</option>
-<option value= "S" >S</option>
-<option value= "W" >W</option>
-</select>
 <br><br>
 
 
@@ -114,7 +95,7 @@ Year :
 <option value= "2016" >2016</option>
 <option value= "2017" selected>2017</option>
 </select>
-Index Number :<input type="text" name="indexno2">
+Index Number :<input type="text" name="indexno2" required>
 Stream :
 <select name="stream">
 <option value= "Arts" >Arts</option>
@@ -123,25 +104,15 @@ Stream :
 <option value= "Bio Science" >Bio Science</option>
 <option value= "Technology" >Technology</option>
 <option value= "IT" >IT</option>
-</select></ul>
-<br><br><br>
+</select></ul><br><br>
+<li>Higher Educational Qualifications :<input type="textarea" name="degree" placeholder="Enter your higher educational qualifications..." style="padding:0px 0px;" required></li><br><br>
+<li>Medium :<input type="text" name="medium" required></li><br>
+
+<br><br>
+
 
 <hr color = "purple">
-<li><b>Extra Curricular Activities </b></li><br><br>
-Sports :<input type="text" name="sports">
-Clubs and societies :
-<input type="text" name="cas"><br><br><br><br>
-
-<hr color = "purple">
-<li>How did you get to know about our institute? :
-<select name="howdidyouknow">
-<option value= "1" >from Facebook</option>
-<option value= "2" >from a friend</option>
-<option value= "3" selected>from handbills</option>
-<option value= "4" >by newspaper advertisements</option>
-<option value= "5" >from the website</option>
-<option value= "6" >other</option>
-</select></font><br></li><br><br></ol>
+<br><br></ol>
 <input type="submit" value="Save All" style="color:MidnightBlue;border-radius:10px;background:LightGrey;">
 <input type="submit" value="Cancel" style="color:MidnightBlue;border-radius:10px;background:LightGrey;">
 <input type="submit" value="Clear All" style="color:MidnightBlue;border-radius:10px;background:LightGrey;">
@@ -150,7 +121,8 @@ Clubs and societies :
 
 
 </div>
-<div class="coursedetails"><h2 align="center">Course Details</h2>
+<br><br><br>
+<!-- <div class="coursedetails"><h2 align="center">Course Details</h2>
 
 <div class="courses">
 <marquee direction="up", height="100%">
@@ -162,7 +134,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>3<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion : </font>Pass Year 9</p><br>
+<font color="grey">Required qualification : </font>Pass Year 9</p><br>
 <hr>
 
 <h4>2. Automobile Repair and Maintainance</h4><br>
@@ -172,7 +144,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>12-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 6 Subjects in G.C.E.(O/L)</p><br>
+<font color="grey">Required qualification :</font>Pass 6 Subjects in G.C.E.(O/L)</p><br>
 <hr>
 
 <h4>3. Building and Construction</h4><br>
@@ -182,7 +154,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>5<br><br>
 <font color="grey">Duration : </font>12-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 2 Subjects in G.C.E(A/L) in Maths Stream</p><br>
+<font color="grey">Required qualification :</font>Pass 2 Subjects in G.C.E(A/L) in Maths Stream</p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - Draughtsperson<br><br>
@@ -191,7 +163,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>1<br><br>
 <font color="grey">Duration : </font>12-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 6 Subjects in G.C.E.(O/L)</p><br>
+<font color="grey">Required qualification :</font>Pass 6 Subjects in G.C.E.(O/L)</p><br>
 <hr>
 
 
@@ -202,7 +174,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>3<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Sat for G.C.E.(O/L)</p><br>
+<font color="grey">Required qualification :</font>Sat for G.C.E.(O/L)</p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - Electronic Appliances Technician<br><br>
@@ -211,7 +183,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>3<br><br>
 <font color="grey">Duration : </font>12-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 6 Subjects in G.C.E.(O/L) with Maths and Science</p><br>
+<font color="grey">Required qualification :</font>Pass 6 Subjects in G.C.E.(O/L) with Maths and Science</p><br>
 <hr>
 
 <h4>5. Fisheries & Aquaculture</h4><br>
@@ -221,7 +193,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>12-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Sat for G.C.E.(O/L)</p><br>
+<font color="grey">Required qualification :</font>Sat for G.C.E.(O/L)</p><br>
 <hr>
 
 <h4>6. Food Technology</h4><br>
@@ -231,7 +203,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>3<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass Year 9</p><br>
+<font color="grey">Required qualification :</font>Pass Year 9</p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - Baker<br><br>
@@ -240,7 +212,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass Year 9</p><br>
+<font color="grey">Required qualification :</font>Pass Year 9</p><br>
 <hr>
 
 <h4>7. Hotel and Tourism</h4><br>
@@ -250,7 +222,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>3<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 6 Subjects in G.C.E.(O/L) with Maths and Science</p><br>
+<font color="grey">Required qualification :</font>Pass 6 Subjects in G.C.E.(O/L) with Maths and Science</p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - Cook<br><br>
@@ -259,7 +231,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>3<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font></p><br>
+<font color="grey">Required qualification :</font></p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - Waiter/Steward<br><br>
@@ -268,7 +240,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Sat for G.C.E.(O/L)</p><br>
+<font color="grey">Required qualification :</font>Sat for G.C.E.(O/L)</p><br>
 <hr>
 
 <h4>8. Information Communication and Multimedia Technology</h4><br>
@@ -278,7 +250,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 6 Subjects in G.C.E.(O/L) with Maths and Science</p><br>
+<font color="grey">Required qualification :</font>Pass 6 Subjects in G.C.E.(O/L) with Maths and Science</p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - Computer Hardware Technician (A Plus)<br><br>
@@ -287,7 +259,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 6 Subjects in G.C.E.(O/L) with Credit Pass for English</p><br>
+<font color="grey">Required qualification :</font>Pass 6 Subjects in G.C.E.(O/L) with Credit Pass for English</p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - NVQ 5 in ICT<br><br>
@@ -296,7 +268,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>5<br><br>
 <font color="grey">Duration : </font>12-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass in NCICT &Pass 6 Subjects in G.C.E.(O/L) with Credit Passes for English, Maths and Science</p><br>
+<font color="grey">Required qualification :</font>Pass in NCICT &Pass 6 Subjects in G.C.E.(O/L) with Credit Passes for English, Maths and Science</p><br>
 <hr>
 
 <h4>9. Metal and Light Engineering</h4><br>
@@ -306,7 +278,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>3<br><br>
 <font color="grey">Duration : </font>12-M<br><br>
 <font color="grey">Medium :</font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 6 Subjects in G.C.E.(O/L)</p><br>
+<font color="grey">Required qualification :</font>Pass 6 Subjects in G.C.E.(O/L)</p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - Welder<br><br>
@@ -315,7 +287,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>12-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 3 Subjects in G.C.E.(O/L)</p><br>
+<font color="grey">Required qualification :</font>Pass 3 Subjects in G.C.E.(O/L)</p><br>
 <hr>
 
 <h4>10. Wood Related</h4><br>
@@ -325,7 +297,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>18-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass Year 9</p><br>
+<font color="grey">Required qualification :</font>Pass Year 9</p><br>
 <hr>
 
 <h4>11. Textile and Garments</h4><br>
@@ -335,7 +307,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass 6 Subjects in G.C.E.(O/L)</p><br>
+<font color="grey">Required qualification :</font>Pass 6 Subjects in G.C.E.(O/L)</p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - Tailor (Ladies & Gents)<br><br>
@@ -344,7 +316,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>4<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium : </font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass Year 9</p><br>
+<font color="grey">Required qualification :</font>Pass Year 9</p><br>
 <hr>
 
 <h4>12. Other</h4><br>
@@ -354,7 +326,7 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>3<br><br>
 <font color="grey">Duration : </font>12-M<br><br>
 <font color="grey">Medium :</font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Pass Year 9</p><br>
+<font color="grey">Required qualification :</font>Pass Year 9</p><br>
 <hr>
 
 <p><font color="grey">Course Name : </font> National Certificate - Litho Mechine Operator<br><br>
@@ -363,24 +335,29 @@ Clubs and societies :
 <font color="grey">Accredit Level : </font>2<br><br>
 <font color="grey">Duration : </font>6-M<br><br>
 <font color="grey">Medium :</font> Sinhala<br><br>
-<font color="grey">Required qualificartion :</font>Sat for G.C.E.(A/L)</p><br>
+<font color="grey">Required qualification :</font>Sat for G.C.E.(A/L)</p><br>
 <hr>
 </font>
 </marquee>
 </div>
-<div class="pics">
+</div> -->
 
+</div></div></div>
+<div class="body_navigation">
+  <ul>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="news.php">News</a></li>
+    <li><a href="courses.php">Courses</a></li>
+    <li><a href="about.php">About</a></li>
+    <li><a href="log-in.php">Log In</a></li>
+  </ul>
 </div>
-</div>
-
-</div>
 
 
+<?php include_once("inc/footer.php"); ?>
 
 
 
-
-</div>
 
 </body>
 </html>
