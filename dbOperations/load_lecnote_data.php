@@ -18,15 +18,17 @@ mysqli_close($connection);
 $output = '';
 
 //load actual file and insert into display
+
 while( $record = mysqli_fetch_array($result_set) ) {
-      $output .= ' <div style="padding:10px;"><a href=" ';
+      $output .= '<div class="ncard"> <a href=" ';
       $output .= (string)$record[1];
       $output .= ' "class="mod_link"> ';
       $output .= (string)$record[0];
       $output .='</a></div>';
 
-}
 
+}
+$output.='</ul>';
 
 echo $output;
 

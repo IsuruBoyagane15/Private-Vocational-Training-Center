@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/card.css">
   <link rel="stylesheet" href="css/subnav.css">
   <link rel="stylesheet" href="css/modules.css">
+  <link rel="stylesheet"  href="css/nestedcard.css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/subnav.js" type="text/javascript"></script>
   <script src="js/load_student_profile.js"  type="text/javascript"></script>
