@@ -9,30 +9,21 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
     <link rel="stylesheet" href="css/styles_create_course.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
 
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/insert_module.js" type="text/javascript"></script>
     <script src="js/create_course_buttons.js" type="text/javascript"></script>
+    <script src="js/subnav.js" type="text/javascript"></script>
 
 </head>
 <body>
 
 
     <?php include_once("inc/header.php"); ?>
+    <?php include_once("inc/navpannel.php"); ?>
     <?php include_once("dbOperations/create_course_trades_db.php"); ?>
-
-
-
-    <nav class="navigate">
-      <ul>
-          <li><a href="index.php" class="selected">Home</a></li>
-          <li><a href="news.php">News</a></li>
-          <li><a href="courses.php">Courses</a></li>
-          <li><a href="about.php">About</a></li>
-          <li><a href="director_board_executive.php">#to profile</a></li>
-
-      </ul>
-    </nav>
 
 	<div class="confirmBox">
       <div class="message"></div>

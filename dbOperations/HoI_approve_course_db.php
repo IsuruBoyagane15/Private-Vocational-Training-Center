@@ -20,6 +20,13 @@
     }
     $sql = "INSERT INTO course_details (course_id,trade,course_name,course_type, type, accredit_level, duration,   medium,required_qualification,student_count) VALUES
     ('$id', '$trade', '$course_name', '$course_type', '$type', '$accredit_level', '$duration', '$medium', '$required_qualification', '$student_count')";
+    $sql5 = "CREATE TABLE $id (modules VARCHAR(10))" ;
+    if(mysqli_query($link, $sql5)){
+      echo "course modules added";
+    } else{
+         echo "ERROR: Could not able to execute $sql5. " . mysqli_error($link);
+    }
+
     if(mysqli_query($link, $sql)){
         echo "Records inserted successfully.";
 
@@ -53,6 +60,13 @@
                 echo "module approved";
               } else{
                    echo "ERROR: Could not able to execute $sql4. " . mysqli_error($link);
+              }
+
+              $sql6 = "INSERT INTO $id (modules) VALUES ('$module_id')";
+              if(mysqli_query($link, $sql6)){
+                echo "module approved";
+              } else{
+                   echo "ERROR: Could not able to execute $sql6. " . mysqli_error($link);
               }
               $count = $count +1;
 
