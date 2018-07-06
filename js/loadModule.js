@@ -6,7 +6,7 @@ $( function() {
     $.ajax({
       url: "dbOperations/db_fetch_module.php",
       method: "POST",
-      data: {id:index},         //***************need to get lec id********************
+      data: {id:index},
       success: function(data){
         $('#assign_mods').html(data);
       }

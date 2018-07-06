@@ -1,3 +1,11 @@
+<?php                                     //access controlling
+  session_start();
+  if( !isset($_SESSION['signed_in']) ) {
+    header('location:index.php');
+    exit();
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,14 +30,14 @@
   <body>
 
     <!--Including header file-->
-    <?php include_once("inc/header.php"); ?>
-    <?php include_once("inc/navpannel.php");?>
-    <?php $index=trim($_GET['index']);
-    include_once("inc/subnavlec.php");
+    <?php
+      include_once("inc/header.php");
+      include_once("inc/navpannel.php");
+      $index = trim($_SESSION['username']);
+      include_once("inc/subnavlec.php");
     ?>
-    <!--navigation panel-->
 
-    <input type="hidden" name="index" id="index" value=<?php echo $_GET['index']?>>
+    <input type="hidden" name="index" id="index" value=<?php echo $index ?> >
     <!--main body contents-->
     <div class="container">
 

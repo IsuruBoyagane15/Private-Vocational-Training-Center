@@ -1,0 +1,84 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jul 05, 2018 at 07:19 AM
+-- Server version: 10.1.29-MariaDB
+-- PHP Version: 7.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `applicantdetails_hrselected`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `selected_lecturer_details`
+--
+
+CREATE TABLE `selected_lecturer_details` (
+  `id` int(9) UNSIGNED NOT NULL,
+  `course` varchar(50) NOT NULL,
+  `name_with_initials` varchar(50) NOT NULL,
+  `fullname` varchar(100) NOT NULL,
+  `medium` varchar(20) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `nic` varchar(10) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `date_of_birth` varchar(100) NOT NULL,
+  `age` varchar(3) NOT NULL,
+  `mobile` varchar(10) NOT NULL,
+  `home` varchar(12) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `year_of_ol` varchar(100) NOT NULL,
+  `year_of_al` varchar(100) NOT NULL,
+  `index_al` varchar(100) NOT NULL,
+  `stream` varchar(10) NOT NULL,
+  `degree` varchar(100) NOT NULL,
+  `applied_date` datetime NOT NULL,
+  `selected_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `selected_lecturer_details`
+--
+
+INSERT INTO `selected_lecturer_details` (`id`, `course`, `name_with_initials`, `fullname`, `medium`, `address`, `nic`, `gender`, `date_of_birth`, `age`, `mobile`, `home`, `email`, `year_of_ol`, `year_of_al`, `index_al`, `stream`, `degree`, `applied_date`, `selected_date`) VALUES
+(1, 'sd', 'a.w.t.bandara', 'amal bandara', 'sn', 'tsrgbd 5yetbv', '58565566v', 'male', '', '12', '015487414', '540545504', 'edfg@am.com', '2312', '2233', '122332', 'maths', 'O/L', '2018-07-02 18:51:08', '2018-07-02 13:54:30');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `selected_lecturer_details`
+--
+ALTER TABLE `selected_lecturer_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `selected_lecturer_details`
+--
+ALTER TABLE `selected_lecturer_details`
+  MODIFY `id` int(9) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

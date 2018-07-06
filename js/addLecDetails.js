@@ -6,12 +6,16 @@ $(function (){
   });
   $(document).on('click', 'input[value="Cancel"]', function(event){
     event.preventDefault();
+    location.reload(true);
+    location.href = "index.php";
   });
   $(document).on('click', 'input[value="Clear All"]', function(event){
     event.preventDefault();
+    location.reload(true);
   });
   $(document).on('click', 'input[value="Previous"]', function(event){
     event.preventDefault();
+    location.href = "news.php";
   });
 
   $(document).on('click', 'input[value="Submit"]', function(event){
@@ -22,6 +26,7 @@ $(function (){
     var fullname = $(document).find('input[name="fullname"]').val();
     var address = $(document).find('input[name="address"]').val();
     var nic = $(document).find('input[name="nicno"]').val();
+    var email = $(document).find('input[name="email"]').val();
     var mobile = $(document).find('input[name="mob"]').val();
     var home = $(document).find('input[name="home"]').val();
     var dob = $(document).find('input[name="dob"]').val();
@@ -37,9 +42,11 @@ $(function (){
     $.ajax({
       url: "dbOperations/addLecDetails_db.php",
       method: "POST",
-      data: {course:course, name_ini:name_ini, fullname:fullname, address:address, nic:nic, mobile:mobile, home:home, dob:dob, age:age, gender:gender, year_ol:year_ol, year_al:year_al, index_al:index_al, stream:stream, degree:degree, medium:medium} ,
+      data: {course:course, name_ini:name_ini, fullname:fullname, address:address, nic:nic, email:email, mobile:mobile, home:home, dob:dob, age:age, gender:gender, year_ol:year_ol, year_al:year_al, index_al:index_al, stream:stream, degree:degree, medium:medium} ,
       success: function(data){
-        alert("Your record successfully inserted!");
+        alert(data);
+        location.href = "regapplication.php";
+        location.reload(true);
       },
       error: function(err){
         alert(err);

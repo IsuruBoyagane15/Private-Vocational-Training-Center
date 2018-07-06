@@ -89,8 +89,8 @@ $(function() {
           success:function(data){
             alert("student registered");
           },
-
         });
+        document.location.reload(true);
       });
     });
 

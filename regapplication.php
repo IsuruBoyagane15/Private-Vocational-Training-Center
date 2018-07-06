@@ -65,8 +65,9 @@
 
 
 <li>Gender :
-<input type="radio" name="gender" value="f" required>Female</input>
-<input type="radio" name="gender" value="m" required>Male</input></li><br>
+<input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">Female
+</li><br>
 <hr color = "purple">
 <li><b>Education </b></li><br><br>
 <ul>
@@ -113,7 +114,6 @@ Stream :
 
 <hr color = "purple">
 <br><br></ol>
-<input type="submit" value="Save All" style="color:MidnightBlue;border-radius:10px;background:LightGrey;">
 <input type="submit" value="Cancel" style="color:MidnightBlue;border-radius:10px;background:LightGrey;">
 <input type="submit" value="Clear All" style="color:MidnightBlue;border-radius:10px;background:LightGrey;">
 <input type="submit" value="Submit" style="color:MidnightBlue;border-radius:10px;background:LightGrey;">
