@@ -37,8 +37,6 @@
       include_once("inc/subnavlec.php");
     ?>
 
-    <!--navigation panel-->
-
     <input type="hidden" name="index" id="index" value=<?php echo $index ?> >
     <!--main body contents-->
     <div class="container">
