@@ -2,7 +2,7 @@
 
 $link = mysqli_connect("localhost", "root", "", "applicantdetails_hrselected");
 
-$query = "select * from selected_staff_details";
+$query = "select * from selected_lecturer_details";
 $result = mysqli_query($link,$query);
 
 
