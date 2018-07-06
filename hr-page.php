@@ -35,7 +35,7 @@
       include_once("inc/header.php");
       include_once("inc/navpannel.php");
       $index = trim($_SESSION['username']);
-      include_once("inc/subnavlec.php");
+      include_once("inc/subnavstaff.php");
     ?>
 
     <input type="hidden" name="index" id="index" value=<?php echo $index ?> >
