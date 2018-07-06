@@ -43,6 +43,7 @@ $(function() {
       window.location.href = "HoI_recruitment.php";
       },
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();
@@ -53,7 +54,7 @@ $(function() {
     var box =  $(this).closest('.staff_container');
 
 
-    confirmBox.find('.message').text("Reject this Staff member...?");
+    confirmBox.find('.message').text("Approve this Staff member...?");
     confirmBox.find('.yes, .no').unbind().click( function() {
         confirmBox.hide();
     } );
@@ -61,19 +62,19 @@ $(function() {
 
     confirmBox.find('.yes').click( function() {
 
-      var staff_id = box.find('.staff_id').text();
-      var name = box.find('.name').text();
+      var id = box.find('.staff_id').text();
+      alert(id);
 
     $.ajax({
       url: "dbOperations/HoI_approve_staff_db.php",
       type:"POST",
-      data: {staff_id:staff_id,name:name},
+      data: {id:id},
 
       success:function(data){
-      window.location.href = "dbOperations/HoI_approve_staff_db.php";
       alert("id sent");
       },
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();

@@ -49,13 +49,29 @@
 						<tr>
 							<th>ID</th>
 							<th>Staff Name</th>
+              <th>address</th>
+              <th>nic</th>
+              <th>Gender</th>
+              <th>Date of Birth</th>
+              <th>Mobile</th>
+              <th>Email</th>
+              <th>Applied Date</th>
+              <th>Selected Date</th>
               <th>Approve</th>
               <th>Reject</th>
 
 						</tr>
 						<tr class ="records">
-							<td class = "staff_id"><?php echo($row['staff_id']);?></td>
-							<td class = "name"><?php echo($row['name']);?></td>
+							<td class = "staff_id"><?php echo($row['id']);?></td>
+							<td class = "name"><?php echo($row['fullname']);?></td>
+              <td class = "address"><?php echo($row['address']);?></td>
+              <td class = "nic"><?php echo($row['nic']);?></td>
+              <td class = "gender"><?php echo($row['gender']);?></td>
+              <td class = "date_of_birth"><?php echo($row['date_of_birth']);?></td>
+              <td class = "mobile"><?php echo($row['mobile']);?></td>
+              <td class = "email"><?php echo($row['email']);?></td>
+              <td class = "applied_date"><?php echo($row['applied_date']);?></td>
+              <td class = "selected_date"><?php echo($row['selected_date']);?></td>
               <td class = "approval"><button>Approve</button></td>
               <td class = "rejection"><button>Reject</button></td>
 						<tr>
