@@ -9,13 +9,12 @@ if($link === false){
 
 $module_name =$_POST["module_name"] ;
 $description =$_POST["description"] ;
-$term =$_POST["term"] ;
 $lecturer =$_POST["lecturer"] ;
 session_start();
     $id = $_SESSION['id'] +1;
 
 
-$sql = "INSERT INTO modules (module_name, description, term, lecturer, course_id) VALUES ('$module_name', '$description', '$term', '$lecturer', '$id' )";
+$sql = "INSERT INTO modules (module_name, description, lecturer, course_id) VALUES ('$module_name', '$description', '$lecturer', '$id' )";
 
 if(mysqli_query($link, $sql)){
     echo "Records inserted successfully.";

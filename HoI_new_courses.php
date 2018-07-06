@@ -90,7 +90,6 @@
 					<table align = "center" id = "modules">
 							<tr>
 								<th>Module Name</th>
-								<th>Term</th>
 								<th>Lecturer</th>
 								<th>Description</th>
 
@@ -100,7 +99,6 @@
 						?>
 							<tr>
 								<td><?php echo($row2['module_name']);?></td>
-								<td><?php echo($row2['term']);?></td>
 								<td><?php echo($row2['lecturer']);?></td>
 								<td><?php echo($row2['description']);?></td>
 

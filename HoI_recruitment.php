@@ -35,9 +35,7 @@
 
 	<div class="container">
 		<ul class = "staff">
-			<?php
-				while($row = mysqli_fetch_assoc($result)){
-			?>
+
 
 			<div class = "staff_container">
 				<li>
@@ -57,6 +55,10 @@
               <th>Reject</th>
 
 						</tr>
+
+            <?php
+      				while($row = mysqli_fetch_assoc($result)){
+      			?>
 						<tr class ="records">
 							<td class = "staff_id"><?php echo($row['id']);?></td>
 							<td class = "name"><?php echo($row['fullname']);?></td>
@@ -71,14 +73,15 @@
               <td class = "approval"><button>Approve</button></td>
               <td class = "rejection"><button>Reject</button></td>
 						<tr>
+              <?php
+        				}
+        			?>
 					</table>
 
 				</li>
 			</div>
 
-			<?php
-				}
-			?>
+
 		</ul>
 
 		<div class="def_buttons">
