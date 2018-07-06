@@ -7,7 +7,7 @@
     <!---script files---->
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/log-in_stud.js" type="text/javascript"></script>
-
+    <script src="js/log-in_staff.js" type="text/javascript"></script>
 
     <!--css styles-->
     <link rel="stylesheet" href="css/styles_header.css">

@@ -2,8 +2,9 @@
 <!-- load module names to the note_upload popup -->
 
 <?php
+  session_start();
   $connection = mysqli_connect("localhost", "root", "", "COURSES_DETAILS");
-  $query = "SELECT module_name FROM module_details";
+  $query = "SELECT module_name FROM module_details WHERE lecturer_id='{$_SESSION['username']}'";
   $result = mysqli_query($connection, $query);
   $output = '<select class="label" id="module_name">';
 
