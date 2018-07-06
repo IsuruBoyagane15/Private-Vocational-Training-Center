@@ -9,9 +9,17 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
     <link rel="stylesheet" href="css/styles_HoI_new_courses.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
 
-	<script src="js/jquery-3.3.1.js"></script>
+	   <script src="js/jquery-3.3.1.js"></script>
     <script src="js/HoI_new_courses_buttons.js" type="text/javascript"></script>
+    <script src="js/subnav.js" type="text/javascript"></script>
+
+
+
+
+
 
 
 </head>
@@ -19,17 +27,8 @@
 
     <!--Including header file-->
     <?php include_once("inc/header.php"); ?>
+    <?php include_once("inc/navpannel.php"); ?>
     <?php include_once("dbOperations/HoI_new_courses_db.php"); ?>
-
-    <nav class="navigate">
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="courses.php">Courses</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="HoI.php">#to profile</a></li>
-      </ul>
-    </nav>
 
 	<div class="confirmBox">
       <div class="message"></div>

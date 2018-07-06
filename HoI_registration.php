@@ -22,26 +22,23 @@ if($link === false){
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
     <link rel="stylesheet" href="css/styles_HoI_registration.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
 
-	<script src="js/jquery-3.3.1.js"></script>
+
+
+
+
+	  <script src="js/jquery-3.3.1.js"></script>
     <script src="js/HoI_registration_buttons.js" type="text/javascript"></script>
-
+    <script src="js/subnav.js" type="text/javascript"></script>
 
 </head>
 <body>
 
     <!--Including header file-->
     <?php include_once("inc/header.php"); ?>
-
-    <nav class="navigate">
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="courses.php">Courses</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="HoI.php">#to profile</a></li>
-      </ul>
-    </nav>
+    <?php include_once("inc/navpannel.php"); ?>
 
 	<div class="confirmBox">
       <div class="message"></div>

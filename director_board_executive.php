@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
     <link rel="stylesheet" href="css/styles_director_board_executive.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
+
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/subnav.js" type="text/javascript"></script>
+
 
 </head>
 <body>
@@ -16,17 +23,10 @@
     <!--Including header file-->
     <?php
     include("inc/header.php");
+    include_once("inc/navpannel.php");
 
     ?>
-    <nav class="navigate">
-      <ul>
-        <li><a href="index.php" class="selected">Home</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="courses.php">Courses</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="">#to profile</a></li>
-      </ul>
-    </nav>
+
 
     <nav class = "tasks">
     <a href="create_course.php">Create Course</a><br>
