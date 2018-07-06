@@ -43,6 +43,7 @@ $(function() {
       success:function(data){
       },
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();
@@ -75,6 +76,7 @@ $(function() {
         alert("id sent");
       },
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();

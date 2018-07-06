@@ -104,11 +104,10 @@ $(function() {
           course_id:course_id},
 
 			success:function(data){
-				alert("New course was approved...!");
+				alert("New course was approved...!" +data);
 			   }
-
 			 });
-
+       window.location.href("dbOperations/HoI_approve_course_db.php");
     });
     confirmBox.show();
   });

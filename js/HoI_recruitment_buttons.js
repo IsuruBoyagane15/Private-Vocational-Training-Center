@@ -43,6 +43,7 @@ $(function() {
       window.location.href = "HoI_recruitment.php";
       },
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();
@@ -71,9 +72,9 @@ $(function() {
 
       success:function(data){
       alert("id sent");
-      //window.location= "dbOperations/HoI_approve_staff_db.php";
       },
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();

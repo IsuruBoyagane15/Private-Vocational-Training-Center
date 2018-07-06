@@ -1,4 +1,4 @@
-<?php
+ <?php
    $server="localhost";
    $username="root";
    $password="";
@@ -24,13 +24,13 @@
      $_SESSION['signed_in']=true;
      $_SESSION['username']=$username;
      $conn->close();
-     header("Location:../student_profile.php?index=$username");
+     header("Location:/VTI2/Private-Vocational-Training-Center/student_profile.php?index=$username");
    }
    else{
      $conn->close();
      $_SESSION['flash_error']="invalid user name or password";
      $_SESSION['signed_in']=false;
      $_SESSION['username']=null;
-     header("Location:../log-in.php");
+     header("Location:/VTI/Private-Vocational-Training-Center/log-in.php");
    }
    ?>

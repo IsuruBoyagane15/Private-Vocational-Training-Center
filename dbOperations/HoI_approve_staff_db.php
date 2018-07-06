@@ -63,19 +63,19 @@ if(mysqli_query($link3, $sql)){
 
 
 
-  $link3 = mysqli_connect("localhost", "root", "", "authentication");
-  if($link3 === false){
+  $link4 = mysqli_connect("localhost", "root", "", "authentication");
+  if($link4 === false){
       die("ERROR: Could not connect. " . mysqli_connect_error());
   }
   $password = sha1($sid);
-  $sql3 = "INSERT INTO user (username, password)  VALUES ('$sid','$password')";
-  if(mysqli_query($link3, $sql3)){
+  $sql4 = "INSERT INTO user_staff (username, password)  VALUES ('$sid','$password')";
+  if(mysqli_query($link4, $sql4)){
     echo "password was added";
   }
   else{
-    echo "ERROR: Could not able to execute $sql3. " . mysqli_error($link3);
+    echo "ERROR: Could not able to execute $sql4. " . mysqli_error($link4);
   }
-  mysqli_close($link3);
+  mysqli_close($link4);
 
 
 } else{

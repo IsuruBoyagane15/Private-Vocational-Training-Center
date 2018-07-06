@@ -43,6 +43,7 @@ $(function() {
         alert("id id ddjd");
 			},
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();
