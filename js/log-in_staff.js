@@ -13,7 +13,7 @@ $(function (){
       method: "POST",
       data: {username:username, password:password},
       success: function(data){              //invalid login
-        if(data=="invalid_usr/pass"){
+        if(data.trim()=="invalid_usr/pass"){
           alert("Invalid username or password!!!");
           location.href = "log-in.php";
         }else{                              //successful login
