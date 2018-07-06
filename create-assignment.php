@@ -20,6 +20,7 @@
 
     <!--Including header file-->
     <?php include_once("inc/header.php"); ?>
+    <input type="hidden" name="index" id="index" value=<?php echo $_GET['index']?>>
 
     <!--navigation panel-->
     <nav class="navigate">
@@ -109,10 +110,23 @@
     </div>
 
     <!--assignment details panel-->
-    <div class="assignment_details">
-      <label class="label" id="module_select">Module name :</label>
-      <label class="label">Assignment name :</label>  <!--loads from php-->
+    <div class="assignment_details" id="ass_det_1">
+      <label class="label">Module name :</label>
+      <label class="label" id="module_select">Module name :</label>  <!--loads from php-->
+      <label class="label">&emsp;Assignment name :</label>
       <input type="text" name="assignment_name" class="details_input" id="assignment_name">
+      <label class="label">&emsp;No of Attempts :</label>
+      <select name="attempts" id="attempts">
+        <option value="01">01</option>
+        <option value="02">02</option>
+        <option value="03">03</option>
+        <option value="04">04</option>
+        <option value="04">05</option>
+      </select>
+    </div>
+    <div class="assignment_details" id="ass_det_2">
+      <label class="label">Description :</label>
+      <input type="text" name="assignment_des" class="des_input" id="assignment_des">
     </div>
 
     <!--question container-->

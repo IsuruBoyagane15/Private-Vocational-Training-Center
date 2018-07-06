@@ -33,7 +33,7 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT tablename FROM config_createassignment WHERE id='$ass_id' AND module='$module_name'";
+$sql="SELECT tablename FROM config_createassignment WHERE id='$ass_id'";
 $result=$conn->query($sql);
 $row=mysqli_fetch_array($result);
 $ass_name=$row[0];

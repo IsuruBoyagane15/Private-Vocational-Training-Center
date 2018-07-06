@@ -9,26 +9,27 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_lecturer-profile.css">
     <link rel="stylesheet" href="css/styles_footer.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
 
     <!--jquery sources-->
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/loadModule.js" type="text/javascript"></script>
     <script src="js/uploads_assigns.js" type="text/javascript"></script>
+    <script src="js/subnav.js" type="text/javascript"></script>
 
   </head>
   <body>
 
     <!--Including header file-->
     <?php include_once("inc/header.php"); ?>
-
+    <?php include_once("inc/navpannel.php");?>
+    <?php $index=trim($_GET['index']);
+    include_once("inc/subnavlec.php");
+    ?>
     <!--navigation panel-->
-    <nav class="navigate">
-      <ul>
-        <li><a href="#">#name#</a></li>
-        <li><a href="log-out.php">Log Out</a></li>
-      </ul>
-    </nav>
 
+    <input type="hidden" name="index" id="index" value=<?php echo $_GET['index']?>>
     <!--main body contents-->
     <div class="container">
 
@@ -108,7 +109,7 @@
         <!--action pane with buttons-->
         <div class="middle_action">
           <a href="#"><button type="submit" id="new_note">Add Lecture Notes</button></a>
-          <a href="create-assignment.php"><button type="submit" name="new_assignment">Create New Assignment</button></a>
+          <a href="create-assignment.php?index=<?php echo $_GET['index']?>"><button type="submit" name="new_assignment">Create New Assignment</button></a>
         </div>
       </div>
 

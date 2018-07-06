@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname="assignments";
+$dbname="configdata";
 
 // Create connection
 $index=$_GET['index'];
@@ -11,6 +11,7 @@ $module_id=trim($module_id);
 $ass_id=$_GET['ass_id'];
 $ass_id=trim($ass_id);
 
+
 $module_id=trim($module_id);
 $conn = new mysqli($servername, $username, $password,$dbname);
 
@@ -18,7 +19,7 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT assignment_name FROM {$module_id} where assignment_id={$ass_id}";
+$sql="SELECT tablename FROM config_createassignment WHERE  id='$ass_id'";
 $result=$conn->query($sql);
 $conn->close();
 $row=mysqli_fetch_array($result);
@@ -49,27 +50,35 @@ else{
   $output.='<tr><th>Grade</th><td>Not graded</td></tr>';
 }
 $conn->close();
-$dbname="assignments";
+$dbname="configdata";
 $conn=new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT due_date FROM $module_id WHERE assignment_name='$ass_name'";
+$sql="SELECT deadline FROM config_createassignment WHERE assignment_name='$ass_name'";
 $result=$conn->query($sql);
 $row=mysqli_fetch_array($result);
 $due_date=date_create($row[0]);
-$due_date=date_format($due_date,"r");
+$due_date=date_format($due_date,"Y/m/d H:i:s");
 $output.='<tr><th>Due date</th><td>'.$due_date.'</td></tr>';
 $today = date("Y-m-d H:i:s");
 $today=date_create($today);
-$today=date_format($today,"r");
+$today=date_format($today,"Y/m/d H:i:s");
 if($today<$due_date){
-  $output.='<tr><th>Time Remaining</th><td>Still time remaining</td></tr>';
+  $timeleft=date_diff($today,$due_date);
+  $timeleft->format("%R%a days");
+  $daysleft=round((($timeleft/24)/60)/60);
+  $minutesleft=round($timeleft-$daysleft*24*60);
+  $output.='<tr><th>Time Remaining</th><td>'.$time_left.'minutes  </td></tr>';
 }
 else{
-  $output.='<tr><th>Time Remaining</th><td>assignment is overdue</td></tr>';
+  $due_date=date_create($row[0]);
+  $today=date_create($today);
+  $timeleft=date_diff($due_date,$today);
+
+  $output.='<tr><th>Time Remaining</th><td> Assignment is overdue by  '.$timeleft->format("%d Days").'</td></tr>';
 }
-$output.='<tr><th>Last modified</th><td></td></tr>';
+$output.='<tr><th>No of attempts remaining</th><td></td></tr>';
 $output.='<tr><th>File Submissions</th><td></td></tr>';
 $output.='<tr><th>Comments</th><td></td></tr>';
 $conn->close();

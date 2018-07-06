@@ -1,10 +1,12 @@
 $( function() {
 
   //load assigned modules to the left panel
+  var index=$('#index').val();
   $(document).ready( function() {
     $.ajax({
       url: "dbOperations/db_fetch_module.php",
       method: "POST",
+      data: {id:index},         //***************need to get lec id********************
       success: function(data){
         $('#assign_mods').html(data);
       }
@@ -25,5 +27,5 @@ $( function() {
     });
   });
 
-  
+
 } );
