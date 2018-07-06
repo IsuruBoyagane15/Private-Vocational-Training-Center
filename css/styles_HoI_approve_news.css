@@ -1,7 +1,9 @@
-.news {
-  padding:30px;
-  background-color:#3b3a36;
+.container{
+	height: auto;
+	padding: 20px;
+	background-color: #3b3a36;
 }
+
 
 ul{
   list-style-type: none;
@@ -53,28 +55,39 @@ ul{
 .values{
   color : #e9ece5;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-padding-top: 10px;
-  padding:5px;
+  //padding-top: 10px;
+  //padding:5px;
 
+}
+
+.ids{
+  color: #e9ece5;
 }
 
 .value_box{
   background-color:#3b3a36;
   margin-left: 25%;
+  margin-bottom: 10px;
   width: 50%;
   height: 30px;
+  text-align: center;;
+  padding-top: 10px;
 }
 
 .news_source{
   margin-left: 25%;
-  border-style: none;
   width:50%;
-  height: 30px;
+  height: 40px;
   color :#e9ece5;
   background-color: #3b3a36;
   margin-top: 10px;
 
 }
+
+.news_source:hover{
+  background-color: green;
+}
+
 a:link{
   text-decoration: none;
 }
@@ -92,6 +105,17 @@ a:link{
   color: #e9ece5;
 
 }
+
+.approve:hover{
+  background-color: green;
+
+}
+
+.reject:hover{
+  background-color: green;
+
+}
+
 .def_buttons{
   background-color: #3b3a36;
   padding: 20px;
@@ -99,7 +123,12 @@ a:link{
 
 .def{
   margin-left:25%;
-  height: 30px;
+  height: 40px;
   width:50%;
   background-color: #2b2d36;
+  font-size: 20px;
+}
+
+.def:hover{
+  background-color: green;
 }

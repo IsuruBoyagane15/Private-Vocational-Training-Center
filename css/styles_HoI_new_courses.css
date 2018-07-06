@@ -1,55 +1,52 @@
 .container{
 	height: auto;
 	padding: 20px;
-	background-color: lightyellow;
+	background-color: #808080;
 }
 
 .course_container{
-	border : dotted blue;
 	margin :20px;
+	background-color: #3b3a36;
 }
 
 .ctable {
 
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
 	margin-top: 20px
 
 }
-.ctable td, .ctable th {
-    border: 1px solid black;
-    padding: 2px;
-}
+
 
 .ctable tr:nth-child(even){background-color: #f2f2f2;}
 
 .ctable tr:hover {background-color: #ddd;}
 
 .ctable th {
-	border: solid black;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #D3D3D3;
-    color: black;
+	border: solid darkgray;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #D3D3D3;
+  color: black;
 }
 
 .ctable td{
-	border: solid black;
+	border: solid darkgray;
 	text-align: center;
+	padding: 10px;
 }
 
 #modules {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;s
 	margin-top: 20px;
 	margin-bottom:20px;
-
+	padding: 20px;
 }
 
 #modules td, #modules th {
-    border: 1px solid black;
-    padding: 8px;
+  padding: 8px;
+	border: solid darkgray;
 }
 
 #modules tr:nth-child(even){background-color: #f2f2f2;}
@@ -57,16 +54,16 @@
 #modules tr:hover {background-color: #ddd;}
 
 #modules th {
-	border: solid black;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #D3D3D3;
-    color: black;
+	border: solid darkgray;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #D3D3D3;
+  color: black;
 }
 
 #modules	 td{
-	border: solid black;
+	border: solid darkgray;
 	text-align: center;
 }
 
@@ -76,47 +73,53 @@
 }
 
 .buttons{
-
-
 	height:50px;
 	margin:5px;
 	padding:5px;
 }
 
 .reject, .approve{
-	width:49.5%;
+	width:49%;
 	height: 30px;
 	justify-content: center;
 	padding:5px 5px;
-	background-color: cadetblue;
+	background-color: 	#A9A9A9;
 	border-color: azure;
+	font-size: 15px;
+}
 
+.approve:hover{
+	background-color: green;
+}
+
+.reject:hover{
+	background-color: green;
 }
 
 .container .courses .course_container h4{
-	color: cadetblue;
+	color: 	#C0C0C0;
 	text-align: center;
-	font-family: fantasy;
-	font-size: 25px;
+	font-size: 35px;
+	padding: 20px;
 }
 
 .def_buttons{
-
-
-	height:50px;
-	margin:100px;
+	height:75px;
 	padding:5px;
+	width : 100%;
 }
 
 .def 	{
-	width:100%;
-	height: 30px;
-	justify-content: center;
-	padding:5px 5px;
-	background-color:darkturquoise;
+	width:96%;
+	height: 40px;
+	margin-left: 3%;
+	font-size: 20px;
+	background-color:#3b3a36;
 	border-color: azure;
-	align-self: center;
+}
 
+.def:hover{
+	background-color: green;
 }
 
 .confirmBox {
@@ -154,9 +157,9 @@
   background-color: #ddd;
 }
 
-.commentBox {
+ .commentBox {
   display: none;
-  background-color: lightyellow;
+/*  background-color: lightyellow;
   border-radius: 5px;
   border: 1px solid #aaa;
   position: fixed; top: 50%; left: 50%; width: 800px; height: 150px; margin-left: -300px; margin-top: -200px;
@@ -187,4 +190,4 @@
 
 .commentBox .button:hover {
   background-color: #ddd;
-}
+} */
