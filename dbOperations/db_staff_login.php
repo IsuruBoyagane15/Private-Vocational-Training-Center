@@ -29,8 +29,7 @@
   if($row=mysqli_fetch_array($result)){
     $_SESSION['signed_in'] = true;
     $_SESSION['username'] = $provided_username;
-    $connection->close();
-    echo "Location:../".$redirect;
+    echo $redirect;
   }
   else{
     $_SESSION['flash_error']="invalid user name or password";
