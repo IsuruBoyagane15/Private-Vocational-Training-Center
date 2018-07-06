@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+if( !isset($_SESSION['signed_in'])){
+  if(!$_SESSION['signed_in']){
+    header('location:index.php');
+    exit();
+  }
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,17 +36,19 @@
     <?php
     include("inc/header.php");
     include_once("inc/navpannel.php");
-
+    $index = trim($_SESSION['username']);
+    include_once("inc/subnavstaff.php");
     ?>
 
+    <input type = "hidden" name = "index" id = "index" value=<?php echo $index ?>>
 
     <nav class = "tasks">
     <a href="create_course.php">Create Course</a><br>
     </nav>
+
+
+
     <!--Include footer file-->
-
-
-
     <?php include_once("inc/footer.php"); ?>
 
 </body>

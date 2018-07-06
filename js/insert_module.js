@@ -17,12 +17,6 @@ $(function() {
       \
       \
       <div class="data">\
-        <label class="label">Term</label><br>\
-        <input type="number" name="term" class="term" id="term">\
-        \
-      </div>\
-      \
-      <div class="data">\
         <label class="label">Lecturer</label><br>\
         <select id = "lecturer" name="lecturer" class = "lecturer">\
           <option value="lecturer1" >lecturer1</option>\
@@ -39,10 +33,10 @@ $(function() {
       \
       <button type="submit" name="que_remove" class="que_remove">Remove Module</button>\
     </li>');
-      
-    
+
+
 
     queId++;
-   
+
   });
 } );

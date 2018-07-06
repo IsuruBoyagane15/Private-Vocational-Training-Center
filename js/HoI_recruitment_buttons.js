@@ -20,7 +20,7 @@ $(function() {
 
   $('.rejection').on('click', function(){
     var confirmBox = $('.confirmBox');
-    var box =  $(this).closest('.staff_container');
+    var box =  $(this).closest('tr');
 
 
     confirmBox.find('.message').text("Reject this Staff member...?");
@@ -51,7 +51,7 @@ $(function() {
 
   $('.approval').on('click', function(){
     var confirmBox = $('.confirmBox');
-    var box =  $(this).closest('.staff_container');
+    var box =  $(this).closest('tr');
 
 
     confirmBox.find('.message').text("Approve this Staff member...?");
