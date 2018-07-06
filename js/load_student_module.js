@@ -1,6 +1,4 @@
 $(document).ready(function(){
-  var module_id=$("#mo_id").val();
-  var index=$("#index").val();
   $.ajax({
     url: "dbOperations/db_load_student_module.php?module_id="+module_id,
     method: "POST",

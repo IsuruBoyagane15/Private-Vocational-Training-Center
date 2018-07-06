@@ -16,7 +16,7 @@
 
 </head>
 <body>
-
+      <?php session_start();?>
       <?php include_once("inc/header.php"); ?>
       <?php include_once("inc/navpannel.php");?>
       <?php
