@@ -1,4 +1,5 @@
-.news {
+.container {
+  height: auto;
   padding:30px;
   background-color:#3b3a36;
 }
@@ -50,29 +51,37 @@ ul{
   width: 50%;
 }
 
-.values{
+.values {
   color : #e9ece5;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-padding-top: 10px;
   padding:5px;
-
+  padding-top: 10px;
 }
 
+.ids{
+  color: #e9ece5;
+}
 .value_box{
   background-color:#3b3a36;
   margin-left: 25%;
+  margin-bottom: 10px;
   width: 50%;
   height: 30px;
+  text-align: center;;
+  padding-top: 10px;
 }
 
 .news_source{
   margin-left: 25%;
-  border-style: none;
   width:50%;
-  height: 30px;
+  height: 40px;
   color :#e9ece5;
   background-color: #3b3a36;
   margin-top: 10px;
+}
+
+.news_source:hover{
+  background-color: green;
 
 }
 a:link{
@@ -85,11 +94,16 @@ a:link{
 }
 
 .remove{
-  width:49.5%;
-  height: 30px;
+  width:52%;
+  height: 40px;
+  margin-left: 24%;
   background-color: #3b3a36;
-  border-style: hidden;
   color: #e9ece5;
+
+}
+
+.remove:hover{
+  background-color: green;
 
 }
 .def_buttons{
@@ -98,8 +112,20 @@ a:link{
 }
 
 .def{
-  margin-left:25%;
-  height: 30px;
+  margin-left:27%;
+  height: 40px;
   width:50%;
   background-color: #2b2d36;
+  font-size: 20px;
+}
+
+.def:hover{
+  background-color: green;
+}
+
+.container h5{
+  font-size: 35px;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #C0C0C0;
 }

@@ -1,4 +1,4 @@
-.body_navigation {
+/* .body_navigation {
   background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
   background: -webkit-linear-gradient(to right, white 15%, yellow 50%, white 85%);
   background: -moz-linear-gradient(to right, white 15%, yellow 50%, white 85%);
@@ -30,26 +30,18 @@
   text-decoration: underline;
   text-decoration-style: dashed;
   color: black;
-}
+} */
 
 .container{
 	height: auto;
-	padding: 0px;
-	background-color: lightyellow;
-	margin: 20px;
-}
-
-.student_container{
-	border : dotted blue;
-	margin: 5px;
+	padding: 20px;
+	background-color: #3b3a36;
 }
 
 .student_table {
 
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-	margin-top: 20px;
-	margin-bottom: 20px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
 	font-size: 15px;
 	padding: 5px;
 
@@ -65,17 +57,18 @@
 .student_table tr:hover {background-color: #ddd;}
 
 .student_table th {
-	border: solid black;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #D3D3D3;
-    color: black;
+  border: solid darkgray;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #D3D3D3;
+  color: black;
 }
 
 .student_table td{
-	border: solid black;
+  border: solid darkgray;
 	text-align: center;
+	padding: 10px;
 }
 
 
@@ -84,33 +77,58 @@
 	list-style-type: none;
 }
 
-
-
-
-.container .students .student_container h4{
-	color: cadetblue;
-	text-align: center;
-	font-family: fantasy;
-	font-size: 25px;
+.container .students .student_container h5{
+    font-size: 35px;
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color: #C0C0C0;
 }
 
-,def_buttons{
-	width:100%;
-	height: auto;
-	margin:20px;
-	padding:10px;
+#approve{
+  width:40%;
+	height: 30px;
+	margin-top: 20px;
+	justify-content: center;
+	padding:5px 5px;
+	background-color: 	#808080;
+	border-color: azure;
+	font-size: 15px;
 }
 
-
-.def 	{
-	width:47%;
+#cancel{
+  width:40%;
 	height: 30px;
 	justify-content: center;
 	padding:5px 5px;
-	background-color:darkturquoise;
+	background-color: 	#808080;
 	border-color: azure;
-	margin-left: 35px;
-	
+	font-size: 15px;
+}
+
+#approve:hover{
+	background-color: 	green;
+}
+
+#cancel:hover{
+	background-color: 	green;
+}
+
+
+
+.def 	{
+  width:40%;
+	height: 40px;
+	font-size: 20px;
+  margin-left: 7%;
+	background-color:#3b3a36;
+	border-color: azure;
+
+}
+
+.def_buttons{
+	height:100px;
+	padding:5px;
+	width : 100%;
 }
 
 .confirmBox {
@@ -147,4 +165,3 @@
 .confirmBox .button:hover {
   background-color: #ddd;
 }
-

@@ -1,3 +1,15 @@
+<?php
+
+
+session_start();
+if( !isset($_SESSION['signed_in'])){
+  if(!$_SESSION['signed_in']){
+    header('location:index.php');
+    exit();
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,27 +21,28 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
     <link rel="stylesheet" href="css/styles_HoI_recruitment.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
 
-	<script src="js/jquery-3.3.1.js"></script>
+	  <script src="js/jquery-3.3.1.js"></script>
     <script src="js/HoI_recruitment_buttons.js" type="text/javascript"></script>
+    <script src="js/subnav.js" type="text/javascript"></script>
 
 
 </head>
 <body>
 
     <!--Including header file-->
-    <?php include_once("inc/header.php"); ?>
-    <?php include_once("dbOperations/HoI_recruitment_db.php"); ?>
+<?php
+    include_once("inc/header.php");
+    include_once("inc/navpannel.php");
+    $index = trim($_SESSION['username']);
+    include_once("inc/subnavstaff.php");
+    include_once("dbOperations/HoI_recruitment_db.php");
+?>
+<input type = "hidden" name = "index" id = "index" value=<?php echo $index ?>>
 
-    <nav class="navigate">
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="courses.php">Courses</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="HoI.php">#to profile</a></li>
-      </ul>
-    </nav>
+
 
 	<div class="confirmBox">
       <div class="message"></div>
@@ -39,9 +52,7 @@
 
 	<div class="container">
 		<ul class = "staff">
-			<?php
-				while($row = mysqli_fetch_assoc($result)){
-			?>
+
 
 			<div class = "staff_container">
 				<li>
@@ -61,6 +72,10 @@
               <th>Reject</th>
 
 						</tr>
+
+            <?php
+      				while($row = mysqli_fetch_assoc($result)){
+      			?>
 						<tr class ="records">
 							<td class = "staff_id"><?php echo($row['id']);?></td>
 							<td class = "name"><?php echo($row['fullname']);?></td>
@@ -75,14 +90,15 @@
               <td class = "approval"><button>Approve</button></td>
               <td class = "rejection"><button>Reject</button></td>
 						<tr>
+              <?php
+        				}
+        			?>
 					</table>
 
 				</li>
 			</div>
 
-			<?php
-				}
-			?>
+
 		</ul>
 
 		<div class="def_buttons">

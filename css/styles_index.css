@@ -61,6 +61,7 @@ PAGE: HOME
 
 .para_box p {
   color: chocolate;
+  text-align: justify;
 }
 
 /******** Body navigation Panel ********/

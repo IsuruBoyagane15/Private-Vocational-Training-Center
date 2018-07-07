@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if( !isset($_SESSION['signed_in'])){
+  if(!$_SESSION['signed_in']){
+    header('location:index.php');
+    exit();
+  }
+}
+?>
 <!DOCTYPE html>
  <html>
    <head>
@@ -9,27 +19,28 @@
      <link rel="stylesheet" href="css/styles_header.css">
      <link rel="stylesheet" href="css/styles_footer.css">
      <link rel="stylesheet" href="css/styles_HoI_remove_news.css">
+     <link rel="stylesheet" href="css/subnav.css">
+     <link rel="stylesheet" href="css/navpannel.css">
 
- 	<script src="js/jquery-3.3.1.js"></script>
+ 	   <script src="js/jquery-3.3.1.js"></script>
      <script src="js/HoI_remove_news_buttons.js" type="text/javascript"></script>
+     <script src="js/subnav.js" type="text/javascript"></script>
 
 
  </head>
  <body>
 
      <!--Including header file-->
-     <?php include_once("inc/header.php"); ?>
-     <?php include_once("dbOperations/HoI_remove_news_db.php"); ?>
+<?php include_once("inc/header.php");
+     include_once("inc/navpannel.php");
+     $index = trim($_SESSION['username']);
+     include_once("inc/subnavstaff.php");
+     include_once("dbOperations/HoI_remove_news_db.php");
+?>
 
-     <nav class="navigate">
-       <ul>
-         <li><a href="index.php">Home</a></li>
-         <li><a href="news.php">News</a></li>
-         <li><a href="courses.php">Courses</a></li>
-         <li><a href="about.php">About</a></li>
-         <li><a href="HoI.php">#to profile</a></li>
-       </ul>
-     </nav>
+  <input type = "hidden" name = "index" id = "index" value=<?php echo $index ?>>
+
+
 
  	<div class="confirmBox">
        <div class="message"></div>
@@ -38,6 +49,7 @@
      </div>
 
  	<div class="container">
+    <h5>News Items</h5>
  		<ul class = "news">
  			<?php
  				while($row = mysqli_fetch_assoc($result)){
@@ -64,13 +76,13 @@
                 <label class = "values"><?php echo $row["description"] ?></label>
               </div>
               <br>
-              <label class = "title">Added Date</label>
+              <label class = "title">Added Date & Time</label>
               <br>
               <div class = "value_box">
                 <label class = "values"><?php echo $row["added_date"] ?></label>
               </div>
               <br>
-              <label class = "title">Expire Date</label>
+              <label class = "title">Expire Date & Time</label>
               <br>
               <div class = "value_box">
                 <label class = "values"><?php echo $row["remove_date"] ?></label>

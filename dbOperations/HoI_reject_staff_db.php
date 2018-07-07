@@ -8,7 +8,7 @@ if($link === false){
 }
 
 $staff_id =  $_POST["staff_id"];
-$sql = "delete from selected_staff_details where staff_id = $staff_id";
+$sql = "DELETE FROM selected_lecturer_details WHERE id = $staff_id";
 
 
 if(mysqli_query($link, $sql)){

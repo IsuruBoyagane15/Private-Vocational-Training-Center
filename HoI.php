@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+if( !isset($_SESSION['signed_in'])){
+  if(!$_SESSION['signed_in']){
+    header('location:index.php');
+    exit();
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,22 +20,24 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
     <link rel="stylesheet" href="css/styles_HoI.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/subnav.js" type="text/javascript"></script>
 
 </head>
 <body>
 
-    <!--Including header file-->
-    <?php include_once("inc/header.php"); ?>
 
-    <nav class="navigate">
-      <ul>
-        <li><a href="index.php" class="selected">Home</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="courses.php">Courses</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="HoI.php">#to profile</a></li>
-      </ul>
-    </nav>
+<?php
+
+    include_once("inc/header.php");
+    include_once("inc/navpannel.php");
+    $index = trim($_SESSION['username']);
+    include_once("inc/subnavstaff.php");
+?>
+    <input type = "hidden" name = "index" id = "index" value=<?php echo $index ?>>
 
     <div class = "tasks">
         <ul>
