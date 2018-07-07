@@ -83,7 +83,7 @@
 	height: 30px;
 	justify-content: center;
 	padding:5px 5px;
-	background-color: 	#A9A9A9;
+	background-color: 	#808080;
 	border-color: azure;
 	font-size: 15px;
 }
@@ -110,9 +110,9 @@
 }
 
 .def 	{
-	width:96%;
+	width:50%;
 	height: 40px;
-	margin-left: 3%;
+	margin-left: 25%;
 	font-size: 20px;
 	background-color:#3b3a36;
 	border-color: azure;
@@ -189,5 +189,12 @@
 }
 
 .commentBox .button:hover {
-  background-color: #ddd;
-} */
+  background-color: #ddd; */
+}
+
+.container h5{
+  font-size: 35px;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: 	#303030;
+}

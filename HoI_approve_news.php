@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+if( !isset($_SESSION['signed_in'])){
+  if(!$_SESSION['signed_in']){
+    header('location:index.php');
+    exit();
+  }
+}
+?>
+
 <!DOCTYPE html>
  <html>
    <head>
@@ -21,10 +32,14 @@
  <body>
 
      <!--Including header file-->
-     <?php include_once("inc/header.php"); ?>
-     <?php include_once("inc/navpannel.php"); ?>
-     <?php include_once("dbOperations/HoI_approve_news_db.php"); ?>
+<?php include_once("inc/header.php");
+     include_once("inc/navpannel.php");
+     $index = trim($_SESSION['username']);
+     include_once("inc/subnavstaff.php");
+     include_once("dbOperations/HoI_approve_news_db.php");
+?>
 
+  <input type = "hidden" name = "index" id = "index" value=<?php echo $index ?>>
 
  	<div class="confirmBox">
        <div class="message"></div>
@@ -33,6 +48,7 @@
      </div>
 
  	<div class="container">
+    <h5>Pending News Items</h5>
  		<ul class = "news">
  			<?php
  				while($row = mysqli_fetch_assoc($result)){
@@ -59,13 +75,13 @@
                 <label class = "values"><?php echo $row["description"] ?></label>
               </div>
               <br>
-              <label class = "title">Added Date</label>
+              <label class = "title">Added Date & Time</label>
               <br>
               <div class = "value_box">
                 <label class = "values"><?php echo $row["added_date"] ?></label>
               </div>
               <br>
-              <label class = "title">Expire Date</label>
+              <label class = "title">Expire Date & Time</label>
               <br>
               <div class = "value_box">
                 <label class = "values"><?php echo $row["remove_date"] ?></label>
