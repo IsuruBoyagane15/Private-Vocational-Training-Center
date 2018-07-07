@@ -20,7 +20,7 @@ $output = '';
 //load actual file and insert into display
 
 while( $record = mysqli_fetch_array($result_set) ) {
-      $output .= '<div class="ncard"> <a href=" ';
+      $output .= '<div class="lightbox" style="margin-left:3%;width:90%;height:5vh;margin-top:1vh;margin-bottom:1vh;"><a href=" ';
       $output .= (string)$record[1];
       $output .= ' "class="mod_link"> ';
       $output .= (string)$record[0];
@@ -28,7 +28,6 @@ while( $record = mysqli_fetch_array($result_set) ) {
 
 
 }
-$output.='</ul>';
 
 echo $output;
 

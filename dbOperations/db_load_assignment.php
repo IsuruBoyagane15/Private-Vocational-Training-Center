@@ -20,6 +20,6 @@ $result=$conn->query($sql);
 $conn->close();
 $output="";
 $row=mysqli_fetch_array($result);
-$output.=$row[0];
+$output.='<div class="lightbox" style="width:90%;margin-left:2vw;height:1vh;">'.$row[0].'</div>';
 echo $output;
 ?>

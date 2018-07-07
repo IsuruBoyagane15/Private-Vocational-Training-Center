@@ -38,7 +38,7 @@ foreach($all_property as $item){
      $sql="SELECT module_name FROM module_details WHERE module_id='$mo_id'";
      $result2=$conn->query($sql);
      $row2=mysqli_fetch_array($result2);
-     $output .= '<a class="mod_link" href="student_module.php?module_id='.$mo_id.'&&index='.$index.'">'.$mo_id.'&emsp;'.$row2[0].'</a><br><br>';
+     $output .= '<a class="mod_link" style="padding-left:3vw;padding-top:1" href="student_module.php?module_id='.$mo_id.'&&index='.$index.'">'.$mo_id.'&emsp;'.$row2[0].'</a><br><br>';
 
   }
   $output.="</div>";

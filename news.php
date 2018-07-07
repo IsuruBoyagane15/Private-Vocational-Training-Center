@@ -36,7 +36,7 @@
       trained academic staff members for our institute. </p>
       <div class="vacancies_link"><br><br>
         <a href="regapplication.php">Click here </a>to apply for the academic staff vacancies. <br><br>
-        <a href="studentapplication.php">Click here </a>to apply for the courses. <br><br>
+        <a href="courses.php">Click here </a>to apply for the courses. <br><br>
       </div>
 
     </div>

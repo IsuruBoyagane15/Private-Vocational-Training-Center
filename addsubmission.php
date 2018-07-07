@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['signed_in'])){
+    if(!$_SESSION['signed_in']){
+      header('location:index.php');
+      exit();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +15,6 @@
   <link rel="stylesheet" href="css/styles_header.css">
   <link rel="stylesheet" href="css/styles_footer.css">
   <link rel="stylesheet" href="css/navpannel.css">
-  <link rel="stylesheet" href="css/card.css">
   <link rel="stylesheet" href="css/addsubmission.css">
   <link rel="stylesheet" href="css/subnav.css">
   <link rel="stylesheet" href="css/popup-box.css">
@@ -22,7 +31,7 @@
   $index=$_GET['index'];
   include_once("inc/subnav.php");
   ?>
-  <input type="hidden" name="index" id="index" value=<?php echo $_GET['index']?>>
+  <input type="hidden" name="index" id="index" value=<?php echo $_SESSION['username']?>>
   <input type="hidden" name="mo_id" id="mo_id" value=<?php echo $_GET['module_id']?>>
   <input type="hidden" name="assignment_id" id="assignment_id" value=<?php echo $_GET['ass_id']?>>
   <input type="hidden" id="late" value=<?php echo true ?>>
@@ -34,7 +43,7 @@
   <div class="submission_window" id="assignment">
   </div>
   <br>
-  <button class="butn" id="submit">Finsh attempt</button>
+  <button class="button" id="submit">Finsh attempt</button>
   <div id="res"></div>
 
   <?php include_once("inc/footer.php"); ?>

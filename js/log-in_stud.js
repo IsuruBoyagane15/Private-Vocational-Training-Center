@@ -16,8 +16,9 @@ $(function (){
         if(data.trim()=="invalid_usr/pass"){
           alert("Invalid username or password!!!");
           location.href = "log-in.php";
-        }else{                              //successful login
-          location.href = "student_profile.php?index="+data;
+        }else{
+                       //successful login
+          location.href ="student_profile.php";
           alert("Login Successful!");
         }
       },
