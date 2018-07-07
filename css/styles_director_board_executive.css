@@ -9,12 +9,15 @@ a:hover{
 .tasks a {
   text-decoration: none;
   margin-left: 25%;
+  margin-top: 25%;
   color: gray;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 25px;
 }
 
 .tasks  {
   padding: 75px 0;
 	background-color:#3b3a36;
+  height: 50px;
 
 }

@@ -1,20 +1,20 @@
 .container{
 	height: auto;
 	padding: 20px;
-	background-color: lightyellow;
+	background-color: #3b3a36;
 }
 
 .staff_container{
-	border : dotted blue;
 	margin :20px;
 	padding: 20px;
 }
 
 .stable {
 
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-	   margin-top: 20px
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+	font-size: 15px;
+	padding: 5px;
 
 }
 .stable td, .stable th {
@@ -27,26 +27,20 @@
 .stable tr:hover {background-color: #ddd;}
 
 .stable th {
-	border: solid black;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #D3D3D3;
-    color: black;
+	border: solid darkgray;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #D3D3D3;
+  color: black;
 }
 
 .stable td{
-	border: solid black;
+	border: solid darkgray;
 	text-align: center;
+	padding: 10px;
 }
 
-#modules {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-	margin-top: 20px;
-	margin-bottom:20px;
-
-}
 
  ul{
 	list-style-type: none;
@@ -54,17 +48,46 @@
 
 .buttons{
 	height:50px;
-	margin:5px;
-	padding:5px;
+	width:20%;
 }
 
-.rejection, .approval{
-	width:33%;
-	height: 30px;
+.rejection button, .approval button{
+	width:100%;
+	height: 100;
 	justify-content: center;
-	padding:5px 5px;
 	border-color: azure;
 
+}
+
+.rejection button:hover{
+	background-color: green;
+
+}
+
+.approval button:hover{
+	background-color: green;
+
+}
+
+
+.def 	{
+  width:50%;
+	height: 40px;
+	font-size: 20px;
+  margin-left: 25%;
+	background-color:#3b3a36;
+	border-color: azure;
+
+}
+
+.def_buttons{
+	height:100px;
+	padding:5px;
+	width : 100%;
+}
+
+.def:hover{
+	background-color: 	green;
 }
 
 
