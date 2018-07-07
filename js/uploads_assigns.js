@@ -137,7 +137,7 @@ $( function() {
       $.ajax({
         url: "assign_delete.php",
         method: "POST",
-        data: { tabname: $('.assign_path').attr('name') },
+        data: { tabname: $('input[name="assign_table_name"]').val() },
         success: function(){
           alert("Assignment deleted successfully!");
           location.reload(true);
@@ -158,6 +158,7 @@ $( function() {
   //load assignment status to the popup
   $(document).on('click', '.assign_path', function() {
     var assignment = $(this).attr('name');
+    $('input[name="assign_table_name"]').val(assignment);     //set table name for a hidden field for later use
 
     // load data into sub. status container
     $(document).ready( function() {
@@ -174,7 +175,7 @@ $( function() {
       });
     } );
 
-    //functionality on view submission button////////////////////////
+    //functionality on view submission button
     $('#view_sub').on('click', function() {
       var popup_sub = $('#submission_preview');
 
