@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/styles_footer.css">
 
+    <!--jquery sources-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/loadNews_newspage.js" type="text/javascript"></script>
+
 </head>
 <body>
 
@@ -41,6 +45,9 @@
 
     </div>
 
+    <div class="news_dbfetch">
+
+    </div>
 
       <div class="slider">
         <marquee behavior="scroll" direction="up">
