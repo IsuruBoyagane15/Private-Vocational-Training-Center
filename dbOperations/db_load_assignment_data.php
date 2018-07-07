@@ -19,7 +19,7 @@ $result=$conn->query($sql);
 $output="";
 $conn->close();
 while($row=mysqli_fetch_array($result)){
-  $output.='<li><a href="assignment.php?assignment_id='.$row[2].'&&index='.$index.'&&module_id='.$module_id.'" class="mod_link" ;">'.$row[0].'</a></div><br>';
+  $output.='<div class="lightbox" style="margin-left:3%;width:90%;height:5vh;margin-top:1vh;margin-bottom:1vh;"><a href="assignment.php?assignment_id='.$row[2].'&&index='.$index.'&&module_id='.$module_id.'" class="mod_link" ;">'.$row[0].'</a></div>';
 }
 echo $output;
 ?>

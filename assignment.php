@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['signed_in'])){
+    if(!$_SESSION['signed_in']){
+      header('location:index.php');
+      exit();
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,19 +33,20 @@
   <input type="hidden" name="assignment_id" id="assignment_id" value=<?php echo $_GET['assignment_id']?>>
   <div id="course" class="head"></div><br><br>
   <div id="module" class="head"></div><br><br>
-  <div id="ass"  class="assignment">
-     <div id="assignment" class="assignmenthead"></div><br>
-     <div class="asscontainer" >
-       <div class="head">Description</div>
-       <div id="description"></div>
+
+     <div class="lightbox" style="padding:0px;margin-left:20vw;height:40vh;">
+
+       <div class="lable" style="margin-left:2vw;margin-top:2vw;">Assignment name</div>
+       <div id="assignment" ></div><br>
+       <div class="lable" style="margin-left:2vw;margin-top:2vw;">Description</div>
+       <div id="description" ></div>
      </div><br>
-     <div id="statushead" class="assignmenthead">Submission Status</div>
-     <div class="asscontainer">
-         <table id="statustable"></table>
+     <div class="lightbox" style="margin-left:20vw;">
+         <table id="statustable" style="width:100%;"></table>
      </div><br><br>
-     <div class="asscontainer" id="butt"><br><br>
+     <div  id="butt"><br><br>
 
      </div>
-
-  </div>
+<?php include_once("inc/footer.php"); ?><br>;
 </body>
+</html>

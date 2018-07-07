@@ -30,7 +30,6 @@
      $_SESSION['flash_error']="invalid user name or password";
      $_SESSION['signed_in']=false;
      $_SESSION['username']=null;
-
      echo "invalid_usr/pass";
    }
 

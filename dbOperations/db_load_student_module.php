@@ -15,12 +15,4 @@ $row=mysqli_fetch_array($result);
 $output=$row[0];
 $conn->close();
 echo $output;
-
-
-
-
-
-
-
-
- ?>
+?>

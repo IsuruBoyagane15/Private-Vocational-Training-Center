@@ -18,26 +18,34 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT assignment_name FROM config_createassignment where id='$ass_id'";
+$sql="SELECT tablename,deadline,late_allowed,attempts FROM config_createassignment where id='$ass_id'";
 $result=$conn->query($sql);
 $conn->close();
 $row=mysqli_fetch_array($result);
+$deadline=$row[1];
+$attempts=$row[3];
+$deadline=strtotime($deadline);
+$today = date("Y-m-d H:i:s");
+$today=strtotime($today);
+$late_allowed=$row[2];
 $ass_name=$row[0];
-$ass_name=trim("ass_name");
 $dbname="assignment_did_log";
 $conn=new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT * FROM {$ass_name} where student_index={$index}";
+$sql="SELECT * FROM $ass_name where student_index='$index'";
 $result=$conn->query($sql);
 $output="";
+$row=mysqli_fetch_array($result);
+$count=sizeof($row);
 $conn->close();
-if(!empty($result)){
-  $output.='<br><br><button onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'"class="button">Edit Submisson</button>';
+if($today<$deadline  and $count<$attempts){
+  $output.='<br><br><button  style="width:40vw;margin-left:30vw;" onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'" >Add Submisson</button>';
 }
-else{
-  $output.='<br><br><button onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'" class="button">Add Submisson</button>';
+else if($today>$deadline and $count<$attempts and $late_allowed){
+    $output.='<br><br><button  style="width:40vw;margin-left:30vw;" onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'" >Add Submisson</button>';
 }
+
 echo $output;
 ?>

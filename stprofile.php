@@ -38,7 +38,7 @@
       </div>
     </div>
   </div>
-  <div id="profdata" class="lightbox">
+  <div id="profdata" class="lightbox" style="margin-left:10.5vw;margin-right:20vw;overflow:hidden">
 
   </div>
 
