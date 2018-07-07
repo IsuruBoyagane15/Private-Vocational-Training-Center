@@ -95,17 +95,17 @@
     <!--Forth Para block-->
     <div class="para_box">
       <h3>Contact Details</h3>
-      <h6>&emsp;&emsp;Mr. Sarath Pieris</h6>
+      <h5>&emsp;&emsp;Mr. Sarath Pieris</h5>
       <p>&emsp;&emsp;Chairman of Vocational Training Institute</p>
       <p>&emsp;&emsp;+94 114 785 569</p>
       <p>&emsp;&emsp;sarath@vti.lk</p>
       <br/>
-      <h6>&emsp;&emsp;Mrs. S.R.Perera</h6>
+      <h5>&emsp;&emsp;Mrs. S.R.Perera</h5>
       <p>&emsp;&emsp;Director of Vocational Training Institute</p>
       <p>&emsp;&emsp;+94 114 458 785</p>
       <p>&emsp;&emsp;samanthi@vti.lk</p>
       <br/>
-      <h6>&emsp;&emsp;Head Office</h6>
+      <h5>&emsp;&emsp;Head Office</h5>
       <p>&emsp;&emsp;Vocational Training Institute</p>
       <p>&emsp;&emsp;652/4, "Parackrama Pedesa", Rajagiriya, Colombo</p>
       <p>&emsp;&emsp;+94 114 444 555</p>

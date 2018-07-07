@@ -6,7 +6,7 @@
   border-style: groove;
   border-radius: 10px;
   border-color: yellow;
-  font-size: 20;
+  font-size: 3vmin;
 }
 
 .news_vacancies h2 {
@@ -16,6 +16,7 @@
 .news_vacancies p {
   font-size:26;
   color: chocolate;
+  text-align: justify;
 }
 .news_vacancies a{
   color:purple;
