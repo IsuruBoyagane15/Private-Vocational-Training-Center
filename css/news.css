@@ -18,14 +18,14 @@
   color: chocolate;
 }
 .news_vacancies a{
-color:white;
-font-size:20;
-text-decoration:none;
+  color:purple;
+  font-size:20;
+  text-decoration:none;
 }
 
 .vacancies_link a:hover{
-background-color:white;
-color:blue;
+  background-color: black;
+  color:white;
 }
 
 .slider {

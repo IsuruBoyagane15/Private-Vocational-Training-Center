@@ -27,14 +27,14 @@
         </ul>
     </nav>
 
-    <div id="news_vacancies">
-      <h2 align="center" color="purple"><marquee direction="left"><font face="Algerian">! Welcome to News Page !</font></marquee></h2>
+    <div class="news_vacancies">
+      <h2 align="center"><marquee direction="left"><font face="Algerian">! Welcome to News Page !</font></marquee></h2>
       <p >&emsp;&emsp;Vocational training, also known as Vocational Education and Training (VET) and Career and Technical Education (CTE),
       provides job-specific technical training for work in the trades. These programs generally focus on providing students
       with hands-on instruction, and can lead to certification, a diploma or certificate.</p><br>
       <p>&emsp;&emsp; The academic staff should be capable of paving path to the students through the modules. We are looking for qualified and
       trained academic staff members for our institute. </p>
-      <div id="vacancies_link"><br><br>
+      <div class="vacancies_link"><br><br>
         <a href="regapplication.php">Click here </a>to apply for the academic staff vacancies. <br><br>
         <a href="studentapplication.php">Click here </a>to apply for the courses. <br><br>
       </div>

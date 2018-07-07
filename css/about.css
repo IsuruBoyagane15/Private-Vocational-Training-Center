@@ -7,23 +7,16 @@
   border-style: groove;
   border-radius: 10px;
   border-color: yellow;
-  font-size: 6vmin;
+  font-size: 3vmin;
 }
-.abtus h3 {
+
+.abtus h2 {
   color: brown;
 }
 
 .abtus ul {
-  margin: 5;
-  padding: 10px;
-  list-style: none;
-  font-size: 4vmin;
-  font-weight: 500;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -o-justify-content: center;
-  text-align: center;
+  color: chocolate;
+  list-style: square;
 }
 .abtus p {
   color: chocolate;
