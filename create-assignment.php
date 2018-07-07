@@ -138,6 +138,11 @@
         <option value="04">04</option>
         <option value="04">05</option>
       </select>
+      <label class="label">&emsp;Late Submission Allowed :</label>
+      <select name="late" id="late_allowed">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
     </div>
     <div class="assignment_details" id="ass_det_2">
       <label class="label">Description :</label>

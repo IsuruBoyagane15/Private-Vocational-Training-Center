@@ -126,6 +126,7 @@ $( function() {
       var assign = $('.assignment_details').find('#assignment_name').val();
       var desc = $('#ass_det_2').find('#assignment_des').val();
       var attempts = $('.assignment_details').find('#attempts').val();
+      var late_allowed = $('.assignment_details').find('#late_allowed').val();
       var deadline;
       if( $('#noDeadline:checked').val() ) {
         deadline = "0000-00-00 00:00:00";
@@ -160,7 +161,7 @@ $( function() {
       $.ajax({
         url: "dbOperations/db_createAssignment.php",
         method: "POST",
-        data: {module_name: mod, assign_name:assign, assign_desc:desc, attempts:attempts, deadline:deadline, questions: allQus},
+        data: {module_name: mod, assign_name:assign, assign_desc:desc, attempts:attempts, late_allowed:late_allowed, deadline:deadline, questions: allQus},
         success: function(){
           alert("Assignment Created Successfully!");
           window.location.href = "lecturer-profile.php?index="+index;
