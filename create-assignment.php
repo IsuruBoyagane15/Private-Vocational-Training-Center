@@ -145,8 +145,8 @@
       </select>
     </div>
     <div class="assignment_details" id="ass_det_2">
-      <label class="label">Description :</label>
-      <input type="text" name="assignment_des" class="des_input" id="assignment_des">
+      <label class="label">Description :&emsp;</label>
+      <textarea id="assignment_des" class="des_input" placeholder="Add a optional description" rows="4"></textarea><br>
     </div>
 
     <!--question container-->
