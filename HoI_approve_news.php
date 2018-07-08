@@ -35,7 +35,8 @@
  <body>
 
      <!--Including header file-->
-<?php include_once("inc/header.php");
+<?php
+     include_once("inc/header.php");
      include_once("inc/navpannel.php");
      $index = trim($_SESSION['username']);
      include_once("inc/subnavstaff.php");

@@ -48,7 +48,7 @@
 
 .container_buttons {
 
-	padding: 10px;
+	padding: 30px;
 	/*
 	margin-left: 20%;
 	margin-right: 20%;
@@ -59,10 +59,11 @@
 
 .assign_button {
 	width:33%;
-/*	border-radius: 5px;*/
+	border-radius: 5px;
 	height: 30px;
 	background-color: #3b3a36;
 	border-style: hidden;
+  font-size: 15px;
 }
 
 
@@ -141,11 +142,6 @@ button:hover {
 }
 
 .basic_data{
-/*
-	margin:10px;
-	margin-left: 20%;
-	margin-right:20%;
-*/
 	padding:30px;
 	background-color:#3b3a36;
 

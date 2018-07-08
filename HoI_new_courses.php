@@ -52,14 +52,6 @@
       <span class="button no">No</span>
     </div>
 
-	<div class="commentBox">
-      <div class="message"></div>
-	  <textarea class="comment" rows="4"></textarea>
-	  <br>
-      <span class="button yes">Add Comment</span>
-      <span class="button no">Cancel</span>
-    </div>
-
 	<div class="container">
     <h5>Pending Courses</h5>
 		<ul class = "courses">

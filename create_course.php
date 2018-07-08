@@ -52,9 +52,6 @@
       <?php include_once("dbOperations/create_course_lecturers_db.php"); ?>
     </div>
 
-
-
-
 	<div class="confirmBox">
       <div class="message"></div>
       <span class="button yes">Yes</span>

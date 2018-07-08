@@ -32,7 +32,6 @@ $(function() {
     confirmBox.find('.yes').click( function() {
 
       var staff_id = box.find('.staff_id').text();
-      alert(staff_id);
 
     $.ajax({
       url: "dbOperations/HoI_reject_staff_db.php",
@@ -40,10 +39,11 @@ $(function() {
       data: {staff_id:staff_id,},
 
       success:function(data){
-      window.location.href = "HoI_recruitment.php";
+        alert("Staff member was rejected...!");
+        location.reload(true);
       },
     });
-    document.location.reload(true);
+
   });
 
   confirmBox.show();
@@ -54,7 +54,7 @@ $(function() {
     var box =  $(this).closest('tr');
 
 
-    confirmBox.find('.message').text("Approve this Staff member...?");
+    confirmBox.find('.message').text("Approve this staff member...?");
     confirmBox.find('.yes, .no').unbind().click( function() {
         confirmBox.hide();
     } );
@@ -63,7 +63,6 @@ $(function() {
     confirmBox.find('.yes').click( function() {
 
       var id = box.find('.staff_id').text();
-      alert(id);
 
     $.ajax({
       url: "dbOperations/HoI_approve_staff_db.php",
@@ -71,10 +70,10 @@ $(function() {
       data: {id:id},
 
       success:function(data){
-      alert("id sent");
+      alert("Staff member was registered...!");
+      location.reload(true);
       },
     });
-    document.location.reload(true);
   });
 
   confirmBox.show();
