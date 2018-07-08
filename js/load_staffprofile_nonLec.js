@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.ajax({
-    url: "dbOperations/db_load_profiledata_staff.php",
+    url: "dbOperations/db_load_profiledata_staff_nonLec.php",
     method: "POST",
     success: function(data){
       arrD  = JSON.parse(data);

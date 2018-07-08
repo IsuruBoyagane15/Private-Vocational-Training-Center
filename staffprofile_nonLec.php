@@ -19,7 +19,7 @@
     <!-- javascript sources -->
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/subnav.js" type="text/javascript"></script>
-    <script src="js/load_staffprofile.js" type="text/javascript"></script>
+    <script src="js/load_staffprofile_nonLec.js" type="text/javascript"></script>
   </head>
   <body>
 
