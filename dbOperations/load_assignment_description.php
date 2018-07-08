@@ -21,7 +21,13 @@ if ($conn->connect_error) {
 $sql="SELECT description FROM config_createassignment WHERE  id='$ass_id'";
 $result=$conn->query($sql);
 $row=mysqli_fetch_array($result);
-$output='<div class="lightbox" style="width:90%;height:10vh;margin-left:2vw;padding:1vw 2vh 1vw 1vh;">'.$row[0].'</div>';
+$size=sizeof($row);
+if($size>0){
+   $output='<div class="lightbox" style="width:90%;height:10vh;margin-left:2vw;padding:1vw 2vh 1vw 1vh;">'.$row[0].'</div>';
+}
+else{
+   $output='<div class="lightbox" style="width:90%;height:10vh;margin-left:2vw;padding:1vw 2vh 1vw 1vh;">No description</div>';
+}
 $conn->close();
 echo $output;
 
