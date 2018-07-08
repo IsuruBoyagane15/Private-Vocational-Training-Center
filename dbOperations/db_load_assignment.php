@@ -15,7 +15,7 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT assignment_name FROM config_createassignment WHERE module_code='$module_id' AND is_deleted=0";
+$sql="SELECT assignment_name FROM config_createassignment WHERE id='$ass_id'  AND is_deleted=0";
 $result=$conn->query($sql);
 $conn->close();
 $output="";

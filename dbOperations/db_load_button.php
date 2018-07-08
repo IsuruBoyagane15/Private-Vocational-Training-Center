@@ -18,7 +18,7 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT tablename,deadline,late_allowed,attempts FROM config_createassignment where id='$ass_id'";
+$sql="SELECT tablename,deadline,late_allowed,no_of_attempts FROM config_createassignment where id='$ass_id'";
 $result=$conn->query($sql);
 $conn->close();
 $row=mysqli_fetch_array($result);
@@ -34,7 +34,7 @@ $conn=new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT * FROM $ass_name where student_index='$index'";
+$sql="SELECT * FROM $ass_name where student_id='$index'";
 $result=$conn->query($sql);
 $output="";
 $row=mysqli_fetch_array($result);
