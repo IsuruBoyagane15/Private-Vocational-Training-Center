@@ -9,105 +9,6 @@
       <link rel="stylesheet" href="css/styles_header.css">
       <link rel="stylesheet" href="css/Student_registration_appl.css">
       <link rel="stylesheet" href="css/styles_footer.css">
-    <style>
-    .error{
-    	display: none;
-    	margin-left: 10px;
-    }
-
-    .error_show{
-    	color: red;
-      font-size: 105%;
-      margin-right: 5vw;
-
-    }
-    input.invalid{
-    	border: 2px solid red;
-    }
-    input.valid, textarea.valid{
-    	border: 2px solid green;
-    }
-    span{
-      display:none;
-      margin-right:2vw;
-      float:right;
-    }
-
-    input[type=text]{
-      width:70%;
-      padding:6px 10px;
-      margin:8px 0;
-      box-sizing: border-box;
-      resize: vertical;
-
-    }
-    input[type=textarea]{
-      width:400px;
-      height: 100px;
-      padding:3px 3px;
-      margin:0 0;
-      box-sizing: border-box;
-      resize: none;
-    }
-    input[type="text"],select{
-      width:90%;
-      display:block;
-      height:6vh;
-      border-color: lightgrey;
-      box-sizing: border-box;
-      border-style: solid;
-      border-width: thin;
-      padding:0.1vw 0.1vh;
-      margin-bottom: 2vw;
-      font-size: 105%;
-      color:solid black;
-      margin-left:2vw;
-      padding-left: 0.5vw;
-    }
-    input[type="date"]{
-      width:90%;
-      display:block;
-      height:6vh;
-      border-color: lightgrey;
-      box-sizing: border-box;
-      border-style: solid;
-      border-width: thin;
-      padding:1vw 0.1vh;
-      margin-bottom: 2vw;
-      font-size: 105%;
-      color:solid black;
-      margin-left:2vw;
-    }
-    input[type="year"]{
-      width:90%;
-      display:block;
-      height:6vh;
-      border-color: lightgrey;
-      box-sizing: border-box;
-      border-style: solid;
-      border-width: thin;
-      padding:1vw 0.1vh;
-      margin-bottom: 1vw;
-      font-size: 105%;
-      color:solid black;
-      margin-left:2vw;
-    }
-    input:focus{
-       background-color:lightblue;
-    }
-    input[type=submit]{
-
-      text-align:center;
-      font-size: 120%;
-      cursor: pointer;
-    }
-    input[type=radio]{
-      cursor:pointer;
-      display: run-in;
-      height:2vh;
-
-    }
- </style>
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/addLecDetails.js" type="text/javascript"></script>
@@ -139,20 +40,8 @@
 <p color="purple"><b>Fill this and submit</b></p>
 <form action="dbOperations/addLecDetails_db.php" id="lecturer_form" method="POST"><font face ="Andalus">
 <ol>
-<li>Course :<select name="course">
-<option value= "Automobile Repair and Maintainance">Automobile Repair and Maintainance </option>
-<option value= "Building and Constructions">Building and Constructions</option>
-<option value= "Agriculture Plantation and Livestock">Agriculture Plantation and Livestock</option>
-<option value= "Electrical and Electronic Telecommunication" selected >Electrical and Electronic Telecommunication</option>
-<option value= "Fisheries & Aquaculture" >Fisheries & Aquaculture</option>
-<option value= "Food Technology" >Food Technology</option>
-<option value= "Hotel and Tourism" >Hotel and Tourism</option>
-<option value= "Information Communication and Multimedia Technology" >Information Communication and Multimedia Technology</option>
-<option value= "Metal and Light Engineering" >Metal and Light Engineering</option>
-<option value= "Wood Related" >Wood Related</option>
-<option value= "Textile and Garments" >Textile and Garments</option>
-<option value= "Other" >Other</option>
-</select></li><br><br>
+<li>Course :<select name="course"></select>
+</li><br><br>
 
 <li>Name with Initials:<input  type="text" name="name_ini" id="nameini" required></input>
 <span class="error">Enter a valid name</span>

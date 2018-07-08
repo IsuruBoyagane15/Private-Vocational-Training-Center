@@ -1,5 +1,20 @@
-// pass user entered lecturer details to the DBOperation file
+// load lecturer modules
+$(function (){
+  $(document).ready(function(){
+    $.ajax({
+      url: "dbOperations/regApp_loadCourses_db.php",
+      method: "POST",
+      success: function(data){
+        $('select[name="course"]').html(data);
+      },
+      error: function(err){
+        alert(err);
+      }
+    });
+  });
+});
 
+// pass user entered lecturer details to the DBOperation file
 $(function (){
   $(document).on('click', 'input[value="Save All"]', function(event){
     event.preventDefault();
