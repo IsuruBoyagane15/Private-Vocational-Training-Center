@@ -43,7 +43,7 @@ $(function() {
       success:function(data){
       },
     });
-    document.location.reload(true);
+    location.reload(true);
   });
 
   confirmBox.show();
