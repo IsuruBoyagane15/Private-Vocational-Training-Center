@@ -29,15 +29,15 @@
    <div class="popupbox" id="popupbox2" style="display:none;height:55vh;top:10vh;">
      <form action="dbOperations/db_change_password.php" method="POST" id="pass_change" enctype="multipart/form-data">
        <label class="lable" for="password" style="color:white">Current Password</label>
-       <input id="password" name="password" type="password" style="margin-bottom:0vh;padding:0px;height:6vh;">
+       <input id="current_password" name="password" type="password" style="margin-bottom:0vh;padding:0px;height:6vh;">
        <label class="lable" for="password" style="color:white;">New Password</label>
-       <input class="contact" id="newpassword" name="newpassword" type="password" style="margin-bottom:0vh;padding:0px;height:6vh;">
+       <input  id="new_password" name="newpassword" type="password" style="margin-bottom:0vh;padding:0px;height:6vh;">
        <span class="error" style="margin-top:0vh;margin-left:0.3vw;">include 8 charactors,at lest one highercase letter,at least onelowercase letter and at least one special charactor</span><br>
        <label class="lable" for="confirmpassword" style="color:white;">Confirm Password</label>
-       <input class="contact" id="confirmpassword" name="confirmpassword" type="password"  style="margin-bottom:0vh;padding:0px;height:6vh;">
+       <input  id="reent_new_password" name="confirmpassword" type="password"  style="margin-bottom:0vh;padding:0px;height:6vh;">
        <span class="error" style="margin-top:0vh;margin-left:0.3vw;";>Confirm password does not match with password</span><br><br>
        <button class="button" id="back2" style="display:inline-block;width:40%;float:left;">Cancel</button>
-       <button type="submit" class="button" style="display:inline-block;width:40%;float:right">Confirm</button>
+       <button  id="change_pass" class="button" style="display:inline-block;width:40%;float:right">Confirm</button>
     </form>
    </div>
 
