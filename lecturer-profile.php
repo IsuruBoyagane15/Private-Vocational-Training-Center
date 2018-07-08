@@ -6,7 +6,7 @@
   }else if( !$_SESSION['signed_in'] ){        //session set, but not signed_in
     header('location:index.php');
     exit();
-  }else if( substr($_SESSION['username'], -1) != "L" ){        //session set, but not for HR
+  }else if( substr($_SESSION['username'], -1) != "L" ){        //session set, but not for Lecturer
     header('location:index.php');
     exit();
   }
