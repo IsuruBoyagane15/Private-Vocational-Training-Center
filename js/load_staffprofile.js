@@ -66,3 +66,54 @@ $(function(){
     x.style.display="none";
   });
 });
+
+
+//change password
+$( function() {
+  $('#passwordchange').on('click',function(event) {
+    $('#popupbox2').show();
+  });
+
+  $('#change_pass').on('click', function(event) {
+    event.preventDefault();
+    var current_pass = $('#current_password').val();
+    var new_pass = $('#new_password').val();
+    var confirm_new_pass = $('#reent_new_password').val();
+    if(current_pass==""){
+      alert("Current Password required!!!");
+    }else if(new_pass==""){
+      alert("New Password required!!!");
+    }else if(confirm_new_pass==""){
+      alert("Re-entering new password is required!!!");
+    }
+    else if( new_pass == confirm_new_pass ){
+      if( new_pass.length > 7 ){
+        $.ajax({
+          url: "dbOperations/db_changePassword_staff.php",
+          method: "POST",
+          data: {current_pass:current_pass, new_pass:new_pass},
+          success: function(msg){
+            alert(msg);
+            location.reload(true);
+          },
+          error: function(error){
+            alert("Error changing password!!!"+error);
+            location.reload(true);
+          }
+        });
+      }else{
+        alert("Minimum 8 characters required for the password!");
+      }
+    }else{
+      alert("Two password fields didn't match!!!");
+    }
+  });
+} );
+
+$(function(){
+  $('#back2').on('click',function(event){
+    event.preventDefault();
+    $('#popupbox2').hide();
+    location.reload(true);
+  });
+});

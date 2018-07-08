@@ -87,10 +87,12 @@ $(function() {
           },
 
           success:function(data){
-            alert("student registered");
+            alert("Student are Registered...!");
+            window.location.href = "HoI.php";
           },
         });
-        document.location.reload(true);
+
+
       });
     });
 

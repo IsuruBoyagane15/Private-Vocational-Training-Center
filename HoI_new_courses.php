@@ -1,12 +1,15 @@
-<?php
-
-session_start();
-if( !isset($_SESSION['signed_in'])){
-  if(!$_SESSION['signed_in']){
+<?php                                     //access controlling
+  session_start();
+  if( !isset($_SESSION['signed_in']) ) {        //session not set
+    header('location:index.php');
+    exit();
+  }else if( !$_SESSION['signed_in'] ){        //session set, but not signed_in
+    header('location:index.php');
+    exit();
+  }else if( substr($_SESSION['username'], -1) != "H" ){        //session set, but not for HR
     header('location:index.php');
     exit();
   }
-}
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +17,7 @@ if( !isset($_SESSION['signed_in'])){
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vocational Training Institute</title>
+    <title>HoI - Approve Courses</title>
 
     <!--css styles-->
     <link rel="stylesheet" href="css/styles_header.css">
@@ -49,14 +52,6 @@ if( !isset($_SESSION['signed_in'])){
       <span class="button no">No</span>
     </div>
 
-	<div class="commentBox">
-      <div class="message"></div>
-	  <textarea class="comment" rows="4"></textarea>
-	  <br>
-      <span class="button yes">Add Comment</span>
-      <span class="button no">Cancel</span>
-    </div>
-
 	<div class="container">
     <h5>Pending Courses</h5>
 		<ul class = "courses">
@@ -77,7 +72,8 @@ if( !isset($_SESSION['signed_in'])){
 							<th>Accredit Level</th>
 							<th>Medium</th>
 							<th>Required Qualification</th>
-							<th >ID</th>
+              <th class = "desc_h">Description</th>
+							<th>ID</th>
 
 						</tr>
 						<tr class ="records">
@@ -90,7 +86,10 @@ if( !isset($_SESSION['signed_in'])){
 							<td class = "accredit_level"><?php echo($row['accredit_level']);?></td>
 							<td class = "medium"><?php echo($row['medium']);?></td>
 							<td class = "required_qualification"> <?php echo($row['required_qualification']);?></td>
-							<td class = "course_id"><?php echo($row['id']);?></td>
+              <td class = "descrip"><?php echo($row['description']);?></td>
+              <td class = "course_id"><?php echo($row['id']);?></td>
+
+
 						<tr>
 					</table>
 

@@ -30,14 +30,26 @@
       include_once("inc/subnavlec.php");
     ?>
 
+    <!-- popup for change password-->
+    <div class="popupbox" id="popupbox2" style="display:none;height:auto;position:fixed;top:2vh;">
+      <form action="dbOperations\db_changePassword_staff.php" method="POST" id="changer2">
+        Current Password: <input type="password" id="current_password" required><br>
+        New Password: <input type="password" id="new_password" required><br>
+        Re-enter New Password: <input type="password" id="reent_new_password" required><br>
+        <button class="button" id="back2" style="display:inline-block;width:40%;">Cancel</button>
+        <button type="submit" class="button" id="change_pass" style="display:inline-block;width:40%;">Change</button>
+     </form>
+    </div>
 
-    <div class="popupbox" id="popupbox" style="display:none;">
+    <!-- popup for upload profile picture-->
+    <div class="popupbox" id="popupbox" style="display:none;height:auto">
       <form action="dbOperations/db_change_profilepicture_staff.php" method="POST" id="changer" enctype="multipart/form-data">
-        <input id="chooser" name="chooser" type="file"></input>
+        <input id="chooser" name="chooser" type="file" style="height:auto"></input>
         <button class="button" id="back" style="display:inline-block;width:40%;">Cancel</button>
         <button type="submit" class="button" style="display:inline-block;width:40%;">Upload</button>
      </form>
     </div>
+
     <div id="test"></div>
     <div class="row">
       <div class="column">
@@ -46,6 +58,7 @@
           <div class="container">
             <p id="name"></p>
              <button class="button"  id="picchange">change profile picture</button>
+             <button class="button"  id="passwordchange">change password</button>
           </div>
         </div>
       </div>

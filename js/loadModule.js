@@ -43,20 +43,4 @@ $( function() {
     });
   });
 
-
-  // //load first module data at startup
-  // $(document).ready( function() {
-  //   var firstMod = $('#assign_mods').first().find('.mod_link').attr('data-id');
-  //   alert(firstMod);
-  //   $.ajax({
-  //     url: "dbOperations/db_fetch_moduleData.php",
-  //     method: "POST",
-  //     data: { id: firstMod },
-  //     success: function(data){
-  //       $('.middle_content').html(data);
-  //     }
-  //   });
-  // });
-
-
 } );

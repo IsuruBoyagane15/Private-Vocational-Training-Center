@@ -12,6 +12,7 @@
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/addLecDetails.js" type="text/javascript"></script>
+<script src="js/validate_lecturer_form.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -35,38 +36,46 @@
 
 
 <h2 align="center"> <font face="Agency Fb" color="black">Registration Appication </font></h2>
+<span class="error">*required field</span><br><br>
 <p color="purple"><b>Fill this and submit</b></p>
-<form action="dbOperations/addLecDetails_db.php" method="POST"><font face ="Andalus">
+<form action="dbOperations/addLecDetails_db.php" id="lecturer_form" method="POST"><font face ="Andalus">
 <ol>
-<li>Course :<select name="course">
-<option value= "Automobile Repair and Maintainance">Automobile Repair and Maintainance </option>
-<option value= "Building and Constructions">Building and Constructions</option>
-<option value= "Agriculture Plantation and Livestock">Agriculture Plantation and Livestock</option>
-<option value= "Electrical and Electronic Telecommunication" selected >Electrical and Electronic Telecommunication</option>
-<option value= "Fisheries & Aquaculture" >Fisheries & Aquaculture</option>
-<option value= "Food Technology" >Food Technology</option>
-<option value= "Hotel and Tourism" >Hotel and Tourism</option>
-<option value= "Information Communication and Multimedia Technology" >Information Communication and Multimedia Technology</option>
-<option value= "Metal and Light Engineering" >Metal and Light Engineering</option>
-<option value= "Wood Related" >Wood Related</option>
-<option value= "Textile and Garments" >Textile and Garments</option>
-<option value= "Other" >Other</option>
-</select></li><br><br>
+<li>Course :<select name="course"></select>
+</li><br><br>
 
-<li>Name with Initials:<input type="text" name="name_ini" required></li><br>
-<li>Full Name :<input type="text" name="fullname" required></li><br>
-<li>Personal Address :<input type="textarea" name="address" placeholder="Enter your personal address" required></li><br>
-<li>NIC Number :<input type="text" name="nicno" required></li><br>
-<li>Email :<input type="text" name="email" required></li><br>
-<li>Mobile Number :<input type="text" name="mob" placeholder="(XXX)-XXX-XXXX" required></li><br>
-<li>Telephone Number(Home) :<input type="text" name="home" placeholder="(XXX)-XXX-XXXX" required></li><br>
-<li>Date of Birth :<input type="text" name="dob" required></li><br>
-<li>Age :<input type="text" name="age" required></li><br>
+<li>Name with Initials:<input  type="text" name="name_ini" id="nameini" required></input>
+<span class="error">Enter a valid name</span>
+</li><br>
+<li>Full Name :<input  type="text"  name="fullname" id="fullname" required></input>
+<span class="error">Enter a valid name</span>
+</li><br>
+<li>Personal Address :<input  type="text" name="address"  id="address" placeholder="Enter your permenent address" style="padding:0px 0px;" required></input>
+<span class="error">Enter a valid address</span>
+</li><br>
+<li>NIC Number :<input  type="text" name="nic" id="id"  placeholder="Your id" required></input>
+  <span class="error">Enter a valid NIC number</span>
+</li><br>
+<li>Email :<input  type="text" name="email" id="email"  required></input>
+  <span class="error">Enter a valid email address</span>
+</li><br>
+<li>Mobile Number :<input type="text" name="mob" id="mobile" placeholder="(XXX)-XXX-XXXX" size="10" required></input>
+  <span class="error">Enter a valid mobile number</span>
+</li><br>
+<li>Telephone Number(Home) :<input  type="text" name="home" id="home" placeholder="(XXX)-XXX-XXXX" size="10" ></input>
+  <span class="error">Enter a valid telephone number</span>
+</li><br>
+<li>Date of Birth :<input  type="Date"  name="dob" id="bday" required></input>
+  <span class="error">Enter a valid date</span>
+</li><br>
+<li>Age :<input  type="text"  name="age" id="age" required></input>
+  <span class="error">Age and birthday doesn't match</span>
+<br></li><br>
 
 
-<li>Gender :
-<input type="radio" name="gender" value="male">Male
-<input type="radio" name="gender" value="female">Female
+<li>Gender :<br>
+  <input type="radio" name="gender" <?php if(isset($gender) && $gender=="Male") echo "checked";?> <?php if(!isset($gender)) echo "requird";?>  value="Male">Male</input><br>
+  <input type="radio" name="gender" <?php if(isset($gender) && $gender=="Female") echo "checked";?> value="Female">Female</input>
+
 </li><br>
 <hr color = "purple">
 <li><b>Education </b></li><br><br>
@@ -74,7 +83,7 @@
 <li>GCE O/L :</li><br>
 Year :
 <select name="year_ol">
-<option value= "2010" >2010</option
+<option value= "2010" >2010</option>
 <option value= "2011" >2011</option>
 <option value= "2012" >2012</option>
 <option value= "2013" >2013</option>
@@ -91,14 +100,15 @@ Year :
 <select name="year_al">
 <option value= "2012" >2012</option>
 <option value= "2013" >2013</option>
-<option value= "2014" >2014</option>
-<option value= "2015" >2015</option>
+ <option value= "2015" >2015</option>
 <option value= "2016" >2016</option>
 <option value= "2017" selected>2017</option>
 </select>
-Index Number :<input type="text" name="indexno2" required>
+Index Number :<input type="year" size=6  name="indexno2" id="index-al" ></input>
+<span class="error">Enter a valid index number</span>
+
 Stream :
-<select name="stream">
+<select name="stream" >
 <option value= "Arts" >Arts</option>
 <option value= "Commerce" >Commerce</option>
 <option value= "Physical Science" selected>Physical Science</option>
@@ -106,8 +116,15 @@ Stream :
 <option value= "Technology" >Technology</option>
 <option value= "IT" >IT</option>
 </select></ul><br><br>
-<li>Higher Educational Qualifications :<input type="textarea" name="degree" placeholder="Enter your higher educational qualifications..." style="padding:0px 0px;" required></li><br><br>
-<li>Medium :<input type="text" name="medium" required></li><br>
+<li>Higher Educational Qualifications :<br><input type="textarea" style="height:15vh;margin-left:4vw;" name="degree" id="qualification" placeholder="Enter your higher educational qualifications..." style="padding:0px 0px;" required></input>
+<span class="error">Enter a valid details</span>
+</li><br><br>
+<li>Medium :
+  <select name="medium">
+  <option value= "English" selected >English</option>
+  <option value= "Tamil" >Tamil</option>
+  <option value= "Sinhala">Sinhala</option>
+  </select></li><br>
 
 <br><br>
 

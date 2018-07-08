@@ -1,19 +1,23 @@
-<?php
-
-session_start();
-if( !isset($_SESSION['signed_in'])){
-  if(!$_SESSION['signed_in']){
+<?php                                     //access controlling
+  session_start();
+  if( !isset($_SESSION['signed_in']) ) {        //session not set
+    header('location:index.php');
+    exit();
+  }else if( !$_SESSION['signed_in'] ){        //session set, but not signed_in
+    header('location:index.php');
+    exit();
+  }else if( substr($_SESSION['username'], -1) != "H" ){        //session set, but not for HR
     header('location:index.php');
     exit();
   }
-}
 ?>
+
 <!DOCTYPE html>
  <html>
    <head>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Vocational Training Institute</title>
+     <title>HoI - Remove News</title>
 
      <!--css styles-->
      <link rel="stylesheet" href="css/styles_header.css">

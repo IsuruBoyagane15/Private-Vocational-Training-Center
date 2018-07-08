@@ -27,6 +27,7 @@ $sql = "INSERT INTO news (id,id_key,name,file_name, file_path, description, adde
 if(mysqli_query($link, $sql)){
     echo "Records inserted successfully.sdfsfd";
 
+
     $sql2 = "delete from temporary_news where id = $id";
 
     if(mysqli_query($link, $sql2)){

@@ -11,11 +11,11 @@ ul{
 
 .confirmBox {
   display: none;
-  background-color: #c0dfd9;
-/*  border: 1px solid #aaa;*/
-  position: fixed;
+  background-color: lightyellow;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  position: fixed; top: 50%; left: 50%; width: 600px; height: 100px; margin-left: -300px; margin-top: -200px;
   width: 300px;
-  height: 100px;
   left: 50%;
   margin-left: -150px;
   padding: 6px 8px 8px;
@@ -28,15 +28,20 @@ ul{
   margin-bottom: 8px;
 }
 
+
 .confirmBox .button {
-  background-color: #b3c2bf;
+  background-color: #ccc;
   display: inline-block;
-/*  border-radius: 3px;*/
+  border-radius: 3px;
   border: 1px solid #aaa;
-  padding: 5px;
+  padding: 2px;
   text-align: center;
   width: 80px;
   cursor: pointer;
+}
+
+.confirmBox .button:hover {
+  background-color: #ddd;
 }
 
 .news_items{
@@ -58,6 +63,7 @@ ul{
   padding-top: 10px;
   padding:5px;
 
+
 }
 
 .ids{
@@ -69,9 +75,9 @@ ul{
   margin-left: 25%;
   margin-bottom: 10px;
   width: 50%;
-  height: 30px;
+  height: auto;
   text-align: center;;
-  padding-top: 10px;
+  padding: 10px;
 }
 
 .news_source{

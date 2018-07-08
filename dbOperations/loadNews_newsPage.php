@@ -12,8 +12,37 @@
     if( checkExpired((string)$row[0]) ){            //get only valid news items and remove expired news
       $output .= '<div class="news_box"><h3>';
       $output .= (string)$row[2];
-      $output .= '</h3>';
-      $output .= '<a href="';
+      $output .= '';
+
+      $file_parts = pathinfo( $row[4] );
+
+      switch( $file_parts['extension'] ) {
+        case "jpg":
+          $output .= '</h3><img class="news_image_box" src="';
+          $output .= (string)$row[4];
+          break;
+        case "jpeg":
+          $output .= '</h3><img class="news_image_box" src="';
+          $output .= (string)$row[4];
+          break;
+        case "jfif":
+          $output .= '</h3><img class="news_image_box" src="';
+          $output .= (string)$row[4];
+          break;
+        case "gif":
+          $output .= '</h3><img class="news_image_box" src="';
+          $output .= (string)$row[4];
+          break;
+        case "png":
+          $output .= '</h3><img class="news_image_box" src="';
+          $output .= (string)$row[4];
+          break;
+        default:
+          $output .= '</h3><img class="news_image_box" src="';
+          $output .= 'icons/icon_document.png';
+      }
+
+      $output .= '"><br><a class="news_image_link" href="';
       $output .= (string)$row[4];
       $output .= '">';
       $output .= (string)$row[3];

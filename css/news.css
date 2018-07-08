@@ -7,6 +7,7 @@
   border-radius: 10px;
   border-color: yellow;
   font-size: 3vmin;
+  margin-left: 1vw;
 }
 
 .news_vacancies h2 {
@@ -22,6 +23,43 @@
   color:purple;
   font-size:20;
   text-decoration:none;
+}
+
+.news_box {
+  background-color: inherit;
+  padding: 2vmin;
+  margin: 3vmin 0;
+  width: 95%;
+  border-style: groove;
+  border-radius: 10px;
+  border-color: yellow;
+  font-size: 3vmin;
+  margin-left: 1vw;
+}
+
+.news_box h2 {
+  color: brown;
+}
+
+.news_box p {
+  font-size:26;
+  color: chocolate;
+  text-align: justify;
+}
+
+.news_box a {
+  color:purple;
+  font-size:20;
+  text-decoration:none;
+}
+
+.news_image_box {
+  width: 20%;
+  margin-left: 30%;
+}
+.news_image_link {
+  width: 30%;
+  margin-left: 30%;
 }
 
 .vacancies_link a:hover{

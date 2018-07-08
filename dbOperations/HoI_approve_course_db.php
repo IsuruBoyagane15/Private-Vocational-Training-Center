@@ -10,6 +10,8 @@
     $medium = $_POST["medium"];
     $required_qualification = $_POST["required_qualification"];
     $course_id = $_POST["course_id"];
+    $c_descrip = $_POST["c_descrip"];
+
     $id = "C"."$course_id";
 
 
@@ -18,8 +20,8 @@
     if($link === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
-    $sql = "INSERT INTO course_details (course_id,trade,course_name,course_type, type, accredit_level, duration,   medium,required_qualification,student_count) VALUES
-    ('$id', '$trade', '$course_name', '$course_type', '$type', '$accredit_level', '$duration', '$medium', '$required_qualification', '$student_count')";
+    $sql = "INSERT INTO course_details (course_id,trade,course_name,course_type, type, accredit_level, duration,   medium,required_qualification,student_count, description) VALUES
+    ('$id', '$trade', '$course_name', '$course_type', '$type', '$accredit_level', '$duration', '$medium', '$required_qualification', '$student_count', '$c_descrip')";
     $sql5 = "CREATE TABLE $id (modules VARCHAR(10))" ;
     if(mysqli_query($link, $sql5)){
       echo "course modules added";
@@ -55,7 +57,7 @@
               $lecturer = $row[2];
               echo $lecturer;
               $module_id = "$course_id"."m"."$count";
-              $sql4 = "INSERT INTO module_details (module_id,module_name,no_of_students, lecturer, description) VALUES ('$module_id', '$module_name', '$student_count', '$lecturer', '$description')";
+              $sql4 = "INSERT INTO module_details (module_id,module_name,no_of_students, lecturer_id  , module_description) VALUES ('$module_id', '$module_name', '$student_count', '$lecturer', '$description')";
               if(mysqli_query($link, $sql4)){
                 echo "module approved";
               } else{
