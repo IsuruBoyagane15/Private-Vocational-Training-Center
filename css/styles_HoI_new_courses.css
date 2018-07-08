@@ -88,6 +88,14 @@
 	font-size: 15px;
 }
 
+.desc_h{
+	display: none;
+}
+
+.descrip{
+	display: none;
+}
+
 .approve:hover{
 	background-color: green;
 }

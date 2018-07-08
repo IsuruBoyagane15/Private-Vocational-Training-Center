@@ -1,16 +1,3 @@
-.navigate ul {
-  justify-content:flex-start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -o-justify-content: flex-start;
-}
-
-.navigate ul li:last-child {
-  margin-left:;
-  justify-content:flex-end;
-}
-
-
 .container_modules {
 	display: none;
 /*
