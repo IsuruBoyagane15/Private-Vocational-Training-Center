@@ -1,6 +1,12 @@
 <?php                                     //access controlling
   session_start();
-  if( !isset($_SESSION['signed_in']) ) {
+  if( !isset($_SESSION['signed_in']) ) {        //session not set
+    header('location:index.php');
+    exit();
+  }else if( !$_SESSION['signed_in'] ){        //session set, but not signed_in
+    header('location:index.php');
+    exit();
+  }else if( substr($_SESSION['username'], -1) != "L" ){        //session set, but not for HR
     header('location:index.php');
     exit();
   }
@@ -132,10 +138,15 @@
         <option value="04">04</option>
         <option value="04">05</option>
       </select>
+      <label class="label">&emsp;Late Submission Allowed :</label>
+      <select name="late" id="late_allowed">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
     </div>
     <div class="assignment_details" id="ass_det_2">
-      <label class="label">Description :</label>
-      <input type="text" name="assignment_des" class="des_input" id="assignment_des">
+      <label class="label">Description :&emsp;</label>
+      <textarea id="assignment_des" class="des_input" placeholder="Add a optional description" rows="4"></textarea><br>
     </div>
 
     <!--question container-->

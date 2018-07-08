@@ -368,6 +368,12 @@ h3, h4 {
   color: green;
 }
 
+/********marquee (only for empty module lists)********/
+marquee {
+  color: #F4A460;
+  font-size: 2.7vmin;
+}
+
 /********action pane with buttons********/
 button[type="submit"] {
   background-color: orange;

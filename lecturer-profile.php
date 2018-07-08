@@ -71,6 +71,7 @@
 
       <!--preview assignment popup table (hidden)-->
       <div id="popup_preview">
+        <input type="hidden" name="assign_table_name">
         <div class="sub_stat_container">
           <nav id="sub_status">
             <ul>
