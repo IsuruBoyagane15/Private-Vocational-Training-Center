@@ -2,7 +2,7 @@
   $servername = "localhost";
   $username = "root";
   $password = "";
-  $dbname = "staff";
+  $dbname = "staff_nonLec";
   session_start();
   $conn = new mysqli($servername, $username, $password,$dbname);
   $index = $_SESSION['username'];
@@ -36,7 +36,7 @@
   $output2='<p>'.$row[0].'</p>';
 
   $output3="";
-  $connection = mysqli_connect('localhost','root','','staff');
+  $connection = mysqli_connect('localhost','root','','staff_nonLec');
   $query = "SELECT filepath FROM profile_pics where index_number='$index'";
   $result_set = mysqli_query($connection, $query);
   mysqli_close($connection);
