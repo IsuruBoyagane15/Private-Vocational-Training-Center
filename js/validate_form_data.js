@@ -164,6 +164,7 @@ $("#student_form").on('submit',function(event){
        event.preventDefault();
        alert("yes");
        var form_data=document.getElementsByClassName('contact');
+       alert(form_data.length);
        var length=form_data.length;
        alert(length);
        alert(form_data);

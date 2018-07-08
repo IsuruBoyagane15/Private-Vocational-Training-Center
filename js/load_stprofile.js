@@ -13,18 +13,14 @@ $(document).ready(function(){
       alert(error);
     }
   });
-});
-$(function(){
   $('#picchange').on('click',function(){
-    var x = document.getElementById("popupbox");
-    if(x.style.display === "none") {
+    var x = document.getElementById("popupbox1");
+    if(x.style.display =="none") {
              x.style.display = "block";
     } else {
               x.style.display = "none";
     }
   });
-});
-$(function(){
   $('#changer').on('submit',function(event) {
 
   event.preventDefault();
@@ -56,10 +52,82 @@ $(function(){
     location.reload(true);
   }
 });
-});
-$(function(){
-  $('#back').on('click',function(event){
-    var x= document.getElementById("popupbox");
+  $('#back1').on('click',function(event){
+    event.preventDefault();
+    var x= document.getElementById("popupbox1");
     x.style.display="none";
   });
+  $('#pass_change').on('submit',function(event){
+      event.preventDefault();
+      var x=document.getElementById("popupbox2");
+      var url = $(this).attr('action');
+      var type = $(this).attr('method');
+      var form_data=document.getElementsByClassName('contact');
+      var length=form_data.length;
+      var error_free=true;
+      var newp=$("#newpassword");
+      var cp=$("#confirmpassword");
+      var valid=newp.hasClass("valid");
+      var error_element=$("span",newp.parent());
+      if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
+      else{error_element.removeClass("error_show").addClass("error");}
+      valid=cp.hasClass("valid");
+      var error_element=$("span",cp.parent());
+      if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
+      else{error_element.removeClass("error_show").addClass("error");}
+     if(error_free){
+      var pwd=$("#password").val();
+      var newpwd=$("#newpassword").val();
+      $.ajax({
+        url: url,
+        type: "POST",
+        data: {pwd:pwd,newpwd:newpwd},
+        processData: false,
+        contentType: false,
+        success: function(data){
+            $('#output').html(data);
+        },
+        error: function(error){
+          alert("Error occured while changing password!");
+          location.reload(true);
+        }
+      });
+    }
+    else{
+      alert("Error changing password");
+    }
+  });
+  $('#back2').on('click',function(event){
+    var x= document.getElementById("popupbox2");
+    x.style.display="none";
+  });
+   $('#newpassword').on('input',function(){
+        var re= new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+        var pswd=$(this).val();
+        if (pswd.length < 8  ) {
+            $('#newpassword').removeClass('valid').addClass('invalid');
+        }
+        else if(!re.test(pswd)){
+              $('#newpassword').removeClass('valid').addClass('invalid');
+        }
+        else{
+            $('#newpassword').removeClass('invalid').addClass('valid');
+        }
+
+   });
+   $('#confirmpassword').on('input',function(){
+       var pass=$('#newpassword').val();
+       var pswd=$(this).val();
+       if(pass==pswd){
+           $('#confirmpassword').removeClass('invalid').addClass('valid');
+       }
+       else{
+         $('#confirmpassword').removeClass('valid').addClass('invalid');
+       }
+  });
+  $('#butt').on('click',function(){
+    var x= document.getElementById("popupbox2");
+    x.style.display="block";
+  });
+
 });

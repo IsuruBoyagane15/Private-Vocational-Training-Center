@@ -49,7 +49,6 @@
   $record = mysqli_fetch_array($result_set);
   $filepath=$record[0];
   $output3.= '<img src="'.$filepath.'" alt="'.$index.'" style="width:100%;">';
-
   $array = json_encode(array($output2,$output,$output3));
   echo $array;
 

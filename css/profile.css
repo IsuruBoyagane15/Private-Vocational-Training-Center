@@ -84,6 +84,8 @@ button:hover{
   margin-left: 35vw;
   background-color: grey;
   background-color.opacity:0.4;
+  top: 30vh;
+  left:3vw;
 }
 .header{
   width:100%;
@@ -97,4 +99,25 @@ button:hover{
   padding-top:2px;
   text-align: center;
 
+}
+.error{
+	display: none;
+	margin-left: 10px;
+}
+
+.error_show{
+	color: red;
+  font-size: 105%;
+  margin-right: 5vw;
+
+}
+input.invalid{
+	border: 2px solid red;
+}
+input.valid, textarea.valid{
+	border: 2px solid green;
+}
+span{
+  margin-right:2vw;
+  float:right;
 }
