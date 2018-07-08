@@ -57,7 +57,7 @@
               $lecturer = $row[2];
               echo $lecturer;
               $module_id = "$course_id"."m"."$count";
-              $sql4 = "INSERT INTO module_details (module_id,module_name,no_of_students, lecturer_id  , description) VALUES ('$module_id', '$module_name', '$student_count', '$lecturer', '$description')";
+              $sql4 = "INSERT INTO module_details (module_id,module_name,no_of_students, lecturer_id  , module_description) VALUES ('$module_id', '$module_name', '$student_count', '$lecturer', '$description')";
               if(mysqli_query($link, $sql4)){
                 echo "module approved";
               } else{
