@@ -42,12 +42,17 @@
     </div>
 
 
-      <div class="slider">
-        <marquee behavior="scroll" direction="up">
-            <img src="img/slider/training_5.jpg" alt="Natural" />
-            <img src="img/slider/training_1.jpg" alt="Natural" />
-          </marquee>
-      </div>
+    <div class="slider">
+      <ul class="slides">
+        <li class="slide"><img src="img/slider/training_2.jpg"></li>
+        <li class="slide"><img src="img/slider/img_institute.jfif"></li>
+        <li class="slide"><img src="img/slider/training_1.jpg"></li>
+        <li class="slide"><img src="img/slider/training_4.jpg"></li>
+        <li class="slide"><img src="img/slider/training_5.jpg"></li>
+        <li class="slide"><img src="img/slider/img_group.jpg"></li>
+        <li class="slide"><img src="img/slider/img_institute.jfif"></li>
+      </ul>
+    </div>
 
 
 

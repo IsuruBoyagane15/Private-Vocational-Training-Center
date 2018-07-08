@@ -29,17 +29,17 @@ color:blue;
 }
 
 .slider {
-  background-color:Darkgreen;
+
   width: 50vw;
   height: 60vmin;
-  /* float:left;
+  float:left;
   padding: 0 0 20px 0;
   width: 100vw;
   height: 60vmin;
-  overflow: hidden; */
+  overflow: hidden;
 }
 
-/* .slides {
+.slides {
   display: block;
   list-style: none;
   padding: 0;
@@ -57,7 +57,7 @@ color:blue;
 .slide img {
   width: 100vw;
   height: 100%;
-} */
+}
 
 .body_navigation {
   background: linear-gradient(to right, white 15%, yellow 50%, white 85%);
