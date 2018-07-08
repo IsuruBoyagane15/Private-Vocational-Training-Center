@@ -123,7 +123,7 @@
         <!--action pane with buttons-->
         <div class="middle_action">
           <a href="#"><button type="submit" id="new_note">Add Lecture Notes</button></a>
-          <a href="create-assignment.php?index=<?php echo $_GET['index']?>"><button type="submit" name="new_assignment">Create New Assignment</button></a>
+          <a href="create-assignment.php?index=<?php echo $_SESSION['username']?>"><button type="submit" name="new_assignment">Create New Assignment</button></a>
         </div>
       </div>
 

@@ -1,10 +1,9 @@
 html{
   width:100vw;
 }
-body{
-  margin:2vw;
-  background-color: lightyellow;
-  font-size:110%;
+body {
+
+  background-color: #CCCCCC;
 }
 h2{
   text-align: center;
@@ -28,11 +27,48 @@ input[type=textarea]{
   box-sizing: border-box;
   resize: none;
 }
-input{
-  border:2px solid powderblue;
-  border-radius: 4px;
-
-
+input[type="text"],select{
+  width:90%;
+  display:block;
+  height:6vh;
+  border-color: lightgrey;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  padding:0.1vw 0.1vh;
+  margin-bottom: 2vw;
+  font-size: 105%;
+  color:solid black;
+  margin-left:2vw;
+  padding-left: 0.5vw;
+}
+input[type="date"]{
+  width:90%;
+  display:block;
+  height:6vh;
+  border-color: lightgrey;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  padding:1vw 0.1vh;
+  margin-bottom: 2vw;
+  font-size: 105%;
+  color:solid black;
+  margin-left:2vw;
+}
+input[type="year"]{
+  width:90%;
+  display:block;
+  height:6vh;
+  border-color: lightgrey;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  padding:1vw 0.1vh;
+  margin-bottom: 1vw;
+  font-size: 105%;
+  color:solid black;
+  margin-left:2vw;
 }
 input:focus{
    background-color:lightblue;
@@ -45,6 +81,9 @@ input[type=submit]{
 }
 input[type=radio]{
   cursor:pointer;
+  display: run-in;
+  height:2vh;
+
 }
 .popup {
     position: relative;
@@ -110,7 +149,73 @@ input[type=radio]{
 }
 
 .btn:hover {opacity: 1}
-.lable{
-  color:white;
-  font-size: 115%;
+label{
+   color:grey;
+   font-size:105%;
+   opacity:80%;
+   margin-left: 2vw;
+}
+.lightbox{
+  margin-left:2%;
+  margin-right:2%;
+  display:inline-block;
+  box-sizing: border-box;
+  padding:2vw 2vh 2vw 2vh;
+  width:60vw;
+  border-width: thin;
+  border-color:lightgrey;
+  border-style: solid;
+}
+@media screen and (max-width:100vw;max-height:100vh) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.slider {
+  padding: 0 0 20px 0;
+  width: 100vw;
+  height: 60vmin;
+  overflow: hidden;
+}
+
+.slides {
+  display: block;
+  list-style: none;
+  padding: 0;
+  width: 700vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+.slide {
+  float: left;
+  width: 100vw;
+  height: 60vmin;
+}
+
+.slide img {
+  width: 100vw;
+  height: 100%;
+}
+.error{
+	display: none;
+	margin-left: 10px;
+}
+
+.error_show{
+	color: red;
+  font-size: 105%;
+  margin-right: 5vw;
+
+}
+input.invalid{
+	border: 2px solid red;
+}
+input.valid, textarea.valid{
+	border: 2px solid green;
+}
+span{
+  margin-right:2vw;
+  float:right;
 }

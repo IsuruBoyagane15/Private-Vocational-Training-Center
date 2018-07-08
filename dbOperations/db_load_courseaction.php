@@ -35,7 +35,7 @@ while($row=mysqli_fetch_array($result)){
      $output .= '<td>' .$row[$item].'</td>';
   }
   $courseid=$row["COURSE_ID"];
-  $output .='<td><button class="btn" onclick=window.location.href="studentapplication.php?courseid='.urlencode($courseid).'">Apply</td>';
+  $output .='<td><button class="button" onclick=window.location.href="studentapplication.php?courseid='.urlencode($courseid).'">Apply</td>';
 }
 echo $output;
 $conn->close();

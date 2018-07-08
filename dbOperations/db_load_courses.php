@@ -16,7 +16,7 @@ $sql="SELECT COURSE_ID,TRADE,COURSE_NAME,COURSE_TYPE,TYPE,ACCREDIT_LEVEL,DURATIO
 $result=$conn->query($sql);
 $all_property=array();
 $output="";
-$output .= '<table class="datatable">
+$output .= '<table class=datatable>
        <tr>';
 while($property=mysqli_fetch_field($result)){
   $output .='<td style="background-color:grey;color:white;">'.$property->name.'</td>';
@@ -30,8 +30,10 @@ while($row=mysqli_fetch_array($result)){
     $output .= '<td>' .$row[$item].'</td>';
   }
   $courseid=$row["COURSE_ID"];
-  $output .='<td><button class="btn" onclick=window.location.href="studentapplication.php?courseid='.urlencode($courseid).'">Apply</td>';
+  $output .='<td><button class="button" onclick=window.location.href="studentapplication.php?courseid='.urlencode($courseid).'">Apply</td>';
 }
-echo $output;
+$output.='</table>';
 $conn->close();
+echo $output;
+
 ?>
