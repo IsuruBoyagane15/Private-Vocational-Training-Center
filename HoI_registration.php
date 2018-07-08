@@ -56,7 +56,8 @@
 	<div class="container">
 		<ul class = "students">
 			<div class = "student_container">
-				<li><h5>Selected Students</h5>
+        <h5>Selected Students</h5>
+				<li>
 					<table align ="center"  class ="student_table"  >
 						<tr>
 							<th>ID</th>

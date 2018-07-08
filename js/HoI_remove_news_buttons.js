@@ -32,7 +32,6 @@ $(function() {
     confirmBox.find('.yes').click( function() {
 
 		var id = box.find('.ids').text();
-    alert(id);
 
     $.ajax({
 			url: "dbOperations/HoI_remove_news_logic_db.php",
@@ -40,10 +39,10 @@ $(function() {
 			data: {id:id,},
 
 			success:function(data){
-        alert("id id ddjd");
+        alert("News item is removed...!");
+        location.reload(true);
 			},
     });
-    document.location.reload(true);
   });
 
   confirmBox.show();

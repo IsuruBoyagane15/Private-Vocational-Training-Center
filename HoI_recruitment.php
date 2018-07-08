@@ -50,10 +50,11 @@
       <div class="message"></div>
       <span class="button yes">Yes</span>
       <span class="button no">No</span>
-    </div>
+  </div>
 
 	<div class="container">
 		<ul class = "staff">
+      <h5>Selected Staff Members</h5>
 
 			<div class = "staff_container">
 				<li>
