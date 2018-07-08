@@ -125,3 +125,10 @@
 .confirmBox .button:hover {
   background-color: #ddd;
 }
+
+.container .staff h5{
+	font-size: 35px;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #C0C0C0;
+}

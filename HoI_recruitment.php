@@ -1,13 +1,15 @@
-<?php
-
-
-session_start();
-if( !isset($_SESSION['signed_in'])){
-  if(!$_SESSION['signed_in']){
+<?php                                     //access controlling
+  session_start();
+  if( !isset($_SESSION['signed_in']) ) {        //session not set
+    header('location:index.php');
+    exit();
+  }else if( !$_SESSION['signed_in'] ){        //session set, but not signed_in
+    header('location:index.php');
+    exit();
+  }else if( substr($_SESSION['username'], -1) != "H" ){        //session set, but not for HR
     header('location:index.php');
     exit();
   }
-}
 ?>
 
 <!DOCTYPE html>
@@ -48,11 +50,11 @@ if( !isset($_SESSION['signed_in'])){
       <div class="message"></div>
       <span class="button yes">Yes</span>
       <span class="button no">No</span>
-    </div>
+  </div>
 
 	<div class="container">
 		<ul class = "staff">
-
+      <h5>Selected Staff Members</h5>
 
 			<div class = "staff_container">
 				<li>

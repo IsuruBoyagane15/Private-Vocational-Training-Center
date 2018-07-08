@@ -1,12 +1,15 @@
-<?php
-
-session_start();
-if( !isset($_SESSION['signed_in'])){
-  if(!$_SESSION['signed_in']){
+<?php                                     //access controlling
+  session_start();
+  if( !isset($_SESSION['signed_in']) ) {        //session not set
+    header('location:index.php');
+    exit();
+  }else if( !$_SESSION['signed_in'] ){        //session set, but not signed_in
+    header('location:index.php');
+    exit();
+  }else if( substr($_SESSION['username'], -1) != "D" ){        //session set, but not for HR
     header('location:index.php');
     exit();
   }
-}
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +48,9 @@ if( !isset($_SESSION['signed_in'])){
     <?php include_once("inc/header.php"); ?>
     <?php include_once("inc/navpannel.php"); ?>
     <?php include_once("dbOperations/create_course_trades_db.php"); ?>
+    <div class = "added_php">
+      <?php include_once("dbOperations/create_course_lecturers_db.php"); ?>
+    </div>
 
 	<div class="confirmBox">
       <div class="message"></div>
@@ -53,6 +59,7 @@ if( !isset($_SESSION['signed_in'])){
     </div>
 
     <div class = "basic_data">
+      <h5>Create a New Course</h5>
       <form action="dbOperations/create_course_db.php " method = "post">
 
         <label>Course Name</label><br>

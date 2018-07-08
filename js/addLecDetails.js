@@ -25,7 +25,7 @@ $(function (){
     var name_ini = $(document).find('input[name="name_ini"]').val();
     var fullname = $(document).find('input[name="fullname"]').val();
     var address = $(document).find('input[name="address"]').val();
-    var nic = $(document).find('input[name="nicno"]').val();
+    var nic = $(document).find('input[name="nic"]').val();
     var email = $(document).find('input[name="email"]').val();
     var mobile = $(document).find('input[name="mob"]').val();
     var home = $(document).find('input[name="home"]').val();
@@ -37,7 +37,7 @@ $(function (){
     var index_al = $(document).find('input[name="indexno2"]').val();
     var stream = $(document).find('select[name="stream"]').val();
     var degree = $(document).find('input[name="degree"]').val();
-    var medium = $(document).find('input[name="medium"]').val();
+    var medium = $(document).find('select[name="medium"]').val();
 
     $.ajax({
       url: "dbOperations/addLecDetails_db.php",

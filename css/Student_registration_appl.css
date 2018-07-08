@@ -9,9 +9,7 @@ width:auto;
 height:30vw;
 background-image:url('../Imgs/training_2.jpg');
 }
-h1{
-color:FireBrick4;
-}
+
 .linkbar{
 width:auto;
 height:5vw;
@@ -113,4 +111,102 @@ text-align:center;
   .slide {
     height: 90vmin;
   }
+}
+.error{
+	display: none;
+	margin-left: 10px;
+}
+
+.error_show{
+	color: red;
+  font-size: 105%;
+  margin-right: 5vw;
+
+}
+input.invalid{
+	border: 2px solid red;
+}
+input.valid, textarea.valid{
+	border: 2px solid green;
+}
+span{
+  margin-right:2vw;
+  float:right;
+}
+.error{
+  color:red;
+}
+input[type=text]{
+  width:75%;
+  padding:6px 10px;
+  margin:8px 0;
+  box-sizing: border-box;
+  resize: vertical;
+
+}
+input[type=textarea]{
+  width:400px;
+  height: 100px;
+  padding:3px 3px;
+  margin:0 0;
+  box-sizing: border-box;
+  resize: none;
+}
+input[type="text"],select{
+  width:90%;
+  display:block;
+  height:6vh;
+  border-color: lightgrey;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  padding:0.1vw 0.1vh;
+  margin-bottom: 2vw;
+  font-size: 105%;
+  color:solid black;
+  margin-left:2vw;
+  padding-left: 0.5vw;
+}
+input[type="date"]{
+  width:90%;
+  display:block;
+  height:6vh;
+  border-color: lightgrey;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  padding:1vw 0.1vh;
+  margin-bottom: 2vw;
+  font-size: 105%;
+  color:solid black;
+  margin-left:2vw;
+}
+input[type="year"]{
+  width:90%;
+  display:block;
+  height:6vh;
+  border-color: lightgrey;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  padding:1vw 0.1vh;
+  margin-bottom: 1vw;
+  font-size: 105%;
+  color:solid black;
+  margin-left:2vw;
+}
+input:focus{
+   background-color:lightblue;
+}
+input[type=submit]{
+
+  text-align:center;
+  font-size: 120%;
+  cursor: pointer;
+}
+input[type=radio]{
+  cursor:pointer;
+  display: run-in;
+  height:2vh;
+
 }

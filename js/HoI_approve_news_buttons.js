@@ -1,5 +1,4 @@
 $(function() {
-
   $('#finish').on('click', function(){
 
     var confirmBox = $('.confirmBox');
@@ -33,7 +32,7 @@ $(function() {
     confirmBox.find('.yes').click( function() {
 
       var id = parseInt(box.find('.ids').text());
-      alert(id);
+
 
     $.ajax({
       url: "dbOperations/HoI_reject_news_db.php",
@@ -41,9 +40,11 @@ $(function() {
       data: {id:id},
 
       success:function(data){
+        alert("News item is rejected...!");
+        location.reload(true);
       },
     });
-    document.location.reload(true);
+
   });
 
   confirmBox.show();
@@ -63,7 +64,6 @@ $(function() {
     confirmBox.find('.yes').click( function() {
 
       var id = box.find('.ids').text();
-      alert(id);
 
     $.ajax({
       url: "dbOperations/HoI_approve_news_logic_db.php",
@@ -73,10 +73,11 @@ $(function() {
       },
 
       success:function(data){
-        alert("id sent");
+        alert("News item is approveed...!");
+        location.reload(true);
       },
     });
-    document.location.reload(true);
+
   });
 
   confirmBox.show();

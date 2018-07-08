@@ -1,12 +1,15 @@
-<?php
-
-session_start();
-if( !isset($_SESSION['signed_in'])){
-  if(!$_SESSION['signed_in']){
+<?php                                     //access controlling
+  session_start();
+  if( !isset($_SESSION['signed_in']) ) {        //session not set
+    header('location:index.php');
+    exit();
+  }else if( !$_SESSION['signed_in'] ){        //session set, but not signed_in
+    header('location:index.php');
+    exit();
+  }else if( substr($_SESSION['username'], -1) != "H" ){        //session set, but not for HR
     header('location:index.php');
     exit();
   }
-}
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +56,8 @@ if( !isset($_SESSION['signed_in'])){
 	<div class="container">
 		<ul class = "students">
 			<div class = "student_container">
-				<li><h5>Selected Students</h5>
+        <h5>Selected Students</h5>
+				<li>
 					<table align ="center"  class ="student_table"  >
 						<tr>
 							<th>ID</th>

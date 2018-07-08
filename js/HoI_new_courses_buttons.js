@@ -35,7 +35,7 @@ $(function() {
     confirmBox.find('.yes').click( function() {
 
 		var course_id = parseInt(box.find('.course_id').text());
-    alert(course_id);
+
 
     $.ajax({
 			url: "dbOperations/HoI_remove_modules_db.php",
@@ -43,7 +43,7 @@ $(function() {
 			data: {course_id:course_id,},
 
 			success:function(data){
-			window.location.href = "HoI_new_courses.php";
+      alert("Course was rejected...!");
 			},
     });
 
@@ -54,10 +54,10 @@ $(function() {
 			data: {course_id:course_id,},
 
 			success:function(data){
-			alert("Course is deleted...!");
+      location.reload(true);
 			},
     });
-    document.location.reload(true);
+
   });
 
   confirmBox.show();
@@ -104,10 +104,11 @@ $(function() {
           course_id:course_id},
 
 			success:function(data){
-				alert("New course was approved...!" +data);
-			   }
+				alert("New course was approved...!");
+  			location.reload(true);
+			  }
 			 });
-       window.location.href("dbOperations/HoI_approve_course_db.php");
+
     });
     confirmBox.show();
   });
