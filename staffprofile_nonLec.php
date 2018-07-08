@@ -43,7 +43,7 @@
 
     <!-- popup for upload profile picture-->
     <div class="popupbox" id="popupbox" style="display:none;height:auto">
-      <form action="dbOperations/db_change_profilepicture_staff.php" method="POST" id="changer" enctype="multipart/form-data">
+      <form action="dbOperations/db_change_profilepicture_staff_nonLec.php" method="POST" id="changer" enctype="multipart/form-data">
         <input id="chooser" name="chooser" type="file" style="height:auto"></input>
         <button class="button" id="back" style="display:inline-block;width:40%;">Cancel</button>
         <button type="submit" class="button" style="display:inline-block;width:40%;">Upload</button>
