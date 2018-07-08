@@ -30,9 +30,25 @@ $link = mysqli_connect("localhost", "root", "", "students");
   if(mysqli_query($link, $sql)){
   	echo "Records inserted successfully.";
 
+    $link3 = mysqli_connect("localhost", "root", "", "authentication");
+    if($link3 === false){
+        die("ERROR: Could not connect. " . mysqli_connect_error());
+    }
+    $password = sha1($student_index);
+    $sql3 = "INSERT INTO user (username, password_sha1)  VALUES ('$student_index','$password')";
+    if(mysqli_query($link3, $sql3)){
+
+      echo "password was added";
+
+    } else{
+      echo "ERROR: Could not able to execute $sql3. " . mysqli_error($link2);
+    }
+
+    mysqli_close($link3);
+
+
+
     $link2 = mysqli_connect("localhost", "root", "", "applicantdetails_hrselected");
-
-
     if($link2 === false){
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }

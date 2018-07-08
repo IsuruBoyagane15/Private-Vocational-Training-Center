@@ -24,26 +24,26 @@ $coursetype=$row[2];
 $nvqtype=$row[3];
 $output="";
 $output .='<label for="trade" >Trade</label>';
-$output .='<input type="text" name="trade" id="trade" value="';
+$output .='<input disabled type="text" name="trade"  id="trade" value="';
 $output .=$trade;
-$output .='" style="width:75%"><br><br>';
+$output .='"</input>';
 
 $output .='<label for="course_name" >Course Name</label>';
-$output .='<input type="text" name="course_name" id="course_name" value="';
+$output .='<input disabled type="text" name="course_name" id="course_name" value="';
 $output .=$coursename;
-$output.='"style="width:75%"><br><br>';
+$output.='"</input>';
 
 $output .='<label for="course_type" >Course Type</label>';
-$output .='<input type="text" name="course_type" id="course_type" value="';
+$output .='<input disabled type="text" name="course_type" id="course_type" value="';
 $output .=$coursetype;
-$output.='"style="width:75%"><br><br>';
+$output.='"</input>';
 
 
 
 $output .='<label for="nvq_type" >Nvq Type</label>';
-$output .='<input type="text" name="nvq_type" id="nvq_type" value="';
+$output .='<input disabled type="text" name="nvq_type" id="nvq_type" value="';
 $output .=$nvqtype;
-$output.='"style="width:75%"><br><br>';
+$output.='"</input>';
 
 
 echo $output;

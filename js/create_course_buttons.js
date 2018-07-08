@@ -111,10 +111,6 @@ $('#done').on('click', function() {
 					alert('Description can not be left blank...!');
 				}
 
-				else if($(this).find('.term').val() == ""){
-					alert('Term can not be left blank...!');
-				}
-
 				else if($.trim($(this).find('.lecturer').val()) == ''){
 					alert('Lecturer can not be left blank...!');
 				}
@@ -152,7 +148,6 @@ $('#done').on('click', function() {
 				module_list.each(function(index, element){
 						var module_name = $(this).find('.module_name').val();
 						var description = $(this).find('.description').val();
-						var term = $(this).find('.term').val();
 						var lecturer = $(this).find('.lecturer').val();
 
 
@@ -160,7 +155,7 @@ $('#done').on('click', function() {
 
 							url: "dbOperations/create_modules_db.php",
 							type: "POST",
-							data: {module_name : module_name, description : description, term : term, lecturer : lecturer, },
+							data: {module_name : module_name, description : description, lecturer : lecturer, },
 
 							success:function(data){
 								alert("New module was created...!");

@@ -1,0 +1,100 @@
+body{
+  display:inline-block;
+}
+.column {
+  float: left;
+  width: 20vw;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  margin-left: 10vw;
+  display: inline-block;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.title {
+  color: grey;
+}
+.lightbox{
+  margin-left:2%;
+  margin-right:2%;
+  display:inline-block;
+  box-sizing: border-box;
+  padding:2vw 2vh 2vw 2vh;
+  width:60vw;
+  border-width: thin;
+  border-color:lightgrey;
+  border-style: solid;
+}
+.lable{
+   color:grey;
+   font-size:100%;
+   opacity:80%;
+}
+input{
+  width:90%;
+  display:block;
+  height:2vh;
+  border-color: lightgrey;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: thin;
+  height:4vw;
+  padding:2vw 2vh;
+  margin-bottom: 2vw;
+  font-size: 105%;
+  color:solid black;
+
+}
+button{
+   width:100%;
+   background-color: green;
+   opacity:0.5;
+   color:white;
+   height:4vh;
+}
+button:hover{
+  opacity:1;
+}
+.popupbox{
+  display:block;
+  width:30vw;
+  height:25vh;
+  box-sizing: border-box;
+  border-width: thin;
+  border-color: lightgrey;
+  padding:2vw 2vh;
+  position:fixed;
+  margin-top: 2vh;
+  margin-left: 35vw;
+  background-color: grey;
+  background-color.opacity:0.4;
+}
+.header{
+  width:100%;
+  display: block;
+  box-sizing: border-box;
+  border-color: lightgrey;
+  border-width: thin;
+  background-color:grey;
+  color: black;
+  height:6vh;
+  padding-top:2px;
+  text-align: center;
+
+}

@@ -1,3 +1,17 @@
+<?php                                     //access controlling
+  session_start();
+  if( !isset($_SESSION['signed_in']) ) {        //session not set
+    header('location:index.php');
+    exit();
+  }else if( !$_SESSION['signed_in'] ){        //session set, but not signed_in
+    header('location:index.php');
+    exit();
+  }else if( substr($_SESSION['username'], -1) != "R" ){        //session set, but not for HR
+    header('location:index.php');
+    exit();
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,24 +23,26 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_hr-page.css">
     <link rel="stylesheet" href="css/styles_footer.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
 
     <!--jquery sources-->
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/hr_act.js" type="text/javascript"></script>
+    <script src="js/subnav.js" type="text/javascript"></script>
 
   </head>
   <body>
 
     <!--Including header file-->
-    <?php include_once("inc/header.php"); ?>
+    <?php
+      include_once("inc/header.php");
+      include_once("inc/navpannel.php");
+      $index = trim($_SESSION['username']);
+      include_once("inc/subnavstaff.php");
+    ?>
 
-    <!--navigation panel-->
-    <nav class="navigate">
-      <ul>
-        <li><a href="#">#name#</a></li>
-        <li><a href="log-out.php">Log Out</a></li>
-      </ul>
-    </nav>
+    <input type="hidden" name="index" id="index" value=<?php echo $index ?> >
 
     <!--preview popup box (hidden)-->
     <div class="popup_box">
@@ -102,7 +118,7 @@
       <div class="sm_cont" id="sel_pro_stud">
         <h4>Student Applications</h4>
         <ul id="stud_apps">
-          
+
         </ul>
       </div>
     </div>

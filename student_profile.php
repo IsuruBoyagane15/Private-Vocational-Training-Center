@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['signed_in'])){
+    if(!$_SESSION['signed_in']){
+      header('location:index.php');
+      exit();
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,7 +14,7 @@
   <link rel="stylesheet" href="css/styles_footer.css">
   <link rel="stylesheet" href="css/user_account.css">
   <link rel="stylesheet" href="css/navpannel.css">
-  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/profile.css">
   <link rel="stylesheet" href="css/subnav.css">
   <link rel="stylesheet" href="css/modules.css">
   <script src="js/jquery-3.3.1.js"></script>
@@ -16,27 +25,25 @@
 
 </head>
 <body>
-
       <?php include_once("inc/header.php"); ?>
       <?php include_once("inc/navpannel.php");?>
       <?php
-      $index=trim($_GET['index']);
       include_once("inc/subnav.php");
       ?>
-      <input type="hidden" name="index" id="index" value=<?php echo $_GET['index']?>>
-      <div id="course" class="head"></div><br><br>
-      <div class="card" width="60%">
-       <div class="head" >
-          Course Modules
-       </div>
-
-       <div id="modules" class="container">
-
-          <div id="modulelist"></div>
-       </div>
+    <input type="hidden" name="index" id="index" value=<?php echo $_SESSION['username']?>></input>
+    <div style='float:none;overflow:hidden'>
+      <div class="lightbox" style="width:30%;margin-left:5vw;float:left;padding:0px;">
+       <div  class="header" style="padding-top:2vh;">
+          Course Modules</div>
+       <div id="modulelist"></div>
      </div>
+     <div class="lightbox" style="width:50%;float:left;margin-left:5vw;height:30vh;padding:0px;">
+         <div class="header" id="course" style="padding-top:0.1vh;"></div>
+         <button class="button" style="bottom:0;height:4vh;width:100%;float:right;" onclick="#">View Course</button>
+      </div>
 
-     <?php include_once("inc/footer.php"); ?><br><br>
+   </div>
+  <?php include_once("inc/footer.php"); ?><br>
 
 
 </body>

@@ -22,39 +22,33 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="news.php">News</a></li>
             <li><a href="courses.php">Courses</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a href="log-in.php" class="selected">Log In</a></li>
+            <li><a href="about.php" class="selected">About</a></li>
+            <li><a href="log-in.php">Log In</a></li>
         </ul>
     </nav>
 
     <div class="slider">
       <ul class="slides">
-        <li class="slide"><img src="img/slider/training_2.jpg"></li>
-        <li class="slide"><img src="img/slider/img_institute.jfif"></li>
         <li class="slide"><img src="img/slider/training_1.jpg"></li>
-        <li class="slide"><img src="img/slider/training_4.jpg"></li>
-        <li class="slide"><img src="img/slider/training_5.jpg"></li>
-        <li class="slide"><img src="img/slider/img_group.jpg"></li>
-        <li class="slide"><img src="img/slider/img_institute.jfif"></li>
       </ul>
     </div>
 
 
-    <div id="abtus">
+    <div class="abtus">
       <h2>Our Vision</h2>
 
       <p>&emsp;&emsp;  The most dynamic and innovative vocational training provider in Sri Lanka, catering to the
         global employment market</p>
 
     </div>
-    <div id="abtus">
+    <div class="abtus">
       <h2>Our Mision</h2>
 
       <p>&emsp;&emsp;  Our Mission is to facilitate the fulfilment of the global skilled employment demand by developing competencies in individuals through modern methods and technologies in vocational training and education. We realize this mission by setting the highest standards
         in our services and facilities and focusing on global employability trends</p>
 
     </div>
-    <div id="abtus">
+    <div class="abtus">
       <h2>Our Objectives</h2>
       <ul>
         <li>Provide accessibility to youth by establishing vocational training centers in rural areas.</li>
@@ -65,7 +59,7 @@
 
     </div>
 
-    <div id="abtus">
+    <div class="abtus">
       <h2>Values</h2>
       <ul>
     <li>Flexibility to change</li>
@@ -77,7 +71,7 @@
     <li>Being honest,punctual and sensitive to humanitarian concerns and gender</li>
       </ul>
     </div>
-    <div id="abtus">
+    <div class="abtus">
       <h2>Functions</h2>
       <ul>
     <li>Provide vocational training to students by drawing up vocational training programs and coordinate with other institutions.</li>
@@ -87,7 +81,7 @@
     <li>Facilitate to the youth who have undergone vocational training to avail further training, placement in employment and to start on self employment.</li>
     </ul>
   </div>
-  <div id="abtus">
+  <div class="abtus">
     <p>&emsp;&emsp;Vocational training, also known as Vocational Education and Training (VET) and Career and Technical Education (CTE),
     provides job-specific technical training for work in the trades. These programs generally focus on providing students
     with hands-on instruction, and can lead to certification, a diploma or certificate. Students may prepare for jobs such as

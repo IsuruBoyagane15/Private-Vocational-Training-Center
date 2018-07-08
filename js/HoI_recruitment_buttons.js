@@ -20,7 +20,7 @@ $(function() {
 
   $('.rejection').on('click', function(){
     var confirmBox = $('.confirmBox');
-    var box =  $(this).closest('.staff_container');
+    var box =  $(this).closest('tr');
 
 
     confirmBox.find('.message').text("Reject this Staff member...?");
@@ -43,6 +43,7 @@ $(function() {
       window.location.href = "HoI_recruitment.php";
       },
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();
@@ -50,7 +51,7 @@ $(function() {
 
   $('.approval').on('click', function(){
     var confirmBox = $('.confirmBox');
-    var box =  $(this).closest('.staff_container');
+    var box =  $(this).closest('tr');
 
 
     confirmBox.find('.message').text("Approve this Staff member...?");
@@ -61,18 +62,19 @@ $(function() {
 
     confirmBox.find('.yes').click( function() {
 
-      var staff_id = box.find('.staff_id').text();
-      var name = box.find('.name').text();
+      var id = box.find('.staff_id').text();
+      alert(id);
 
     $.ajax({
       url: "dbOperations/HoI_approve_staff_db.php",
       type:"POST",
-      data: {staff_id:staff_id,name:name},
+      data: {id:id},
 
       success:function(data){
       alert("id sent");
       },
     });
+    document.location.reload(true);
   });
 
   confirmBox.show();

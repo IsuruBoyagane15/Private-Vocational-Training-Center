@@ -10,6 +10,8 @@ FOOTER
   background: -webkit-linear-gradient(to right, white 20%, yellow 90%);
   background: -moz-linear-gradient(to right, white 20%, yellow 90%);
   background: -o-linear-gradient(to right, white 20%, yellow 90%);
+  margin-top: 10vh;
+  margin-bottom:3vh;
 }
 
 /******** copyright ownership ********/

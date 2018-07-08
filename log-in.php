@@ -1,3 +1,29 @@
+<?php                                     //check whether already logged in
+  session_start();
+  if( isset($_SESSION['signed_in']) ) {
+    if( $_SESSION['signed_in'] ){                    //if logged in direct to profile page
+      $username = trim( $_SESSION['username'] );
+      $type = substr($username, -1);
+      $redirect = "log-in.php";
+
+      if($type == "L") {
+        $redirect = "lecturer-profile.php";
+      }else if($type == "H") {
+        $redirect = "HoI.php";
+      }else if($type == "R") {
+        $redirect = "hr-page.php";
+      }else if($type == "D") {
+        $redirect = "director_board_executive.php";
+      }else {
+        $redirect = "student_profile.php?index=".$username;
+      }
+
+      header("Location:".$redirect);
+
+    }
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +33,7 @@
     <!---script files---->
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/log-in_stud.js" type="text/javascript"></script>
-
+    <script src="js/log-in_staff.js" type="text/javascript"></script>
 
     <!--css styles-->
     <link rel="stylesheet" href="css/styles_header.css">
@@ -37,7 +63,7 @@
         <!--left panel (staff login)-->
         <div id="staff_login">
           <h2 class="panel_heading">Staff Log in</h2>
-          <form action="db_staff_login.php" method="POST">
+          <form action="dbOperations/db_staff_login.php" method="POST">
 
             <div class="image_container">
               <img src="img/login/login_staff.jfif" alt="Avatar" class="login_photo">

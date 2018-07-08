@@ -64,16 +64,52 @@
 
     <!--Second Para block-->
     <div class="para_box">
-      <h3>Second Para Box</h3>
-      <p>&emsp;&emsp;first paragraph.</p>
-      <p>&emsp;&emsp;second paragraph.</p>
+      <h3>How to Qualified with NVQ</h3>
+      <p>&emsp;There are two methods to obtain National Vocational Qualification (NVQ).</p>
+      <p>&emsp;&emsp;1. If the candidate could prove his/her ability with adequate evidence of his/her competencies pertaining to qualifications stipulated
+        in the Skills Standards, then the candidate is eligible to receive NVQ certificate through RPL (Recognition of Prior Learning).</p>
+      <p>&emsp;&emsp;2. The other method of getting NVQ certificate is, by following a Competency Based Training (CBT) course relevant to the qualification.
+        A candidate can follow a NVQ based training program at Vocational Training Authority primarily and few other public and private institutes
+        which are accredited to issue NVQ certificates.</p>
     </div>
 
     <!--Third Para block-->
     <div class="para_box">
-      <h3>Third Para Box</h3>
-      <p>&emsp;&emsp;first paragraph.</p>
-      <p>&emsp;&emsp;second paragraph.</p>
+      <h3>Director's Message</h3>
+      <p>&emsp;&emsp;Welcome to the Vocational Training Authority of Sri Lanka (VTA), the premier institute in providing Technical and Vocational Education
+        and Training (TVET) in the government sector. Established under the Vocational Training Authority Act No.12 of 1995, VTA has been functioning for
+        the last 20 years and has contributed extensively to the national economy. Each year VTA produces nearly 30000 youth empowering them with vocational skills
+        for employability & entrepreneurship. Since its inception, VTA has provided skill training for about 475,000 youth throughout the island. VTA comprises of 245
+        centres, consisting of 07 National Vocational Training Institutes (NVTI), 22 District Vocational Training Centres (DVTC), and 216 other Vocational Training
+        Centres established at Divisional Secretariats level. Altogether VTA covers 18 trades and conducts 79 courses consisting of 2178 programmes. Durations of
+        these courses range from 45 days to 2 years. The Vocational Training Authority is dedicated to make vocational training more accessible to youth of the country
+        and make them more skilled and employable locally and internationally. Our aim is to produce a globally competitive, industry specific, quality workforce by
+        setting the highest standards in our services and facilities by focusing on global employability trends and developing competencies in individuals through
+        modern methods and technologies in vocational training and education. After recognizing the needs of the market, we are planning to introduce English and
+        soft skills as well, to all the trainees in VTA making them competent in non-technical skills such as communication, problem solving, teamwork and personal
+        attributes such as adaptability, resilience, enthusiasm and openness to innovative ideas to produce a set of self-confident skilled employees. Furthermore
+        all students of VTA centres will be given IT training to keep them abreast with the advancement of technology and thereby to make them more knowledgeable
+        and employable.</p>
+    </div>
+
+    <!--Forth Para block-->
+    <div class="para_box">
+      <h3>Contact Details</h3>
+      <h5>&emsp;&emsp;Mr. Sarath Pieris</h5>
+      <p>&emsp;&emsp;Chairman of Vocational Training Institute</p>
+      <p>&emsp;&emsp;+94 114 785 569</p>
+      <p>&emsp;&emsp;sarath@vti.lk</p>
+      <br/>
+      <h5>&emsp;&emsp;Mrs. S.R.Perera</h5>
+      <p>&emsp;&emsp;Director of Vocational Training Institute</p>
+      <p>&emsp;&emsp;+94 114 458 785</p>
+      <p>&emsp;&emsp;samanthi@vti.lk</p>
+      <br/>
+      <h5>&emsp;&emsp;Head Office</h5>
+      <p>&emsp;&emsp;Vocational Training Institute</p>
+      <p>&emsp;&emsp;652/4, "Parackrama Pedesa", Rajagiriya, Colombo</p>
+      <p>&emsp;&emsp;+94 114 444 555</p>
+      <p>&emsp;&emsp;headoff@vti.lk</p>
     </div>
 
     <!--Body navigation Panel-->

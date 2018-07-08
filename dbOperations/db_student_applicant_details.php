@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
+
 <?php
 
    $servername="localhost";
@@ -17,43 +13,31 @@
    else{
      echo "connected successfully<br>";
    }
-   $courseid=$_POST["course_id"];
-   $id=$_POST["nic"];
-   $nameini=$_POST["nameini"];
-   $fullname=$_POST["fullname"];
-   $medium=$_POST["medium"];
-   $address=$_POST["address"];
-   $gender=$_POST["gender"];
-   $bday=$_POST["bday"];
-   $age=$_POST["age"];
-   $mobile=$_POST["mobile"];
-   $home=$_POST["home"];
-   $email=$_POST["email"];
-   //creating data base
-   /*$sql="CREATE DATABASE applicantDetails";
-   if($conn->query($sql)===TRUE){
-     echo "DATABASE applicantDetails created successfully";
-   }
-   else{
-     echo "Error creating database: ".$conn->error;
-   }*/
-   //creating student_details table
-   /*$sql="CREATE TABLE STUDENT_DETAILS(id INT(9) UNSIGNED,course VARCHAR(30) NOT NULL,name_with_initials VARCHAR(30) NOT NULL,fullname VARCHAR(30) NOT NULL,medium VARCHAR(15) NOT NULL,
-        address VARCHAR(50) NOT NULL,gender VARCHAR(10) NOT NULL,date_of_birth DATE NOT NULL,age DATE NOT NULL,mobile VARCHAR(12) NOT NULL,home VARCHAR(12),email VARCHAR(50) NOT NULL,applied_date TIMESTAMP)";
-
-  if ($conn->query($sql) === TRUE) {
-      echo "Table MyGuests created successfully";
-  } else {
-      echo "Error creating table: " . $conn->error;
-  }
-
-  $conn->close();
-  */
+   $array=$_POST["data_array"];
+   $courseid=$array[0];
+   $id=$array[5];
+   $nameini=$array[7];
+   $fullname=$array[8];
+   $medium=$array[6];
+   $address=$array[9];
+   $gender=$array[12];
+   $bday=$array[10];
+   $age=$array[11];
+   $mobile=$array[13];
+   $home=$array[14];
+   $email=$array[15];
+   $olyear=$array[16];
+   $olindex=$array[17];
+   $maths=$array[18];
+   $science=$array[19];
+   $english=$array[20];
+   $alyear=$array[21];
+   $alindex=$array[22];
+   $alstream=$array[23];
   $appdate=date("Y-m-d");
-  $sql="INSERT INTO STUDENT_DETAILS(course_id,id,name_with_initials,fullname,medium,address,gender,date_of_birth,age,mobile,home,email,applied_date) VALUES ('$courseid','$id','$nameini','$fullname','$medium','$address','$gender','$bday','$age','$mobile','$home','$email','$appdate')";
+  $sql="INSERT INTO STUDENT_DETAILS(course,id,name_with_initials,fullname,medium,address,gender,date_of_birth,age,mobile,home,email,applied_date,year_of_ol,index_of_ol,maths,english,science,year_of_al,index_al,stream) VALUES ('$courseid','$id','$nameini','$fullname','$medium','$address','$gender','$bday','$age','$mobile','$home','$email','$appdate','$olyear','$olinex','$maths','$enslish','$science','$alyear','$alindex','$alstream')";
   $conn->query($sql);
-  echo "new record created sucessfully";
   $conn->close();
+  $output='';
+  echo $output;
   ?>
-</body>
-</html>

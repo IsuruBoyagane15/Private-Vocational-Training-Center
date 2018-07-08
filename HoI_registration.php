@@ -1,13 +1,11 @@
 <?php
 
-$link = mysqli_connect("localhost", "root", "", "applicantdetails_hrselected");
-
-$query = "select * from selected_student_details";
-$result = mysqli_query($link,$query);
-
-
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+session_start();
+if( !isset($_SESSION['signed_in'])){
+  if(!$_SESSION['signed_in']){
+    header('location:index.php');
+    exit();
+  }
 }
 ?>
 
@@ -22,26 +20,28 @@ if($link === false){
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_footer.css">
     <link rel="stylesheet" href="css/styles_HoI_registration.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
 
-	<script src="js/jquery-3.3.1.js"></script>
+	  <script src="js/jquery-3.3.1.js"></script>
     <script src="js/HoI_registration_buttons.js" type="text/javascript"></script>
-
+    <script src="js/subnav.js" type="text/javascript"></script>
 
 </head>
 <body>
 
     <!--Including header file-->
-    <?php include_once("inc/header.php"); ?>
+<?php
+    include_once("inc/header.php");
+    include_once("inc/navpannel.php");
+    $index = trim($_SESSION['username']);
+    include_once("inc/subnavstaff.php");
+    include_once("dbOperations/HoI_registration_load_db.php");
 
-    <nav class="navigate">
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="courses.php">Courses</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="HoI.php">#to profile</a></li>
-      </ul>
-    </nav>
+?>
+
+  <input type = "hidden" name = "index" id = "index" value=<?php echo $index ?>>
+
 
 	<div class="confirmBox">
       <div class="message"></div>
@@ -53,7 +53,7 @@ if($link === false){
 	<div class="container">
 		<ul class = "students">
 			<div class = "student_container">
-				<li><h4>Selected Students</h4>
+				<li><h5>Selected Students</h5>
 					<table align ="center"  class ="student_table"  >
 						<tr>
 							<th>ID</th>
@@ -113,16 +113,6 @@ if($link === false){
 			<button class = "def" id = "cancel">Cancel</button>
 		</div>
 	</div>
-
-    <div class="body_navigation">
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="news.php">News</a></li>
-        <li><a href="courses.php">Courses</a></li>
-        <li><a href="about.php">About</a></li>
-        <li><a href="log-in.php">Log In</a></li>
-      </ul>
-    </div>
 
     <!--Include footer file-->
     <?php include_once("inc/footer.php"); ?>

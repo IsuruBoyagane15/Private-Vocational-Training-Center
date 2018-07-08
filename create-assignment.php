@@ -1,3 +1,17 @@
+<?php                                     //access controlling
+  session_start();
+  if( !isset($_SESSION['signed_in']) ) {        //session not set
+    header('location:index.php');
+    exit();
+  }else if( !$_SESSION['signed_in'] ){        //session set, but not signed_in
+    header('location:index.php');
+    exit();
+  }else if( substr($_SESSION['username'], -1) != "L" ){        //session set, but not for HR
+    header('location:index.php');
+    exit();
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,25 +23,27 @@
     <link rel="stylesheet" href="css/styles_header.css">
     <link rel="stylesheet" href="css/styles_create-assignment.css">
     <link rel="stylesheet" href="css/styles_footer.css">
+    <link rel="stylesheet" href="css/subnav.css">
+    <link rel="stylesheet" href="css/navpannel.css">
 
     <!--jquery sources-->
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/addQueTemp.js" type="text/javascript"></script>
     <script src="js/assign-buttons.js" type="text/javascript"></script>
+    <script src="js/subnav.js" type="text/javascript"></script>
 
   </head>
   <body>
 
-    <!--Including header file-->
-    <?php include_once("inc/header.php"); ?>
+    <!--Including header file and navigation-->
+    <?php
+      include_once("inc/header.php");
+      include_once("inc/navpannel.php");
+      $index = trim($_SESSION['username']);
+      include_once("inc/subnavlec.php");
+    ?>
 
-    <!--navigation panel-->
-    <nav class="navigate">
-      <ul>
-        <li><a href="#">#name#</a></li>
-        <li><a href="log-out.php">Log Out</a></li>
-      </ul>
-    </nav>
+    <input type="hidden" name="index" id="index" value=<?php echo $index ?> >
 
     <!--confirm dialog box (hidden)-->
     <div class="confirmBox">
@@ -122,10 +138,15 @@
         <option value="04">04</option>
         <option value="04">05</option>
       </select>
+      <label class="label">&emsp;Late Submission Allowed :</label>
+      <select name="late" id="late_allowed">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
     </div>
     <div class="assignment_details" id="ass_det_2">
-      <label class="label">Description :</label>
-      <input type="text" name="assignment_des" class="des_input" id="assignment_des">
+      <label class="label">Description :&emsp;</label>
+      <textarea id="assignment_des" class="des_input" placeholder="Add a optional description" rows="4"></textarea><br>
     </div>
 
     <!--question container-->
