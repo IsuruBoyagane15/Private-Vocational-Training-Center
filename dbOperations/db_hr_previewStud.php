@@ -44,14 +44,12 @@
   $output .= (string)$row[17];
   $output .= ' </dd><dt>&emsp; Science</dt><dd> :&emsp; ';
   $output .= (string)$row[18];
-  $output .= ' </dd><dt>&emsp; ICT</dt><dd> :&emsp; ';
-  $output .= (string)$row[19];
   $output .= ' </dd><dt>&emsp; Year of A/L</dt><dd> :&emsp; ';
-  $output .= (string)$row[20];
+  $output .= (string)$row[19];
   $output .= ' </dd><dt>&emsp; Index of A/L</dt><dd> :&emsp; ';
-  $output .= (string)$row[21];
+  $output .= (string)$row[20];
   $output .= ' </dd><dt>&emsp; A/L Stream</dt><dd> :&emsp; ';
-  $output .= (string)$row[22];
+  $output .= (string)$row[21];
   $output .= ' </dd><dt>&emsp; Applied course</dt><dd> :&emsp; ';
   $output .= (string)$row[1];
   $output .= ' </dd><dt>&emsp; Medium</dt><dd> :&emsp; ';

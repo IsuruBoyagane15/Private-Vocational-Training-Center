@@ -66,7 +66,8 @@
       correct_answers INT(3),
       marks VARCHAR(3),
       timetaken VARCHAR(8),
-      is_late TINYINT(1)
+      is_late TINYINT(1),
+      comments VARCHAR(500)
     )";       //timetaken should be a time field
     $result = mysqli_query($conn, $query);
 

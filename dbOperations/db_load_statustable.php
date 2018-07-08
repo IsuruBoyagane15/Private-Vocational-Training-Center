@@ -19,7 +19,7 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT tablename,attempts,late_allowed FROM config_createassignment WHERE  id='$ass_id'";
+$sql="SELECT tableName,no_of_attempts,late_allowed FROM config_createassignment WHERE  id='$ass_id'";
 $result=$conn->query($sql);
 $conn->close();
 $row=mysqli_fetch_array($result);
@@ -32,16 +32,16 @@ $conn=new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT * FROM $ass_name where student_index='$index'";
+$sql="SELECT * FROM $ass_name where student_id='$index'";
 $result=$conn->query($sql);
 $output="";
 $row4=mysqli_fetch_array($result);
 $attempted=sizeof($row4);
-if(!empty($result)){
+if($attempted>0){
   $output.='<tr><th>Submission Status</th><td style="background-color:lightgreen">Submitted</td></tr>';
 }
 else{
-  $output.='<tr><th>Submission Status</th><td>No attempt/td></tr>';
+  $output.='<tr><th>Submission Status</th><td>No attempt</td></tr>';
 }
 $sql="SELECT marks FROM $ass_name WHERE student_index='$index'";
 $result=$conn->query($sql);
@@ -106,7 +106,7 @@ if($due_date!=0){
 
 
  if($today<$due_date){
-   
+
     $output.='<tr><th>Time Remaining</th><td>'.$remaining.' remaining </td></tr>';
  }
  else{
@@ -139,7 +139,7 @@ else{
  if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
  }
- $sql="SELECT comments FROM $ass_name where student_index='$index'";
+ $sql="SELECT comments FROM $ass_name where student_id='$index'";
  $result=$conn->query($sql);
  $output1='';
  $i=1;
