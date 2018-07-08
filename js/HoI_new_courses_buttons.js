@@ -87,6 +87,8 @@ $(function() {
 		  var medium = box.find('.medium').text();
 		  var required_qualification = box.find('.required_qualification').text();
 		  var course_id = parseInt(box.find('.course_id').text());
+      var c_descrip = box.find('.descrip').text();
+
 
 		 $.ajax({
 
@@ -101,7 +103,9 @@ $(function() {
           accredit_level: accredit_level,
           medium: medium,
           required_qualification:required_qualification,
-          course_id:course_id},
+          c_descrip:c_descrip,
+          course_id:course_id,
+          },
 
 			success:function(data){
 				alert("New course was approved...!");

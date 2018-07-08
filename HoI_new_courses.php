@@ -72,7 +72,8 @@
 							<th>Accredit Level</th>
 							<th>Medium</th>
 							<th>Required Qualification</th>
-							<th >ID</th>
+              <th class = "desc_h">Description</th>
+							<th>ID</th>
 
 						</tr>
 						<tr class ="records">
@@ -85,7 +86,10 @@
 							<td class = "accredit_level"><?php echo($row['accredit_level']);?></td>
 							<td class = "medium"><?php echo($row['medium']);?></td>
 							<td class = "required_qualification"> <?php echo($row['required_qualification']);?></td>
-							<td class = "course_id"><?php echo($row['id']);?></td>
+              <td class = "descrip"><?php echo($row['description']);?></td>
+              <td class = "course_id"><?php echo($row['id']);?></td>
+
+
 						<tr>
 					</table>
 

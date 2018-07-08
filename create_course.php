@@ -40,10 +40,7 @@
     include_once("inc/subnavstaff.php");
 ?>
     <input type = "hidden" name = "index" id = "index" value=<?php echo $index ?>>
-
-
 <body>
-
 
     <?php include_once("inc/header.php"); ?>
     <?php include_once("inc/navpannel.php"); ?>
@@ -60,22 +57,16 @@
 
     <div class = "basic_data">
       <h5>Create a New Course</h5>
-      <form action="dbOperations/create_course_db.php " method = "post">
+      <form action="dbOperations/create_course_db.php " method = "post" id = "data_c">
 
         <label>Course Name</label><br>
         <input type="text" id="name" name="name" placeholder="Enter Course Name"><br>
 
-
-
         <label>Number of Students</label><br>
         <input type="number" id="student_count" name="student_count" placeholder ="Enter Number of Students"><br>
 
-
-
         <label>Duration (Months)</label><br>
         <input type="number" id="duration" name="duration" placeholder = "Enter Number of Months"><br>
-
-
 
     		<label>Trade</label><br>
     		<input list="trades" placeholder="Enter Trade Field" id = "trade">
@@ -92,8 +83,6 @@
     		  </datalist>
     		<br>
 
-
-
     		<label>Course Type</label><br>
             <select id = "course_type" name="course_type" class = "values">
     		        <option  value = "" selected>Select Course Type</option>
@@ -102,8 +91,6 @@
             </select>
     		<br>
 
-
-
     		<label>Type</label><br>
             <select id = "type" name="type" class = "values">
     			       <option  value = "" selected>Select Type</option>
@@ -111,8 +98,6 @@
                  <option value="NON-NVQ">NON-NVQ</option>
     		    </select>
     		<br>
-
-
 
     		<label>Accredit Level</label><br>
         <select id = "accredit_level" name="accredit_level" class = "values">
@@ -127,8 +112,6 @@
         </select>
     		</form><br>
 
-
-
     		<label>Medium</label><br>
             <select id = "medium" name="medium" class = "values">
     		  		<option  value = "" selected>Select Medium</option>
@@ -136,10 +119,12 @@
               		<option value="sinhala">Sinhala</option>
     		</select><br>
 
-
-
     		<label>Required Qulification </label><br>
     		  <input type="text" id="required_qualification" name="required_qualification" placeholder="Enter Required Qualifications"><br>
+        <br>
+
+        <label>Description </label><br>
+    		  <input type="text" id="des" name="description" placeholder="Enter a Description"><br>
         <br>
       </form>
 	</div>

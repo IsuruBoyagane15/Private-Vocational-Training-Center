@@ -92,6 +92,9 @@ $('#done').on('click', function() {
 		else if(parseInt($('#duration').val()) == ""){
 			alert('Please enter Duration...!');
 		}
+		else if($.trim($('#des').val()) == ""){
+			alert('Please add a Description...!');
+		}
 		else if( (module_list.length === 0) ){
 			alert('Modules are not added...!');
 		}
@@ -130,17 +133,18 @@ $('#done').on('click', function() {
 				var accredit_level = $('#accredit_level').val();
 				var medium = $('#medium').val();
 				var required_qualification = $('#required_qualification').val();
+				var c_description = $('#des').val();
 
 
 			  	$.ajax( {
 
 						url: "dbOperations/create_course_db.php",
 						type: "POST",
-						data: {course_name : course_name, student_count : student_count, duration : duration,  trade : trade, course_type:  course_type, type:type, accredit_level: accredit_level,  medium: medium,  required_qualification:required_qualification},
+						data: {course_name : course_name, student_count : student_count, duration : duration,  trade : trade, course_type:  course_type, type:type, accredit_level: accredit_level,  medium: medium,  required_qualification:required_qualification, c_description:c_description},
 
 						success:function(data){
 							alert("New course was created successfully...!");
-							window.location.href = "director_board_executive.php";
+
 						}
 
 					});
@@ -159,7 +163,7 @@ $('#done').on('click', function() {
 
 							success:function(data){
 								alert("New module was created...!");
-
+								window.location.href = "director_board_executive.php";
 
 							}
 

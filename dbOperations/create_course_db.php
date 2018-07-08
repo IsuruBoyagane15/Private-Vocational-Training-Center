@@ -17,9 +17,10 @@ if($link === false){
     $accredit_level = $_POST["accredit_level"];
     $medium = $_POST["medium"];
     $required_qualification = $_POST["required_qualification"];
+    $c_description = $_POST["c_description"];
 
 
-    $sql = "INSERT INTO courses (course_name, student_count, duration, trade, course_type, type, accredit_level, medium,required_qualification) VALUES ('$course_name', '$student_count', '$duration','$trade','$course_type','$type','$accredit_level','$medium','$required_qualification' )";
+    $sql = "INSERT INTO courses (course_name, student_count, duration, trade, course_type, type, accredit_level, medium,required_qualification, description) VALUES ('$course_name', '$student_count', '$duration','$trade','$course_type','$type','$accredit_level','$medium','$required_qualification', '$c_description' )";
     if(mysqli_query($link, $sql)){
         echo "Records inserted successfully.";
     } else{
@@ -29,7 +30,7 @@ if($link === false){
 	session_start();
         $idrow = mysqli_query($link, "SELECT * FROM courses ORDER BY id DESC LIMIT 1");
 		    $id = mysqli_fetch_row($idrow);
-		    $_SESSION['id'] = $id[9];
+		    $_SESSION['id'] = $id[10];
 
 mysqli_close($link);
 
