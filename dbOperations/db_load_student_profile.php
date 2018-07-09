@@ -7,12 +7,14 @@
    if($conn->connect_error){
      die("conection failed:".$conn->connect_error);
    }
+
    $index=(string)$_GET['index'];
    $index=trim($index);
    $sql="SELECT course_id FROM student_info WHERE student_index='$index'";
    $result=$conn->query($sql);
    $row=mysqli_fetch_array($result);
    $courseid=$row[0];
+   $_SESSION['course_id']=$courseid;
    $conn->close();
    $dbname="COURSES_DETAILS";
    $conn= new mysqli($server,$username,$password,$dbname);

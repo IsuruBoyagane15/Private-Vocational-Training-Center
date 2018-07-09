@@ -33,8 +33,9 @@
   <input type="hidden" name="mo_id" id="mo_id" value=<?php echo $_GET['module_id']?>>
   <div id="course" class="header"></div><br><br>
   <div style="overflow:hidden;">
-  <div class="lightbox" style="width:40vw;padding:0px;float:left;margin-left:5vw;">
+  <div class="lightbox" style="width:40vw;padding:0px;float:left;margin-left:5vw;height:20vh;">
   <div id="module" class="header"></div>
+  <div id="description"></div>
 </div>
 
   <div id="lecture_notes" name="lecture_notes" class="lightbox" style="width:40vw;padding:0px;float:left;margin-left:5vw;">

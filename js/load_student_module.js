@@ -31,5 +31,14 @@ $(document).ready(function(){
       alert(error);
     }
   });
+  $.ajax({
+    url:"dbOperations/db_module_description.php?module_id="+module_id,
+    success: function(data){
+      $('#description').html(data);
+    },
+    error: function(error){
+      alert(error);
+    }
+  });
 
 });

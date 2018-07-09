@@ -39,7 +39,7 @@
      </div>
      <div class="lightbox" style="width:50%;float:left;margin-left:5vw;height:30vh;padding:0px;">
          <div class="header" id="course" style="padding-top:0.1vh;"></div>
-         <button class="button" style="bottom:0;height:4vh;width:100%;float:right;" onclick="#">View Course</button>
+         <div id="description"></div>
       </div>
 
    </div>
