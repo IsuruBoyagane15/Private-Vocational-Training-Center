@@ -1,8 +1,6 @@
 <?php
 
 $link = mysqli_connect("localhost", "root", "", "courses");
-
-
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
@@ -10,8 +8,5 @@ if($link === false){
 $sql = "SELECT trade FROM trades";
 $trades = mysqli_query($link,$sql);
 
-
 mysqli_close($link);
-
-
 ?>
