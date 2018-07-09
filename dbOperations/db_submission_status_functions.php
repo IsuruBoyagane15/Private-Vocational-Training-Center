@@ -8,7 +8,7 @@ function getModName($tablename){
   $result = mysqli_query($conn, $query);
   mysqli_close($conn);
   $row = mysqli_fetch_array($result);
-  $modname = (string)$row[2];
+  $modname = (string)$row['module'];
   return $modname;
 }
 
@@ -20,7 +20,7 @@ function getTotal($modname){
   $result1 = mysqli_query($conn1, $query1);
   mysqli_close($conn1);
   $row1 = mysqli_fetch_array($result1);
-  $total = (string)$row1[3];
+  $total = (string)$row1['no_of_students'];
   return $total;
 }
 
