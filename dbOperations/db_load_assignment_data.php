@@ -13,7 +13,7 @@ $sql="SELECT module_name FROM module_details WHERE module_id='$module_id'";
 $result=$conn->query($sql);
 $conn->close();
 $row=mysqli_fetch_array($result);
-$module_name=trim($row[0]);
+$module_name=$row[0];
 $dbname="configdata";
 $conn = new mysqli($servername, $username, $password,$dbname);
 
@@ -21,7 +21,7 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql="SELECT assignment_name,tableName,id FROM config_createassignment WHERE module='Introduction to plumbing' AND is_deleted=0";
+$sql="SELECT assignment_name,tableName,id FROM config_createassignment WHERE module='$module_name' ";
 $result=$conn->query($sql);
 $output="";
 $conn->close();

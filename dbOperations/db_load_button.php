@@ -38,14 +38,30 @@ $sql="SELECT * FROM $ass_name where student_id='$index'";
 $result=$conn->query($sql);
 $output="";
 $row=mysqli_fetch_array($result);
-$count=sizeof($row);
 $conn->close();
+if(!empty($row)){
+ $count=sizeof($row);
+
 if($today<$deadline  and $count<$attempts){
   $output.='<br><br><button  style="width:40vw;margin-left:30vw;" onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'" >Add Submisson</button>';
 }
 else if($today>$deadline and $count<$attempts and $late_allowed){
     $output.='<br><br><button  style="width:40vw;margin-left:30vw;" onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'" >Add Submisson</button>';
 }
+else if($deadline==date("0000-00-00 00:00:00")){
+    $output.='<br><br><button  style="width:40vw;margin-left:30vw;" onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'" >Add Submisson</button>';
+}
+else{
+    ////
+}
+}
+else if($deadline==date("0000-00-00 00:00:00") ){
+    $output.='<br><br><button  style="width:40vw;margin-left:30vw;" onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'" >Add Submisson</button>';
+}
+else{
+  $output.='<br><br><button  style="width:40vw;margin-left:30vw;" onclick=window.location.href="addsubmission.php?module_id='.urlencode($module_id).'&&index='.urlencode($index).'&&ass_id='.urlencode($ass_id).'" >Add Submisson</button>';
+}
+
 
 echo $output;
 ?>

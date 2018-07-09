@@ -13,7 +13,7 @@
 
   //get course id
   $connection = mysqli_connect("localhost", "root", "", "courses_details");
-  $query = "SELECT COURSE_NAME,COURSE_ID FROM course_details WHERE COURSE_NAME='$course'";
+  $query = "SELECT course_name,course_id FROM course_details WHERE course_name='$course'";
   $result = mysqli_query($connection, $query);
   $row = mysqli_fetch_array($result);
   $course_id = $row[1];

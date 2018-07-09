@@ -36,13 +36,13 @@ $sql="SELECT * FROM $ass_name where student_id='$index'";
 $result=$conn->query($sql);
 $output="";
 $row4=mysqli_fetch_array($result);
-$attempted=sizeof($row4);
-if($attempted>0){
+if(!empty($row4)){
   $output.='<tr><th>Submission Status</th><td style="background-color:lightgreen">Submitted</td></tr>';
 }
 else{
   $output.='<tr><th>Submission Status</th><td>No attempt</td></tr>';
 }
+
 $sql="SELECT marks FROM $ass_name WHERE student_index='$index'";
 $result=$conn->query($sql);
 

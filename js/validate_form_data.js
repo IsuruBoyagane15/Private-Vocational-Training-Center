@@ -191,6 +191,7 @@ $("#student_form").on('submit',function(event){
        else{
             error_element=$("span",id.parent());
             error_element.removeClass("error_show").addClass("error");
+            error_free=true;
        }
        if(!nameini.hasClass("valid")){
          error_element=$("span",nameini.parent());
@@ -200,6 +201,7 @@ $("#student_form").on('submit',function(event){
        else{
             error_element=$("span",nameini.parent());
             error_element.removeClass("error_show").addClass("error");
+            error_free=true;
        }
        if(!fullname.hasClass("valid")){
          error_element=$("span",fullname.parent());
@@ -208,7 +210,8 @@ $("#student_form").on('submit',function(event){
        }
        else{
          error_element=$("span",fullname.parent());
-            error_element.removeClass("error_show").addClass("error");
+          error_element.removeClass("error_show").addClass("error");
+          error_free=true;
        }
 
        if(!address.hasClass("valid")){
@@ -219,6 +222,7 @@ $("#student_form").on('submit',function(event){
        else{
          error_element=$("span",address.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
        if(!bday.hasClass("valid")){
@@ -229,16 +233,18 @@ $("#student_form").on('submit',function(event){
        else{
          error_element=$("span",bday.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
        if(!age.hasClass("valid")){
          error_element=$("span",age.parent());
-      error_element.removeClass("error").addClass("error_show");
+         error_element.removeClass("error").addClass("error_show");
          error_free=false;
        }
        else{
           error_element=$("span",age.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
        if(!mobile.hasClass("valid")){
@@ -249,6 +255,7 @@ $("#student_form").on('submit',function(event){
        else{
          error_element=$("span",mobile.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
        if(!home.hasClass("valid")){
@@ -259,6 +266,7 @@ $("#student_form").on('submit',function(event){
        else{
          error_element=$("span",home.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
        if(!email.hasClass("valid")){
@@ -269,6 +277,7 @@ $("#student_form").on('submit',function(event){
        else{
          error_element=$("span",email.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
        if(!olyear.hasClass("valid")){
@@ -279,6 +288,7 @@ $("#student_form").on('submit',function(event){
        else{
          error_element=$("span",olyear.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
        if(!olindex.hasClass("valid")){
@@ -289,6 +299,7 @@ $("#student_form").on('submit',function(event){
        else{
             error_element=$("span",olindex.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
        if(!alyear.hasClass("valid")){
@@ -299,6 +310,7 @@ $("#student_form").on('submit',function(event){
        else{
             error_element=$("span",alyear.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
        if(!alindex.hasClass("valid")){
@@ -309,6 +321,7 @@ $("#student_form").on('submit',function(event){
        else{
             error_element=$("span",alindex.parent());
             error_element.removeClass("error_show").addClass("error");
+                error_free=true;
        }
 
       if(error_free){

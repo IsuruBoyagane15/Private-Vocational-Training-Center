@@ -11,7 +11,7 @@ $medium = $_POST["medium"];
 $required_qualification = $_POST["required_qualification"];
 $course_id = $_POST["course_id"];
 $c_descrip = $_POST["c_descrip"];
-$id = "C"."$course_id";
+$id = "c"."$course_id";
 
 
 

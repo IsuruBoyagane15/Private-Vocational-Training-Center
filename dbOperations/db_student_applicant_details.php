@@ -33,8 +33,7 @@
    $alyear=$_POST['alyear'];
    $alindex=$_POST['indexal'];
    $alstream=$_POST['stream'];
-  $appdate=date("Y-m-d");
-  $sql="INSERT INTO STUDENT_DETAILS(course,nic,name_with_initials,fullname,medium,address,gender,date_of_birth,age,mobile,home,email,applied_date,year_of_ol,index_of_ol,maths,english,science,year_of_al,index_al,stream) VALUES ('$courseid','$id','$nameini','$fullname','$medium','$address','$gender','$bday','$age','$mobile','$home','$email','$appdate','$olyear','$olindex','$maths','$english','$science','$alyear','$alindex','$alstream')";
+  $sql="INSERT INTO STUDENT_DETAILS(course,nic,name_with_initials,fullname,medium,address,gender,date_of_birth,age,mobile,home,email,year_of_ol,index_ol,maths,english,science,year_of_al,index_al,stream) VALUES ('$courseid','$id','$nameini','$fullname','$medium','$address','$gender','$bday','$age','$mobile','$home','$email','$olyear','$olindex','$maths','$english','$science','$alyear','$alindex','$alstream')";
   $conn->query($sql);
   $conn->close();
   $output='<div>';
