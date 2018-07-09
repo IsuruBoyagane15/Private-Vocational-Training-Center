@@ -28,13 +28,11 @@
     <span class="error">Enter a valid NIC number</span>
 
     <label  for="medium">Medium</label>
-    <input  type="text" list="media" name="medium" placeholder="prefered medium" required>
-    <datalist id="media">
-      <option value="English">
-      <option value="Sinhala">
-      <option value="Tamil">
-    </datalist>
-  </input>
+    <select  type="text"  id="medium" name="medium" placeholder="prefered medium" required>
+      <option value="English">English</option>
+      <option value="Sinhala">Sinhala</option>
+      <option value="Tamil">Tamil</option>
+  </select>
 
     <label  for="nameini">Name With Initials</label>
     <input  type="text" class="contact" name="nameini" id="nameini" required></input>
@@ -60,10 +58,10 @@
 
 
       <label for="gender">Gender</label><br>
-      <div class="lightbox" style="width:90%;margin-left:2vw;height:7vh;padding:0.1vw 0.1vh;background-color:white;margin-left:2vw;margin-bottom:2vh;">
-        <input type="radio" name="gender" <?php if(isset($gender) && $gender=="Male") echo "checked";?> <?php if(!isset($gender)) echo "requird";?>  value="Male">Male</input><br>
-        <input type="radio" name="gender" <?php if(isset($gender) && $gender=="Female") echo "checked";?> value="Female">Female</input>
-      </div><br>
+      <select  required class="lightbox" name="gender" id="gender" style="width:90%;margin-left:2vw;height:7vh;padding:0.1vw 0.1vh;background-color:white;margin-left:2vw;margin-bottom:2vh;">
+        <option     value="Male">Male</option><br>
+        <option     value="Female">Female</option>
+      </select><br>
 
     <label for="mobile">Telephone(Mobile)</label>
     <input type="text" class="contact" name="mobile" id="mobile" placeholder="(XXX)-XXX-XXXX" size="10" id="mobile"   required></input>
@@ -87,35 +85,29 @@
     <span class="error">Enter a valid index number</span><br>
     <div class="lightbox" style="width:90%;margin-left:2vw;margin-bottom:2vh;">
       <label for="maths">Mathematics</label>
-      <input type="text" name="maths" list="grades" style="width:30%;margin-left:2vw;padding:0.3vw 0.1vh;height:4vh;" required>
-      <datalist id="grades">
-        <option value="A">
-        <option value="B">
-        <option value="C">
-        <option value="S">
-        <option value="F">
-      </datalist>
-    </input>
+      <select type="text" name="maths" id="maths" style="width:30%;margin-left:2vw;padding:0.3vw 0.1vh;height:4vh;" required>
+      <option value="A">A</optionn>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="S">D</option>
+      <option value="F">E</option>
+    </select>
     <label for="science">Science</label>
-    <input type="text" name="science" list="grades" style="width:30%;margin-left:2vw;padding:0.3vw 0.1vh;height:4vh;" required>
-    <datalist id="grades">
-      <option value="A">
-      <option value="B">
-      <option value="C">
-      <option value="S">
-      <option value="F">
-    </datalist>
+    <select type="text" name="science"  id="science" style="width:30%;margin-left:2vw;padding:0.3vw 0.1vh;height:4vh;" required>
+      <option value="A">A</optionn>
+      <option value="B">B</option>
+      <option value="C">C</option>
+      <option value="S">D</option>
+      <option value="F">E</option>
+    </select>
     <label for="english">English</label>
-    <input type="text" name="english" list="grades" style="width:30%;margin-left:2vw;padding:0.3vw 0.1vh;height:4vh;" required>
-    <datalist id="grades">
-      <option value="A">
-      <option value="B">
-      <option value="C">
-      <option value="S">
-      <option value="F">
-    </datalist>
-  </input>
-  </input>
+    <select type="text" name="english" id="english" style="width:30%;margin-left:2vw;padding:0.3vw 0.1vh;height:4vh;" required>
+        <option value="A">A</optionn>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="S">D</option>
+        <option value="F">E</option>
+    </select>
 </div>
     <label for="al-year">Year of A/L</label>
     <input  type="year" class="contact" name="al-year" id="al-year"></input>
@@ -126,17 +118,16 @@
     <span class="error">Enter a valid index number</span><br>
 
     <label for="stream">A/L stream</label>
-    <input type="text" list="streams" name="stream">
-    <datalist id="streams">
-      <option value="Art">
-      <option value="Commerce">
-      <option value="Physical">
-      <option value="Biology">
-      <option value="Other">
-    </datalist>
-  </input>
+    <select type="text" id="stream" name="stream">
+      <option value="Art">Art</option>
+      <option value="Commerce">Commerce</option>
+      <option value="Physical">Physical</option>
+      <option value="Biology">Biology</option>
+      <option value="Other">Other</option>
+  </select>
     <input class="btn" id="submit" type="submit" name="Submit"  style="float:right"></input>
  </form>
+ <div id="test"></div>
 </div>
 
 

@@ -162,34 +162,169 @@ $(document).ready(function(){
 
 $("#student_form").on('submit',function(event){
        event.preventDefault();
-       alert("yes");
-       var form_data=document.getElementsByClassName('contact');
-       alert(form_data.length);
-       var length=form_data.length;
-       alert(length);
-       alert(form_data);
- 	     var error_free=true;
- 	     for (var input in form_data){
-         var element=$("#"+form_data[input]['id']);
-   		   var valid=element.hasClass("valid");
-   		   var error_element=$("span",element.parent());
-   		   if (!valid){error_element.removeClass("error").addClass("error_show"); error_free=false;}
-   		   else{error_element.removeClass("error_show").addClass("error");}
- 	    }
+	     var error_free=true;
+       var courseid=$('#course_id')
+       var id=$('#id')
+       var nameini=$('#nameini')
+       var fullname=$('#fullname')
+       var medium=$('#medium')
+       var address=$('#address')
+       var gender=$('#gender')
+       var bday=$('#bday')
+       var age=$('#age')
+       var mobile=$('#mobile')
+       var home=$('#home')
+       var email=$('#email')
+       var olyear=$('#ol-year');
+       var olindex=$('#index-ol');
+       var maths=$('#maths');
+       var science=$('#science');
+       var english=$('#english');
+       var alyear=$('#al-year');
+       var alindex=$('#index-al');
+       var alstream=$('#stream');
+       if(!id.hasClass("valid")){
+         error_element=$("span",id.parent());
+         error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+            error_element=$("span",id.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+       if(!nameini.hasClass("valid")){
+         error_element=$("span",nameini.parent());
+         error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+            error_element=$("span",nameini.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+       if(!fullname.hasClass("valid")){
+         error_element=$("span",fullname.parent());
+         error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+         error_element=$("span",fullname.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!address.hasClass("valid")){
+         error_element=$("span",address.parent());
+         error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+         error_element=$("span",address.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!bday.hasClass("valid")){
+         error_element=$("span",bday.parent());
+        error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+         error_element=$("span",bday.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!age.hasClass("valid")){
+         error_element=$("span",age.parent());
+      error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+          error_element=$("span",age.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!mobile.hasClass("valid")){
+         error_element=$("span",mobile.parent());
+         error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+         error_element=$("span",mobile.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!home.hasClass("valid")){
+         error_element=$("span",home.parent());
+       error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+         error_element=$("span",home.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!email.hasClass("valid")){
+         error_element=$("span",email.parent());
+                 error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+         error_element=$("span",email.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!olyear.hasClass("valid")){
+         error_element=$("span",olyear.parent());
+         error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+         error_element=$("span",olyear.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!olindex.hasClass("valid")){
+         error_element=$("span",olindex.parent());
+         error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+            error_element=$("span",olindex.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!alyear.hasClass("valid")){
+         error_element=$("span",alyear.parent());
+         error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+            error_element=$("span",alyear.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
+       if(!alindex.hasClass("valid")){
+         error_element=$("span",alindex.parent());
+         error_element.removeClass("error").addClass("error_show");
+         error_free=false;
+       }
+       else{
+            error_element=$("span",alindex.parent());
+            error_element.removeClass("error_show").addClass("error");
+       }
+
       if(error_free){
         var url = $(this).attr('action');
         var type = $(this).attr('method');
-        var array=getFromData($('#student_form'));
-        alert(array);
         $.ajax({
           url: url,
-          type: type,
-          data: {data_array:array},
-          processData: false,
-          contentType: false,
+          type: "POST",
+          data:{course_id:courseid.val(),id:id.val(),nameini:nameini.val(),fullname:fullname.val(),medium:medium.val(),address:address.val(),gender:gender.val(),bday:bday.val(),age:age.val(),mobile:mobile.val(),home:home.val(),email:email.val(),
+              olyear:olyear.val(),indexol:olindex.val(),maths:maths.val(),science:science.val(),english:english.val(),alyear:alyear.val(),
+             indexal:alindex.val(),stream:alstream .val()
+          },
+
           success: function(data){
             alert("Submitted Sucessfully!");
-            location.reload(true);
+            $('#test').html(data);
           },
           error: function(){
             alert("Error occured submitting!");
@@ -199,14 +334,19 @@ $("#student_form").on('submit',function(event){
 
 
       }
-$(function getFormData($form){
-            var unindexed_array = $form.serializeArray();
+      else{
+        alert("invalid input!!");
+      }
+
+    });
+    });
+
+function getFormData($form){
+           alert("Function");
             var indexed_array = {};
 
            $.map(unindexed_array, function(n, i){
            indexed_array[n['name']] = n['value'];
            return indexed_array;
       });
-});
-});
-});
+}
