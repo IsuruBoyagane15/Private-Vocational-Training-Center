@@ -37,9 +37,11 @@ $result=$conn->query($sql);
 $output="";
 $row4=mysqli_fetch_array($result);
 if(!empty($row4)){
+  $attempted=sizeof($row4);
   $output.='<tr><th>Submission Status</th><td style="background-color:lightgreen">Submitted</td></tr>';
 }
 else{
+  $attempted=0;
   $output.='<tr><th>Submission Status</th><td>No attempt</td></tr>';
 }
 

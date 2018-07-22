@@ -25,7 +25,7 @@
   <option value="<?php echo $_POST['coursetype'] ?>"><?php echo $_POST['coursetype']?></option>
 </select>
 </div>
-<div id="datatable" class="lightbox" style="width:90%"></div>
+<div id="datatable" class="lightbox" style="width:100%"></div>
 
 <?php include_once("inc/footer.php"); ?>
 </body>

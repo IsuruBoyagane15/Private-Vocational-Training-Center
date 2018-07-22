@@ -183,148 +183,163 @@ $("#student_form").on('submit',function(event){
        var alyear=$('#al-year');
        var alindex=$('#index-al');
        var alstream=$('#stream');
+
+       var err_fr1 = true;
+       var err_fr2 = true;
+       var err_fr3 = true;
+       var err_fr4 = true;
+       var err_fr5 = true;
+       var err_fr6 = true;
+       var err_fr7 = true;
+       var err_fr8 = true;
+       var err_fr9 = true;
+       var err_fr10 = true;
+       var err_fr11 = true;
+       var err_fr12 = true;
+       var err_fr13 = true;
+
        if(!id.hasClass("valid")){
          error_element=$("span",id.parent());
          error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr1 = false;
        }
        else{
             error_element=$("span",id.parent());
             error_element.removeClass("error_show").addClass("error");
-            error_free=true;
+            var err_fr1 = true;
        }
        if(!nameini.hasClass("valid")){
          error_element=$("span",nameini.parent());
          error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr2 = false;
        }
        else{
             error_element=$("span",nameini.parent());
             error_element.removeClass("error_show").addClass("error");
-            error_free=true;
+            var err_fr2 = true;
        }
        if(!fullname.hasClass("valid")){
          error_element=$("span",fullname.parent());
          error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr3 = false;
        }
        else{
          error_element=$("span",fullname.parent());
-          error_element.removeClass("error_show").addClass("error");
-          error_free=true;
+            error_element.removeClass("error_show").addClass("error");
+            var err_fr3 = true;
        }
 
        if(!address.hasClass("valid")){
          error_element=$("span",address.parent());
          error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr4 = false;
        }
        else{
          error_element=$("span",address.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr4 = true;
        }
 
        if(!bday.hasClass("valid")){
          error_element=$("span",bday.parent());
         error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr5 = false;
        }
        else{
          error_element=$("span",bday.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr5 = true;
        }
 
        if(!age.hasClass("valid")){
          error_element=$("span",age.parent());
-         error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+      error_element.removeClass("error").addClass("error_show");
+         var err_fr6 = false;
        }
        else{
           error_element=$("span",age.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr6 = true;
        }
 
        if(!mobile.hasClass("valid")){
          error_element=$("span",mobile.parent());
          error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr7 = false;
        }
        else{
          error_element=$("span",mobile.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr7 = true;
        }
 
        if(!home.hasClass("valid")){
          error_element=$("span",home.parent());
        error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr8 = false;
        }
        else{
          error_element=$("span",home.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr8 = true;
        }
 
        if(!email.hasClass("valid")){
          error_element=$("span",email.parent());
                  error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr9 = false;
        }
        else{
          error_element=$("span",email.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr9 = true;
        }
 
        if(!olyear.hasClass("valid")){
          error_element=$("span",olyear.parent());
          error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr10 = false;
        }
        else{
          error_element=$("span",olyear.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr10 = true;
        }
 
        if(!olindex.hasClass("valid")){
          error_element=$("span",olindex.parent());
          error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr11 = false;
        }
        else{
             error_element=$("span",olindex.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr11 = true;
        }
 
        if(!alyear.hasClass("valid")){
          error_element=$("span",alyear.parent());
          error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr12 = false;
        }
        else{
             error_element=$("span",alyear.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr12 = true;
        }
 
        if(!alindex.hasClass("valid")){
          error_element=$("span",alindex.parent());
          error_element.removeClass("error").addClass("error_show");
-         error_free=false;
+         var err_fr13 = false;
        }
        else{
             error_element=$("span",alindex.parent());
             error_element.removeClass("error_show").addClass("error");
-                error_free=true;
+            var err_fr13 = true;
        }
 
-      if(error_free){
+      if( err_fr1==true && err_fr2==true && err_fr3==true && err_fr4==true && err_fr5==true && err_fr6==true && err_fr7==true && err_fr8==true && err_fr9==true && err_fr10==true && err_fr11==true && err_fr12==true && err_fr13==true ){
         var url = $(this).attr('action');
         var type = $(this).attr('method');
         $.ajax({
